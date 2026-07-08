@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorCotton"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_size_guide"
+            style="@style/TextAppearance.Saive.Header"
+            android:textSize="24sp"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:textColor="@color/colorNoirBlack"
+            android:letterSpacing="0.02" />
+
+        <!-- Tab Selection & Unit -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp">
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_product"
+                    style="@style/TextAppearance.Saive.Nav"
+                    android:textColor="@color/colorMaroon"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.05"
+                    android:fontFamily="sans-serif-medium" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="14dp"
+                    android:background="#D0D0D0"
+                    android:layout_marginHorizontal="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_body"
+                    style="@style/TextAppearance.Saive.Nav"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.05"
+                    android:alpha="0.7" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_measurement_unit"
+                style="@style/TextAppearance.Saive.Nav"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/colorNoirBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Size Table wrapped in HorizontalScrollView -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginTop="20dp">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <!-- Table Header -->
+                <TableRow android:background="@color/colorSizeTableHead" android:paddingVertical="12dp" android:paddingHorizontal="12dp">
+                    <TextView android:text="@string/label_size" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="@string/label_bust" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="@string/label_waist" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="@string/label_hip" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                </TableRow>
+
+                <!-- XS Row -->
+                <TableRow android:paddingVertical="12dp" android:paddingHorizontal="12dp" android:background="@color/colorSizeTableRowAlt">
+                    <TextView android:text="XS" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="73-79" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="57-63" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="80-86" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                </TableRow>
+
+                <!-- S Row -->
+                <TableRow android:paddingVertical="12dp" android:paddingHorizontal="12dp" android:background="@color/colorCotton">
+                    <TextView android:text="S" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="77-83" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="61-67" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="84-90" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                </TableRow>
+
+                <!-- M Row -->
+                <TableRow android:paddingVertical="12dp" android:paddingHorizontal="12dp" android:background="@color/colorSizeTableRowAlt">
+                    <TextView android:text="M" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="81-87" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="65-71" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="88-94" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                </TableRow>
+
+                <!-- L Row -->
+                <TableRow android:paddingVertical="12dp" android:paddingHorizontal="12dp" android:background="@color/colorCotton">
+                    <TextView android:text="L" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="85-91" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="69-75" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="92-98" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                </TableRow>
+
+                <!-- XL Row -->
+                <TableRow android:paddingVertical="12dp" android:paddingHorizontal="12dp" android:background="@color/colorSizeTableRowAlt">
+                    <TextView android:text="XL" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="91-97" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="75-81" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="98-104" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                </TableRow>
+
+                <!-- XXL Row -->
+                <TableRow android:paddingVertical="12dp" android:paddingHorizontal="12dp" android:background="@color/colorCotton">
+                    <TextView android:text="XXL" style="@style/TextAppearance.Saive.Nav" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack" android:fontFamily="sans-serif-medium"/>
+                    <TextView android:text="97-103" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="81-87" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                    <TextView android:text="104-110" style="@style/TextAppearance.Saive.Light" android:textSize="13sp" android:layout_width="80dp" android:gravity="center" android:textColor="@color/colorNoirBlack"/>
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <!-- Options Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <!-- Compare -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_all"
+                    app:tint="@color/colorNoirBlack"
+                    android:contentDescription="@null"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_compare_size"
+                        style="@style/TextAppearance.Saive.Nav"
+                        android:textColor="@color/colorMaroon"
+                        android:textSize="15sp"
+                        android:letterSpacing="0.02"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_compare_size_desc"
+                        style="@style/TextAppearance.Saive.Light"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Length Selection Guide -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_profile"
+                    app:tint="@color/colorNoirBlack"
+                    android:contentDescription="@null"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_length_guide"
+                        style="@style/TextAppearance.Saive.Nav"
+                        android:textColor="@color/colorMaroon"
+                        android:textSize="15sp"
+                        android:letterSpacing="0.02"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_length_guide_desc"
+                        style="@style/TextAppearance.Saive.Light"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- MySize Assist -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingVertical="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_hanger"
+                    app:tint="@color/colorNoirBlack"
+                    android:contentDescription="@null"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_mysize_assist"
+                        style="@style/TextAppearance.Saive.Nav"
+                        android:textColor="@color/colorMaroon"
+                        android:textSize="15sp"
+                        android:letterSpacing="0.02"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_mysize_assist_desc"
+                        style="@style/TextAppearance.Saive.Light"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorGrey"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bottom Spacing -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

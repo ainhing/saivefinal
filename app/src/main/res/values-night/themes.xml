@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+    <style name="Base.Theme.Saive" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/colorCotton</item>
+
+        <item name="colorPrimary">@color/colorMaroon</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/colorMaroon</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorSecondaryContainer">@color/colorCollectionMaroonSand</item>
+        <item name="colorOnSecondaryContainer">@color/colorCotton</item>
+        <item name="colorTertiary">@color/colorCotton</item>
+        <item name="android:colorBackground">@color/colorCotton</item>
+        <item name="colorSurface">@color/colorCotton</item>
+        <item name="colorOnSurface">@color/colorNoirBlack</item>
+
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.Saive.Header</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Saive.Header</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.Saive.SectionHeader</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Saive.Thin</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.Saive.Light</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.Saive.Label</item>
+    </style>
+
+    <style name="Theme.Saive" parent="Base.Theme.Saive" />
+    </resources>

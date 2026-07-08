@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BankTransferActivity"
+    android:background="@color/colorCotton"
+    tools:ignore="Overdraw">
+
+    <!-- Header -->
+    <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                android:baselineAligned="false"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="54dp"
+        android:paddingBottom="20dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorCotton"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:padding="4dp"
+            app:tint="@color/colorNoirBlack"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/nav_back"/>
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/bank_transfer_title"
+            android:fontFamily="sans-serif-light"
+            android:textSize="16sp"
+            android:textColor="@color/colorNoirBlack"
+            android:letterSpacing="0.05" />
+
+        <!-- Placeholder to balance the back button -->
+        <View
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+
+    <!-- Scroll Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="32dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="48dp">
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_transfer_scan_desc"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:textSize="14sp"
+                android:textColor="@color/colorGrayText"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="28dp" />
+
+            <!-- QR Code Image -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/colorAlwaysWhite"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/ivQrCode"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:padding="16dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_qr_code"
+                    android:contentDescription="@null"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Expiry Timer -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/colorMaroon"
+                app:cardBackgroundColor="@color/colorCotton"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvExpiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:text="@string/bank_transfer_expire_format"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorMaroon" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Regenerate -->
+            <TextView
+                android:id="@+id/tvRegenerate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_transfer_regenerate"
+                android:fontFamily="sans-serif-light"
+                android:textSize="13sp"
+                android:textColor="@color/colorGrayText"
+                android:paddingVertical="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Confirm Button -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tvConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/colorMaroon"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/bank_transfer_confirm_success"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:letterSpacing="0.05"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/colorOnMaroon" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

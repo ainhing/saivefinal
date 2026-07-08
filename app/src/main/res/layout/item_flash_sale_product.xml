@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@android:color/transparent"
+    android:layout_margin="4dp"
+    tools:ignore="Overdraw">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardProduct"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:background="@color/colorCotton">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/model1"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/tvDiscountBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="10dp"
+                android:background="@color/colorMaroon"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="-20%"
+                style="@style/TextAppearance.Saive.Caption"
+                android:textColor="@color/colorAlwaysWhite"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:elevation="4dp"
+                android:translationZ="4dp"
+                android:visibility="visible"
+                tools:text="-20%" />
+
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:src="@drawable/ic_favorite"
+                app:tint="@color/colorAlwaysWhite"
+                android:elevation="4dp"
+                android:translationZ="4dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/nav_favorite"/>
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/TextAppearance.Saive.ProductTitle"
+        android:text="NYLON WEATHER"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/colorFlashSaleContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardProduct" />
+
+    <LinearLayout
+                android:baselineAligned="false"
+        android:id="@+id/priceContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName">
+
+        <TextView
+            android:id="@+id/tvOriginalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            tools:text="400.000 đ"
+            android:textColor="@color/colorFlashSaleContentSecondary"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            style="@style/TextAppearance.Saive.Thin"
+            android:text="$30.00 USD"
+            android:textColor="@color/colorFlashSaleContent"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

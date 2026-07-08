@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="VectorRaster"
+    android:width="400dp"
+    android:height="600dp"
+    android:viewportWidth="400"
+    android:viewportHeight="600">
+    <path
+        android:fillColor="@color/colorAuthCardBg"
+        android:pathData="M 40,0
+                          L 360,0
+                          C 385,0 400,15 400,40
+                          L 400,420
+                          C 400,445 385,455 365,460
+                          L 35,555
+                          C 15,560 0,550 0,525
+                          L 0,40
+                          C 0,15 15,0 40,0
+                          Z" />
+</vector>

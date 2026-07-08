@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ContactUsActivity"
+    android:background="@color/colorCotton"
+    tools:ignore="Overdraw">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorHeaderBg"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="54dp"
+            android:paddingBottom="20dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorHeaderContent"
+                android:contentDescription="@string/nav_back"/>
+
+            <TextView
+                android:id="@+id/tvToolbarTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="56dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="@string/menu_contact_us"
+                android:textAllCaps="true"
+                android:textColor="@color/colorHeaderContent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Scroll Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="48dp">
+
+            <!-- Tagline Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/contact_tagline"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="24sp"
+                android:textStyle="italic" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorAccentBrand" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/contact_desc"
+                android:textColor="@color/colorGrayText"
+                android:textSize="14sp" />
+
+            <!-- Quick Contact Row -->
+            <LinearLayout
+                android:baselineAligned="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:orientation="horizontal">
+
+                <!-- Email Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnEmailShortcut"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/colorContactCardBg"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="20dp"
+                        android:paddingHorizontal="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="12dp"
+                            android:src="@android:drawable/ic_dialog_email"
+                            app:tint="@color/colorContactCardContent"
+                            android:contentDescription="@null"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="0.1"
+                            android:text="@string/contact_label_email"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorContactCardLabel"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/contact_email"
+                            android:textColor="@color/colorContactCardContent"
+                            android:textSize="11sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Phone Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/colorContactCardBg"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="20dp"
+                        android:paddingHorizontal="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="12dp"
+                            android:src="@android:drawable/ic_menu_call"
+                            app:tint="@color/colorContactCardContent"
+                            android:contentDescription="@null"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="0.1"
+                            android:text="@string/contact_label_phone"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorContactCardLabel"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/contact_phone"
+                            android:textColor="@color/colorContactCardContent"
+                            android:textSize="11sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Instagram Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnInstagram"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/colorContactCardBg"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingVertical="20dp"
+                        android:paddingHorizontal="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="12dp"
+                            android:src="@drawable/ic_instagram"
+                            app:tint="@color/colorContactCardContent"
+                            android:contentDescription="@null"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="0.1"
+                            android:text="@string/contact_label_instagram"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorContactCardLabel"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/contact_instagram"
+                            android:textColor="@color/colorContactCardContent"
+                            android:textSize="11sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Form Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:letterSpacing="0.1"
+                android:text="@string/contact_label_send_message"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccentBrand"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Name field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_full_name"
+                style="@style/TextAppearance.Saive.Nav"
+                android:textColor="@color/colorSand"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/colorLinen"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_full_name"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textColorHint="@color/colorGrayText"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Email field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_email"
+                style="@style/TextAppearance.Saive.Nav"
+                android:textColor="@color/colorSand"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/colorLinen"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/contact_hint_email"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textColorHint="@color/colorGrayText"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Message field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_comment"
+                style="@style/TextAppearance.Saive.Nav"
+                android:textColor="@color/colorSand"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/colorLinen"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/contact_hint_message"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="16dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textColorHint="@color/colorGrayText"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textMultiLine"
+                    android:gravity="top" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Send Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/contact_btn_send"
+                android:textColor="@color/colorButtonText"
+                android:textSize="14sp"
+                android:letterSpacing="0.1"
+                app:cornerRadius="12dp"
+                app:backgroundTint="@color/colorButtonBg"
+                app:elevation="4dp"
+                style="@style/TextAppearance.Saive.Nav" />
+
+            <!-- Footer note -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_footer_note"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/colorGrayText"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="32dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

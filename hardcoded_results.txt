@@ -1,0 +1,63 @@
+admin_activity_main.xml:119 - —
+admin_activity_main.xml:154 - —
+admin_activity_main.xml:197 - —
+admin_activity_main.xml:232 - —
+admin_activity_main.xml:275 - —
+admin_activity_main.xml:310 - —
+admin_activity_review_mgmt.xml:42 - KIỂM DUYỆT ĐÁNH GIÁ
+admin_dialog_add_variant.xml:12 - Kích thước (ví dụ: M, L, XL)
+admin_dialog_add_variant.xml:20 - Màu sắc (ví dụ: Black, Brown)
+admin_dialog_add_variant.xml:28 - Số lượng kho
+admin_dialog_user_detail.xml:23 - User Details
+admin_dialog_user_detail.xml:47 - Name
+admin_dialog_user_detail.xml:82 - EMAIL
+admin_dialog_user_detail.xml:90 - email@domain.com
+admin_dialog_user_detail.xml:122 - ROLE
+admin_dialog_user_detail.xml:130 - Customer
+admin_dialog_user_detail.xml:162 - AUTH PROVIDER
+admin_dialog_user_detail.xml:170 - password
+admin_dialog_user_detail.xml:202 - CREATED AT
+admin_dialog_user_detail.xml:210 - 2026-06-24
+admin_dialog_user_detail.xml:223 - Close
+admin_fragment_dashboard.xml:102 - ?
+admin_fragment_dashboard.xml:141 - 22
+admin_fragment_dashboard.xml:180 - 8
+admin_fragment_dashboard.xml:219 - 9
+admin_fragment_dashboard.xml:258 - 1
+admin_fragment_dashboard.xml:301 - 16.049.000
+admin_fragment_dashboard.xml:309 - ₫
+admin_fragment_dashboard.xml:357 - PRODUCT
+admin_fragment_dashboard.xml:376 - 0% (0)
+admin_fragment_dashboard.xml:392 - PRICE
+admin_fragment_dashboard.xml:411 - 0% (0)
+admin_fragment_dashboard.xml:427 - SERVICE
+admin_fragment_dashboard.xml:446 - 0% (0)
+admin_fragment_dashboard.xml:461 - DELIVERY
+admin_fragment_dashboard.xml:480 - 0% (0)
+admin_fragment_product_detail.xml:278 - Phân loại hàng
+admin_fragment_product_edit.xml:47 - Đổi ảnh
+admin_fragment_product_edit.xml:54 - Tên sản phẩm
+admin_fragment_product_edit.xml:66 - Danh mục
+admin_fragment_product_edit.xml:84 - Giá gốc
+admin_fragment_product_edit.xml:97 - Giá sale
+admin_fragment_product_edit.xml:111 - Số lượng trong kho (Tổng)
+admin_fragment_product_edit.xml:123 - Quản lý kho theo biến thể (Size/Màu)
+admin_fragment_product_edit.xml:138 - Thêm biến thể
+admin_fragment_product_edit.xml:147 - Đang kinh doanh
+admin_fragment_product_edit.xml:154 - Nổi bật (Featured)
+admin_fragment_product_edit.xml:160 - LƯU SẢN PHẨM
+admin_fragment_product_edit.xml:169 - XÓA SẢN PHẨM
+admin_fragment_reviews.xml:29 - Swipe right to approve, swipe left to reject
+admin_item_employee.xml:46 - Employee Name
+admin_item_employee.xml:56 - Department - Position
+admin_item_employee.xml:65 - 0123456789
+admin_item_order.xml:31 - #ORDER-8829
+admin_item_order.xml:40 - PENDING
+admin_item_order.xml:56 - Huỳnh Thảo Nhi
+admin_item_order.xml:65 - 2 Items: Silk Blazer, Wool Scarf
+admin_item_order.xml:98 - 2,450,000 ₫
+admin_item_variant_stock.xml:15 - M / Black
+admin_item_variant_stock.xml:23 - 10
+admin_nav_header.xml:32 - SAIVE Admin
+admin_nav_header.xml:53 - Management Console
+Total hardcoded strings in XML: 62

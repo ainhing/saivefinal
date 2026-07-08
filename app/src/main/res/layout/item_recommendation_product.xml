@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRecommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/colorLinen"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Product row: image + info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Product Image with badge -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="110dp"
+                    android:layout_height="140dp">
+
+                    <ImageView
+                        android:id="@+id/ivProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="@color/colorCotton"
+                        tools:src="@drawable/model1"
+                        android:contentDescription="@null" />
+
+                    <!-- Category Badge -->
+                    <TextView
+                        android:id="@+id/tvCategoryBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp"
+                        android:background="@color/colorMaroon"
+                        android:textColor="@color/colorAlwaysWhite"
+                        android:textSize="9sp"
+                        android:letterSpacing="0.12"
+                        android:fontFamily="sans-serif-medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="BOTTOM" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Product Info -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="140dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="12dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorNoirBlack"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.04"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        tools:text="WIDE LEG TROUSERS" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvProductPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif"
+                            tools:text="520,000 ₫" />
+
+                        <TextView
+                            android:id="@+id/tvOriginalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif-light"
+                            android:visibility="gone"
+                            tools:text="700,000 ₫"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvViewDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recommend_view_detail"
+                        android:textColor="@color/colorMaroon"
+                        android:textSize="10sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.1"
+                        android:drawableEnd="@drawable/ic_arrow_right"
+                        android:drawableTint="@color/colorMaroon"
+                        android:drawablePadding="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Reason / Why This Works Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorCotton"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Quotation icon -->
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="28dp"
+                        android:background="@color/colorMaroon"
+                        android:layout_marginEnd="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvReasonTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorMaroon"
+                            android:textSize="10sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="0.1"
+                            tools:text="PERFECT PAIR" />
+
+                        <TextView
+                            android:id="@+id/tvReasonDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif-light"
+                            android:lineSpacingExtra="2dp"
+                            android:alpha="0.75"
+                            tools:text="Cùng phong cách Minimalist • Màu Cream trung tính dễ phối" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

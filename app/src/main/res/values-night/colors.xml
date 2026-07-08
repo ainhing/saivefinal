@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds → Warm Dark (Quiet Luxury) -->
+    <color name="colorCotton">#121212</color> <!-- Nền chính -->
+    <color name="colorIvory">#1E1E1C</color> <!-- Nền Card/Section -->
+    <color name="colorBeigeBg">#121212</color>
+    <color name="colorGrayBg">#1E1E1C</color>
+    <color name="colorSandLight">#2A2A28</color>
+    <color name="colorUnreadBg">#2A2A28</color>
+    <color name="colorReadBg">#121212</color>
+    <color name="colorCategoryBg">#1E1E1C</color>
+    <color name="colorCategoryBorder">#333331</color>
+
+    <!-- Dividers & Borders -->
+    <color name="colorLightGray">#333333</color>
+    <color name="colorLinen">#888888</color> <!-- Làm sáng lên để thấy đường kẻ và icon phụ -->
+
+    <!-- Text Colors -->
+    <color name="colorNoirBlack">#FFFFFF</color> <!-- Trắng tinh khiết -->
+    <color name="colorNoir">#FFFFFF</color>
+    <color name="colorGrayText">#B0B0B0</color>
+    <color name="colorGrey">#999999</color>
+    <color name="colorSand">#D4C9B8</color>
+
+    <!-- Base Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="colorAlwaysWhite">#FFFFFF</color>
+    <color name="colorAlwaysBlack">#000000</color>
+
+    <!-- Header & Button Adaptive (Quan trọng để thấy chữ) -->
+    <color name="colorHeaderBg">#D4C9B8</color>
+    <color name="colorHeaderContent">#1A1A1A</color> <!-- Đen đậm để thấy chữ trên Header -->
+    <color name="colorButtonBg">#D4C9B8</color>
+    <color name="colorButtonText">#1A1A1A</color> <!-- Đen đậm để thấy chữ trên Nút -->
+
+    <!-- Input Field -->
+    <color name="colorInputText">#FFFFFF</color>
+    <color name="colorInputHint">#888888</color>
+    <color name="colorInputBoxBg">#1E1E1E</color>
+    <color name="colorInputStroke">#4A4A48</color>
+
+    <!-- Content on Sand adaptive backgrounds (Adaptive) -->
+    <color name="colorOnMaroon">#1A1A1A</color> <!-- Ép về màu đen cho Dark Mode -->
+    <color name="colorOnMaroonSecondary">#B01A1A1A</color>
+
+    <!-- Contact Card Adaptive Colors -->
+    <color name="colorContactCardBg">#D4C9B8</color>
+    <color name="colorContactCardContent">#1A1A1A</color>
+    <color name="colorContactCardLabel">#661A1A1A</color>
+
+    <!-- Translucent Surface Adaptive -->
+    <color name="colorTranslucentSurface">#20FFFFFF</color>
+
+    <!-- Address Card Adaptive -->
+    <color name="colorAddressCardBg">@color/colorIvory</color>
+    <color name="colorAddressCardText">@color/colorNoirBlack</color>
+    <color name="colorAddressCardPhone">@color/colorSand</color>
+
+    <!-- Full Screen Backgrounds -->
+    <color name="colorAuthBg">#000000</color>
+
+    <!-- Accents -->
+    <color name="colorMaroon">#D4C9B8</color>
+    <color name="colorAccentRed">#D4C9B8</color>
+    <color name="colorAccentBrand">#D4C9B8</color>
+
+    <!-- Colors for content on Flash Sale background (Adaptive) -->
+    <color name="colorFlashSaleContent">#FAF8F3</color>
+    <color name="colorFlashSaleContentSecondary">#D4C9B8</color>
+
+    <!-- Auth Card Adaptive -->
+    <color name="colorAuthCardBg">@color/colorCotton</color>
+    <color name="colorAuthCardTitle">@color/colorNoirBlack</color>
+    <color name="colorAuthCardSubtitle">@color/colorGrayText</color>
+
+    <!-- Semantic Text Colors (Dark Mode) -->
+    <color name="colorTextPrimary">#FFFFFF</color>
+    <color name="colorTextSecondary">#AAAAAA</color>
+    <color name="colorTextTertiary">#999999</color>
+    <color name="colorTextPlaceholder">#888888</color>
+    <color name="colorTextOnDark">#FFFFFF</color>
+
+    <!-- Flash Sale Always-Dark Background -->
+    <color name="colorFlashSaleBg">#1A1A1A</color>
+
+    <!-- Search Box Adaptive -->
+    <color name="colorSearchBoxBg">#2A2A28</color>
+</resources>

@@ -1,0 +1,60 @@
+cat_top: Top
+cat_bottom: Bottom
+cat_dress: Dress
+cat_outerwear: Outerwear
+cat_shoes: Shoes
+cat_bag: Bag
+cat_accessory: Accessory
+cat_casual: Casual
+cat_streetwear: Streetwear
+cat_hobo: Hobo
+cat_minimal: Minimal
+cat_accessories: Accessories
+contact_label_instagram: INSTAGRAM
+see_more: See more
+see_less: See less
+label_measurement_unit: cm
+about_stats_natural_value: 100%
+payment_vietqr: VietQR
+payment_vietqr_desc: Scan and pay with any banking apps
+col_time_1: 09:00
+col_time_2: 14:30
+col_time_3: 10:00
+col_time_4: 14:00
+hint_phone_number: +84 901 234 567
+lang_en: English
+lang_vi: Tiếng Việt
+lang_zh: 中文
+admin_search_product_hint: Search by product name…
+admin_search_blog_hint: Search by title, author…
+admin_search_user_hint: Search by name, email…
+admin_manage_blogs: Manage Blogs
+admin_tab_review_pending: Pending
+admin_tab_approved: Approved
+admin_tab_rejected: Rejected
+admin_stats_users: USERS
+admin_stats_blogs: BLOGS
+admin_stats_reviews: REVIEWS
+admin_stats_products: PRODUCTS
+otp_hint: -
+price_zero_format: 0 ₫
+discount_format: -%1$d%%
+card_preview_number: **** **** **** ****
+card_preview_expiry: MM/YY
+hint_card_number: 0000 0000 0000 0000
+hint_expiry_date: MM/YY
+label_cvv: CVV
+about_est: EST. 2024
+timer_default_time: 00 : 00 : 00
+status_cancelled: Cancelled
+status_pending: Pending
+status_confirmed: Confirmed
+status_shipping: Shipping
+status_delivered: Delivered
+label_rate_this_product: Rate this product
+hint_review_comment: Share your experience with this piece…
+error_rate_all_products: Please rate all products before submitting
+label_add_photos: Add Photos
+label_your_review: Your Review
+col_empty_products: This collection currently has no products.
+label_payment_vietqr_short: PAYMENT: VIETQR

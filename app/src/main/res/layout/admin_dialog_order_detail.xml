@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="28dp"
+    app:cardBackgroundColor="@color/colorCotton"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvDetailOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Order #12345678"
+            style="@style/TextAppearance.Saive.Header"
+            android:textSize="18sp"
+            android:textColor="@color/colorMaroon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLinen"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/admin_customer_info"
+                    style="@style/TextAppearance.Saive.Caption"
+                    android:textColor="@color/colorSand"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/tvDetailCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Huỳnh Thảo Nhi"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textSize="15sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="0901234567 | nhi.huynh@gmail.com"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:textSize="13sp"
+                    android:layout_marginTop="2dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="123 Lê Lợi, Phường Bến Thành, Quận 1, TP.HCM"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/admin_products_label"
+                    style="@style/TextAppearance.Saive.Caption"
+                    android:textColor="@color/colorSand"
+                    android:letterSpacing="0.1"
+                    android:layout_marginTop="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/llOrderItemsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorLinen"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_total"
+                        style="@style/TextAppearance.Saive.Light"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvDetailTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="3.450.000 ₫"
+                        style="@style/TextAppearance.Saive.Header"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorMaroon" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDetailPaymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Thanh toán: COD"
+                    style="@style/TextAppearance.Saive.Caption"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/admin_update_status_title"
+                    style="@style/TextAppearance.Saive.Caption"
+                    android:textColor="@color/colorSand"
+                    android:letterSpacing="0.1"
+                    android:layout_marginTop="24dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/colorLinen">
+                    <Spinner
+                        android:id="@+id/spnOrderStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:paddingHorizontal="12dp"
+                        android:background="@android:color/transparent" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdateStatus"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/admin_update_status_btn"
+            app:cornerRadius="28dp"
+            android:backgroundTint="@color/colorMaroon"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

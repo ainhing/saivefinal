@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_all"
+            android:title="@string/admin_dashboard_title" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ordericonadmin"
+            android:title="@string/admin_order_mgmt" />
+        <item
+            android:id="@+id/nav_users"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/admin_menu_users" />
+        <item
+            android:id="@+id/nav_reviews"
+            android:icon="@drawable/ic_favorite"
+            android:title="@string/admin_review_mgmt" />
+        <item
+            android:id="@+id/nav_blogs"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/admin_stats_blogs" />
+    </group>
+
+    <item android:title="@string/cat_system">
+        <menu>
+            <item
+                android:id="@+id/nav_language"
+                android:icon="@drawable/ic_menu"
+                android:title="@string/menu_language" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+</menu>

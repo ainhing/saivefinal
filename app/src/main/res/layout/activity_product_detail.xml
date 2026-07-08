@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCotton"
+    tools:ignore="Overdraw">
+
+    <!-- FIXED HEADER (Search, Cart, Logo) -->
+    <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                android:baselineAligned="false"
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCotton"
+        android:elevation="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing_large"
+        android:paddingTop="54dp"
+        android:paddingBottom="12dp"
+        android:translationZ="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_circle_white"
+            android:backgroundTint="@color/colorTranslucentSurface"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorNoirBlack"
+            android:contentDescription="@null"/>
+
+        <FrameLayout
+            android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/bg_rounded_white_8dp"
+            android:backgroundTint="@color/colorTranslucentSurface"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:src="@android:drawable/ic_menu_search"
+                app:tint="@color/colorNoirBlack"
+                android:alpha="0.5"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="28dp"
+                style="@style/TextAppearance.Saive.Nav"
+                android:text="@string/nav_search"
+                android:textSize="13sp"
+                android:textColor="@color/colorNoirBlack"
+                android:alpha="0.5" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnCart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/colorNoirBlack"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/tvCartBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_rounded_white_8dp"
+                android:backgroundTint="@color/colorAccentBrand"
+                android:gravity="center"
+                android:minWidth="16dp"
+                android:minHeight="16dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                tools:text="0"
+                android:textColor="@color/colorButtonText"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toBottomOf="@id/searchContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- HERO IMAGE AREA -->
+            <FrameLayout
+                android:id="@+id/heroContainer"
+                android:layout_width="match_parent"
+                android:layout_height="450dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpProductImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:color/transparent"
+                    app:tabBackground="@drawable/selector_tab_indicator"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMaxWidth="12dp"
+                    app:tabRippleColor="@null" />
+
+                <ImageButton
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/bg_square_white"
+                    android:elevation="6dp"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_heart_thin"
+                    app:tint="@color/colorAccentBrand"
+                    android:contentDescription="@string/nav_favorite"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieFavorite"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="4dp"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false"
+                    app:lottie_rawRes="@raw/heart_animation" />
+
+                <ImageButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/bg_square_white"
+                    android:elevation="6dp"
+                    android:padding="13dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_share"
+                    app:tint="@color/colorNoirBlack"
+                    android:contentDescription="@string/btn_share"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large">
+
+                <!-- Title & Price -->
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.Saive.Header"
+                    android:textSize="24sp"
+                    tools:text="Silk Wrap Dress" />
+
+                <LinearLayout
+                android:baselineAligned="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/tvOriginalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Saive.Editorial"
+                        android:textSize="16sp"
+                        tools:text="3.000.000 ₫"
+                        android:textColor="@color/colorNoirBlack"
+                        android:alpha="0.4"
+                        android:background="@drawable/bg_underline_maroon"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        style="@style/TextAppearance.Saive.Editorial"
+                        tools:text="2.450.000 ₫"
+                        android:textColor="@color/colorAccentBrand" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="24dp"
+                    android:background="@color/colorNoirBlack"
+                    android:alpha="0.1" />
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.Saive.Caption"
+                    android:text="@string/label_description"
+                    android:textColor="@color/colorAccentBrand" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:lineSpacingExtra="6dp"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    tools:text="A timeless piece crafted from 100% pure silk. Designed with a relaxed silhouette and elegant drape."
+                    android:textColor="@color/colorNoirBlack" />
+
+                <TextView
+                    android:id="@+id/btnSeeMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/see_more"
+                    style="@style/TextAppearance.Saive.Nav"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorAccentBrand" />
+
+                <!-- Recommendation Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRecommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/colorMaroon"
+                    android:text="@string/btn_shop_the_look"
+                    android:textColor="@color/colorAlwaysWhite"
+                    android:textSize="13sp"
+                    android:letterSpacing="0.1"
+                    app:icon="@drawable/ic_hanger"
+                    app:iconTint="@color/colorAlwaysWhite"
+                    app:iconGravity="textStart"
+                    app:cornerRadius="8dp"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.Button"
+                    tools:visibility="visible" />
+
+                <!-- Size Selection -->
+                <LinearLayout
+                    android:id="@+id/sizeSelectionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/btnSizeGuide"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            style="@style/TextAppearance.Saive.Caption"
+                            android:text="@string/label_size"
+                            android:textColor="@color/colorAccentBrand" />
+
+                        <LinearLayout
+                android:baselineAligned="false"
+                            android:id="@+id/btnSizeGuide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_rounded_white_8dp"
+                            android:backgroundTint="@color/colorTranslucentSurface"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="4dp">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_all"
+                                app:tint="@color/colorNoirBlack"
+                                android:contentDescription="@null"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/btnSizeGuide"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                style="@style/TextAppearance.Saive.Nav"
+                                android:text="@string/label_size_guide_short"
+                                android:textColor="@color/colorNoirBlack"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                android:baselineAligned="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView android:id="@+id/sizeXS" style="@style/TextAppearance.Saive.Nav" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="XS" android:background="@drawable/bg_size_square" android:textColor="@color/selector_size_text" android:clickable="true" android:focusable="true" android:layout_marginEnd="12dp"/>
+                        <TextView android:id="@+id/sizeS" style="@style/TextAppearance.Saive.Nav" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="S" android:background="@drawable/bg_size_square" android:textColor="@color/selector_size_text" android:clickable="true" android:focusable="true" android:layout_marginEnd="12dp"/>
+                        <TextView android:id="@+id/sizeM" style="@style/TextAppearance.Saive.Nav" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="M" android:background="@drawable/bg_size_square" android:textColor="@color/selector_size_text" android:clickable="true" android:focusable="true" android:layout_marginEnd="12dp"/>
+                        <TextView android:id="@+id/sizeL" style="@style/TextAppearance.Saive.Nav" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="L" android:background="@drawable/bg_size_square" android:textColor="@color/selector_size_text" android:clickable="true" android:focusable="true" android:layout_marginEnd="12dp"/>
+                        <TextView android:id="@+id/sizeXL" style="@style/TextAppearance.Saive.Nav" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="XL" android:background="@drawable/bg_size_square" android:textColor="@color/selector_size_text" android:clickable="true" android:focusable="true" />
+
+                        <TextView
+                            android:id="@+id/tvSizeStockStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            style="@style/TextAppearance.Saive.Caption"
+                            android:textSize="11sp"
+                            android:textColor="@color/colorAccentBrand"
+                            android:text="@string/inventory_low_stock"
+                            android:visibility="gone"
+                            tools:visibility="visible"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Color Selection -->
+                <LinearLayout
+                    android:id="@+id/colorSelectionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextAppearance.Saive.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/label_color"
+                        android:textColor="@color/colorAccentBrand" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:scrollbars="none">
+
+                        <!-- colorSwatchContainer is filled dynamically from Java based on Stock data -->
+                        <LinearLayout
+                            android:id="@+id/colorSwatchContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingEnd="8dp">
+
+                            <TextView
+                                android:id="@+id/tvColorStockStatus"
+                                style="@style/TextAppearance.Saive.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="@string/inventory_out_of_stock"
+                                android:textColor="@color/colorAccentBrand"
+                                android:textSize="11sp"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- Quantity Selector -->
+
+                <LinearLayout
+                android:baselineAligned="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/TextAppearance.Saive.Caption"
+                        android:text="@string/label_quantity"
+                        android:textColor="@color/colorAccentBrand" />
+
+                    <LinearLayout
+                android:baselineAligned="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rounded_white_8dp"
+                        android:backgroundTint="@color/colorTranslucentSurface"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <ImageButton
+                            android:id="@+id/btnDecrease"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_minus"
+                            app:tint="@color/colorNoirBlack"
+                            android:contentDescription="@string/desc_decrease_quantity"/>
+
+                        <TextView
+                            android:id="@+id/tvQuantity"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            tools:text="1"
+                            style="@style/TextAppearance.Saive.Nav"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/btnIncrease"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_plus"
+                            app:tint="@color/colorNoirBlack"
+                            android:contentDescription="@string/desc_increase_quantity"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Complete the Look -->
+                <TextView
+                    android:id="@+id/tvLabelCompleteLook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    style="@style/TextAppearance.Saive.Caption"
+                    android:text="@string/label_complete_look"
+                    android:textColor="@color/colorAccentBrand" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCompleteLook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:clipToPadding="false" />
+
+                <!-- Reviews Section -->
+                <LinearLayout
+                android:baselineAligned="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/TextAppearance.Saive.Caption"
+                        android:text="@string/label_reviews"
+                        android:textColor="@color/colorAccentBrand"
+                        android:letterSpacing="0.2" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnWriteReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorButtonBg"
+                        android:paddingHorizontal="20dp"
+                        android:text="@string/label_write_review"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorButtonText"
+                        android:textSize="13sp"
+                        app:cornerRadius="20dp"
+                        app:elevation="2dp"
+                        app:icon="@android:drawable/ic_menu_edit"
+                        app:iconGravity="textStart"
+                        app:iconSize="16dp"
+                        app:iconTint="@color/white"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        style="@style/TextAppearance.Saive.Nav"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- BOTTOM ACTION BAR -->
+    <LinearLayout
+                android:baselineAligned="false"
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCotton"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="32dp"
+        android:gravity="center_vertical"
+        android:elevation="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Quantity Selector in Bottom Bar -->
+
+        <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                android:baselineAligned="false"
+            android:id="@+id/btnAddToWardrobe"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:background="@color/colorButtonBg"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:stateListAnimator="@null">
+
+            <ImageView
+                android:id="@+id/ivWardrobeIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/colorButtonText"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/tvWardrobeAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                style="@style/TextAppearance.Saive.Nav"
+                android:text="@string/btn_add_to_bag"
+                android:textColor="@color/colorButtonText"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

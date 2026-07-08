@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:clipChildren="false">
+
+    <!-- Background Swipe Area (Revealed behind the card) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/swipeBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMaroon">
+
+            <ImageView
+                android:id="@+id/ivDeleteIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/ic_trash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorOnMaroon"
+                android:alpha="0"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:contentDescription="@null"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Foreground Product Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/swipeForeground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorIvory"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/jacket1"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="serif"
+                android:text="Structured Wool Coat"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivProduct"
+                app:layout_constraintTop_toTopOf="@id/ivProduct" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:text="Jackets"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextTertiary"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <LinearLayout
+                android:baselineAligned="false"
+                android:id="@+id/priceContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvCategory">
+
+                <TextView
+                    android:id="@+id/tvOriginalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/colorTextTertiary"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="3.000.000 ₫"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textSize="14sp"
+                    tools:text="2.450.000 ₫" />
+            </LinearLayout>
+
+            <!-- Size/Color Selector -->
+            <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                android:baselineAligned="false"
+                android:id="@+id/variantContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_cart_variant"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/priceContainer">
+
+                <TextView
+                    android:id="@+id/tvVariantLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Size: 8"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_chevron_down"
+                    app:tint="@color/colorNoirBlack"
+                    android:contentDescription="@null"/>
+            </LinearLayout>
+
+            <!-- Quantity Controller -->
+            <LinearLayout
+                android:baselineAligned="false"
+                android:id="@+id/qtyContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/ivProduct"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageButton
+                    android:id="@+id/btnMinus"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_qty_button"
+                    android:src="@drawable/ic_minus"
+                    app:tint="@color/colorNoirBlack"
+                    android:contentDescription="@string/desc_decrease_quantity"/>
+
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light" />
+
+                <ImageButton
+                    android:id="@+id/btnPlus"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_qty_button"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/colorNoirBlack"
+                    android:contentDescription="@string/btn_add"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

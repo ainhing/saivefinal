@@ -1,0 +1,94 @@
+<resources>
+    <!-- Vietnamese Stopwords -->
+    <string-array name="vietnamese_stopwords">
+        <item>và</item><item>có</item><item>là</item><item>thì</item><item>mà</item><item>của</item><item>được</item><item>cho</item>
+        <item>trong</item><item>ra</item><item>lại</item><item>ở</item><item>bị</item><item>cái</item><item>này</item><item>như</item>
+        <item>nó</item><item>đây</item><item>đó</item><item>với</item><item>các</item><item>những</item><item>một</item><item>nhưng</item>
+        <item>cũng</item><item>đã</item><item>đang</item><item>sẽ</item><item>đi</item><item>về</item><item>lên</item><item>xuống</item>
+        <item>vào</item><item>đến</item><item>nhiều</item><item>ít</item><item>quá</item><item>rất</item><item>khá</item><item>để</item>
+        <item>nếu</item><item>khi</item><item>vì</item><item>nên</item><item>tự</item><item>mình</item><item>họ</item><item>ta</item>
+        <item>tôi</item><item>bạn</item><item>nha</item><item>ạ</item><item>nhé</item><item>nhe</item><item>ấy</item><item>đều</item>
+        <item>hơn</item><item>nhất</item><item>không</item><item>ko</item><item>k</item><item>khg</item><item>chưa</item><item>rồi</item>
+        <item>nữa</item><item>cực</item><item>kỳ</item><item>thật</item><item>luôn</item><item>thấy</item><item>còn</item><item>chỉ</item>
+        <item>sự</item><item>việc</item><item>sản</item><item>phẩm</item><item>sp</item><item>hàng</item><item>cửa</item>
+    </string-array>
+
+    <!-- Product Subtopics Keywords -->
+    <string-array name="kw_prod_quality">
+        <item>chất lượng</item><item>bền</item><item>dễ hỏng</item><item>chắc chắn</item><item>mỏng manh</item><item>vải</item>
+        <item>chất vải</item><item>xịn</item><item>nát</item><item>hỏng</item><item>rách</item><item>yếu</item>
+    </string-array>
+    <string-array name="kw_prod_features">
+        <item>tính năng</item><item>chức năng</item><item>hoạt động</item><item>đầy đủ</item><item>thiếu</item><item>sử dụng</item><item>tiện lợi</item>
+    </string-array>
+    <string-array name="kw_prod_design">
+        <item>đẹp</item><item>xấu</item><item>màu</item><item>màu sắc</item><item>kiểu dáng</item><item>kích thước</item><item>size</item>
+        <item>mẫu mã</item><item>thiết kế</item><item>form</item><item>dáng</item>
+    </string-array>
+    <string-array name="kw_prod_performance">
+        <item>nhanh</item><item>chậm</item><item>mạnh</item><item>yếu</item><item>tiêu thụ điện</item><item>pin</item><item>nóng</item><item>mượt</item>
+    </string-array>
+    <string-array name="kw_prod_fit">
+        <item>mô tả</item><item>vừa</item><item>vừa vặn</item><item>rộng</item><item>chật</item><item>phù hợp</item><item>đúng mô tả</item>
+        <item>y hình</item><item>giống ảnh</item>
+    </string-array>
+
+    <!-- Price Subtopics Keywords -->
+    <string-array name="kw_price_cost">
+        <item>giá</item><item>đắt</item><item>rẻ</item><item>tiền</item><item>chi phí</item><item>thấp</item><item>cao</item>
+        <item>tầm giá</item><item>giá cả</item><item>hạt dẻ</item>
+    </string-array>
+    <string-array name="kw_price_value">
+        <item>đáng tiền</item><item>xứng đáng</item><item>đáng mua</item><item>worth</item><item>tiết kiệm</item>
+    </string-array>
+    <string-array name="kw_price_promo">
+        <item>khuyến mãi</item><item>giảm giá</item><item>deal</item><item>voucher</item><item>sale</item><item>quà</item><item>tặng</item>
+    </string-array>
+    <string-array name="kw_price_compare">
+        <item>cạnh tranh</item><item>rẻ hơn</item>
+    </string-array>
+
+    <!-- Service Subtopics Keywords -->
+    <string-array name="kw_serv_shop">
+        <item>shop</item><item>người bán</item><item>chủ shop</item><item>cửa hàng</item><item>gian hàng</item>
+    </string-array>
+    <string-array name="kw_serv_consult">
+        <item>tư vấn</item><item>giải đáp</item><item>hướng dẫn</item>
+    </string-array>
+    <string-array name="kw_serv_support">
+        <item>hỗ trợ</item><item>giải quyết</item><item>chăm sóc</item>
+    </string-array>
+    <string-array name="kw_serv_attitude">
+        <item>thân thiện</item><item>lịch sự</item><item>chuyên nghiệp</item><item>nhiệt tình</item><item>dễ thương</item><item>chu đáo</item>
+    </string-array>
+    <string-array name="kw_serv_response">
+        <item>phản hồi</item><item>trả lời</item><item>nhanh</item><item>rep</item><item>tin nhắn</item>
+    </string-array>
+
+    <!-- Delivery Subtopics Keywords -->
+    <string-array name="kw_deliv_speed">
+        <item>giao</item><item>ship</item><item>vận chuyển</item><item>nhanh</item><item>chậm</item><item>trễ</item><item>lâu</item>
+        <item>đúng hẹn</item><item>tốc độ</item>
+    </string-array>
+    <string-array name="kw_deliv_shipper">
+        <item>shipper</item><item>giao tận nơi</item><item>bác tài</item><item>anh ship</item><item>người giao</item>
+    </string-array>
+    <string-array name="kw_deliv_pkg">
+        <item>đóng gói</item><item>hộp</item><item>bọc</item><item>gói</item><item>bao bì</item><item>chống sốc</item><item>kỹ</item><item>cẩn thận</item>
+    </string-array>
+    <string-array name="kw_deliv_status">
+        <item>nguyên vẹn</item><item>móp</item><item>méo</item><item>hư hại</item><item>nát</item><item>vỡ</item><item>bể</item>
+    </string-array>
+    <string-array name="kw_deliv_policy">
+        <item>đổi trả</item><item>hoàn tiền</item>
+    </string-array>
+    <string-array name="kw_deliv_fee">
+        <item>phí ship</item><item>tiền ship</item><item>ship mắc</item><item>free ship</item><item>miễn phí ship</item>
+    </string-array>
+    <string-array name="kw_deliv_qty">
+        <item>thiếu</item><item>đủ</item><item>thiếu hàng</item><item>đủ số lượng</item>
+    </string-array>
+    <string-array name="kw_deliv_target">
+        <item>đúng</item><item>sai</item><item>nhầm</item><item>sai hàng</item><item>nhầm hàng</item><item>đúng mẫu</item><item>sai mẫu</item>
+    </string-array>
+</resources>

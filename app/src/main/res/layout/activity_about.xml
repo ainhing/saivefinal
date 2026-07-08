@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="TooDeepLayout,Overdraw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCotton"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+
+    <!-- FIXED HEADER - Synchronized with brand header -->
+    <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                android:baselineAligned="false"
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCotton"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing_large"
+        android:paddingTop="54dp"
+        android:paddingBottom="12dp"
+        android:translationZ="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorNoirBlack"
+            android:contentDescription="@null"/>
+
+        <FrameLayout
+            android:id="@+id/btnCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/colorNoirBlack"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/tvCartBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="-4dp"
+                android:background="@drawable/bg_rounded_white_8dp"
+                android:backgroundTint="@color/colorAccentBrand"
+                android:gravity="center"
+                android:minWidth="14dp"
+                android:minHeight="14dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                tools:text="0"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:src="@android:drawable/ic_menu_search"
+            app:tint="@color/colorNoirBlack"
+            android:contentDescription="@null"/>
+
+        <TextView
+            style="@style/TextAppearance.Saive.Nav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:text="@string/nav_search"
+            android:textColor="@color/colorNoirBlack" />
+
+        <TextView
+            style="@style/TextAppearance.Saive.Logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name_caps" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 01 · HERO -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+
+                <ImageView
+                    android:id="@+id/ivAboutHero"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/abouthero"
+                    android:contentDescription="@null"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_overlay" />
+
+                <LinearLayout
+                    android:id="@+id/heroTextContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|start"
+                    android:padding="32dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvHeroTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Saive.Header"
+                        android:text="@string/about_hero_title"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:id="@+id/tvHeroSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        style="@style/TextAppearance.Saive.Nav"
+                        android:letterSpacing="0.2"
+                        android:text="@string/about_hero_subtitle"
+                        android:textColor="@color/white"
+                        android:alpha="0.8" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- 02 · NGUỒN GỐC -->
+            <LinearLayout
+                android:id="@+id/originSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorCotton"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="80dp">
+
+                <TextView
+                    android:id="@+id/tvOriginYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.Saive.Logo.Huge"
+                    android:text="@string/about_origin_year"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textSize="64sp" />
+
+                <TextView
+                    android:id="@+id/tvOriginText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:lineSpacingExtra="8dp"
+                    android:text="@string/about_origin_text"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textSize="16sp"
+                    android:alpha="0.8" />
+            </LinearLayout>
+
+            <!-- 03 · CHẤT LIỆU -->
+            <LinearLayout
+                android:id="@+id/materialSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorIvory"
+                android:orientation="vertical"
+                android:paddingVertical="80dp">
+
+                <TextView
+                    android:id="@+id/tvMaterialTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.Saive.Header"
+                    android:paddingHorizontal="32dp"
+                    android:text="@string/about_material_title"
+                    android:textColor="@color/colorNoirBlack" />
+
+                <HorizontalScrollView
+                    android:id="@+id/svMaterials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="32dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                android:baselineAligned="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- LINEN -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="320dp"
+                            android:layout_marginEnd="20dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            android:backgroundTint="@color/colorCotton">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/ivLinen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:scaleType="centerCrop"
+                                    tools:src="@drawable/banner1"
+                                    android:contentDescription="@null"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="20dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="@style/TextAppearance.Saive.Header"
+                                        android:text="@string/about_material_linen"
+                                        android:textColor="@color/colorNoirBlack"
+                                        android:textSize="20sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        style="@style/TextAppearance.Saive.Light"
+                                        android:text="@string/about_material_linen_desc"
+                                        android:textColor="@color/colorNoirBlack"
+                                        android:alpha="0.7"
+                                        android:textSize="12sp"
+                                        android:lineSpacingExtra="4dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- TENCEL -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="320dp"
+                            android:layout_marginEnd="20dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            android:backgroundTint="@color/colorCotton">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/ivTencel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:scaleType="centerCrop"
+                                    tools:src="@drawable/atumncollection2"
+                                    android:contentDescription="@null"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="20dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="@style/TextAppearance.Saive.Header"
+                                        android:text="@string/about_material_tencel"
+                                        android:textColor="@color/colorNoirBlack"
+                                        android:textSize="20sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        style="@style/TextAppearance.Saive.Light"
+                                        android:text="@string/about_material_tencel_desc"
+                                        android:textColor="@color/colorNoirBlack"
+                                        android:alpha="0.7"
+                                        android:textSize="12sp"
+                                        android:lineSpacingExtra="4dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- BAMBOO -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="320dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            android:backgroundTint="@color/white">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/ivBamboo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:scaleType="centerCrop"
+                                    tools:src="@drawable/banner2"
+                                    android:contentDescription="@null"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="20dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="@style/TextAppearance.Saive.Header"
+                                        android:text="@string/about_material_bamboo"
+                                        android:textColor="@color/colorNoirBlack"
+                                        android:textSize="20sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        style="@style/TextAppearance.Saive.Light"
+                                        android:text="@string/about_material_bamboo_desc"
+                                        android:textColor="@color/colorNoirBlack"
+                                        android:alpha="0.7"
+                                        android:textSize="12sp"
+                                        android:lineSpacingExtra="4dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- 04 · TRIẾT LÝ SẢN XUẤT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorContactCardBg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="48dp"
+                android:paddingVertical="100dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.Saive.Editorial"
+                    android:text="@string/about_philosophy_quote"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorContactCardContent"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    style="@style/TextAppearance.Saive.Nav"
+                    android:text="@string/about_philosophy_sub"
+                    android:textColor="@color/colorContactCardContent"
+                    android:alpha="0.6"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- 05 · CON SỐ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorCotton"
+                android:orientation="horizontal"
+                android:paddingVertical="60dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Saive.Stats.Number"
+                        android:text="@string/about_stats_items_value"
+                        android:textColor="@color/colorNoirBlack"
+                        android:textSize="32sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Saive.Stats.Label"
+                        android:text="@string/about_stats_items_label"
+                        android:textColor="@color/colorSand" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Saive.Stats.Number"
+                        android:text="@string/about_stats_natural_value"
+                        android:textColor="@color/colorNoirBlack"
+                        android:textSize="32sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Saive.Stats.Label"
+                        android:text="@string/about_stats_natural_label"
+                        android:textColor="@color/colorSand" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Saive.Stats.Number"
+                        android:text="@string/about_stats_founded_value"
+                        android:textColor="@color/colorNoirBlack"
+                        android:textSize="32sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Saive.Stats.Label"
+                        android:text="@string/about_stats_founded_label"
+                        android:textColor="@color/colorSand" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorIvory"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="80dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.Saive.Header"
+                    android:text="@string/about_commit_title"
+                    android:textColor="@color/colorNoirBlack"
+                    android:textSize="32sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:orientation="vertical">
+
+                    <!-- Item 1 -->
+                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="24dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textColor="@color/colorAccentBrand"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            style="@style/TextAppearance.Saive.Light"
+                            android:text="@string/about_commit_1"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!-- Item 2 -->
+                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="24dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textColor="@color/colorAccentBrand"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            style="@style/TextAppearance.Saive.Light"
+                            android:text="@string/about_commit_2"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!-- Item 3 -->
+                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="24dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textColor="@color/colorAccentBrand"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            style="@style/TextAppearance.Saive.Light"
+                            android:text="@string/about_commit_3"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <!-- Item 4 -->
+                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="24dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textColor="@color/colorAccentBrand"
+                            android:textSize="18sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            style="@style/TextAppearance.Saive.Light"
+                            android:text="@string/about_commit_4"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- FOOTER BRANDING -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorCotton"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="100dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.Saive.Logo.Huge"
+                    android:text="@string/app_name_caps" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-20dp"
+                    style="@style/TextAppearance.Saive.Nav"
+                    android:text="@string/about_est"
+                    android:textColor="@color/colorNoirBlack"
+                    android:alpha="0.5" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

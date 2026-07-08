@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAF7; /* Cotton background */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .tabs {
+            display: flex;
+            background-color: #EFEFE9;
+            padding: 4px;
+            border-radius: 12px;
+            margin: 12px 16px 8px 16px;
+        }
+        .tab-btn {
+            flex: 1;
+            border: none;
+            background: none;
+            padding: 10px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #777777;
+            border-radius: 8px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        .tab-btn.active {
+            background-color: #FFFFFF;
+            color: #8D1C3D; /* Saive Maroon red */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        .chart-container {
+            flex: 1;
+            position: relative;
+            margin: 0 16px 16px 16px;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .chart-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .chart-wrapper.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: #888888;
+        }
+        .tooltip-title {
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: #333333;
+        }
+    </style>
+    <!-- Load ECharts and WordCloud from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+</head>
+<body>
+    <div class="tabs">
+        <button id="btn-wordcloud" class="tab-btn active" onclick="switchTab('wordcloud')">Word Cloud</button>
+        <button id="btn-treemap" class="tab-btn" onclick="switchTab('treemap')">Topic Treemap</button>
+    </div>
+    <div class="chart-container">
+        <div id="loader">Loading analysis...</div>
+        <div id="wordcloud-chart" class="chart-wrapper active"></div>
+        <div id="treemap-chart" class="chart-wrapper"></div>
+    </div>
+
+    <script>
+        var wordCloudChart = null;
+        var treemapChart = null;
+        var currentTab = 'wordcloud';
+        var localization = {
+            tabWordCloud: 'Word Cloud',
+            tabTreemap: 'Topic Treemap',
+            loadingText: 'Loading analysis...',
+            noData: 'No Data',
+            tooltipMentions: 'Mentions',
+            chartTitle: 'Review Topics'
+        };
+
+        function applyLocalization() {
+            try {
+                if (typeof Android !== 'undefined' && Android.getLocalizationConfig) {
+                    var config = JSON.parse(Android.getLocalizationConfig());
+                    if (config.tabWordCloud) localization.tabWordCloud = config.tabWordCloud;
+                    if (config.tabTreemap) localization.tabTreemap = config.tabTreemap;
+                    if (config.loadingText) localization.loadingText = config.loadingText;
+                    if (config.noData) localization.noData = config.noData;
+                    if (config.tooltipMentions) localization.tooltipMentions = config.tooltipMentions;
+                    if (config.chartTitle) localization.chartTitle = config.chartTitle;
+                }
+            } catch (e) {
+                console.error("Localization error", e);
+            }
+
+            document.getElementById('btn-wordcloud').innerText = localization.tabWordCloud;
+            document.getElementById('btn-treemap').innerText = localization.tabTreemap;
+            document.getElementById('loader').innerText = localization.loadingText;
+        }
+
+        function initCharts() {
+            applyLocalization();
+            var loader = document.getElementById('loader');
+            if (loader) loader.style.display = 'none';
+
+            var wcElement = document.getElementById('wordcloud-chart');
+            var tmElement = document.getElementById('treemap-chart');
+
+            wordCloudChart = echarts.init(wcElement);
+            treemapChart = echarts.init(tmElement);
+
+            var wordCloudData = [];
+            var treemapData = [];
+
+            try {
+                if (typeof Android !== 'undefined') {
+                    wordCloudData = JSON.parse(Android.getWordCloudData());
+                    treemapData = JSON.parse(Android.getTreemapData());
+                } else {
+                    // Fallback sample data for testing in browser / standalone
+                    wordCloudData = [
+                        { name: 'tốt', value: 120 },
+                        { name: 'đẹp', value: 95 },
+                        { name: 'shop', value: 80 },
+                        { name: 'giao nhanh', value: 75 },
+                        { name: 'chất lượng', value: 70 },
+                        { name: 'đáng tiền', value: 65 },
+                        { name: 'đóng gói kỹ', value: 60 },
+                        { name: 'phù hợp', value: 55 },
+                        { name: 'rẻ', value: 50 },
+                        { name: 'màu sắc', value: 45 },
+                        { name: 'shipper', value: 40 },
+                        { name: 'hỗ trợ', value: 35 }
+                    ];
+                    treemapData = [
+                        {
+                            name: 'PRODUCT',
+                            value: 45,
+                            children: [
+                                { name: 'Chất lượng', value: 20 },
+                                { name: 'Thiết kế', value: 15 },
+                                { name: 'Tính năng', value: 5 },
+                                { name: 'Hiệu năng', value: 3 },
+                                { name: 'Phù hợp', value: 2 }
+                            ]
+                        },
+                        {
+                            name: 'DELIVERY',
+                            value: 30,
+                            children: [
+                                { name: 'Tốc độ', value: 15 },
+                                { name: 'Đóng gói', value: 10 },
+                                { name: 'Shipper', value: 5 }
+                            ]
+                        },
+                        {
+                            name: 'PRICE',
+                            value: 15,
+                            children: [
+                                { name: 'Giá cả', value: 8 },
+                                { name: 'Giá trị', value: 5 },
+                                { name: 'Khuyến mãi', value: 2 }
+                            ]
+                        },
+                        {
+                            name: 'SERVICE',
+                            value: 10,
+                            children: [
+                                { name: 'Tư vấn', value: 5 },
+                                { name: 'Thái độ', value: 3 },
+                                { name: 'Phản hồi', value: 2 }
+                            ]
+                        }
+                    ];
+                }
+            } catch (e) {
+                console.error("Error loading Java-side data: ", e);
+            }
+
+            renderWordCloud(wordCloudData);
+            renderTreemap(treemapData);
+
+            window.addEventListener('resize', function() {
+                if (wordCloudChart) wordCloudChart.resize();
+                if (treemapChart) treemapChart.resize();
+            });
+        }
+
+        function renderWordCloud(data) {
+            if (!data || data.length === 0) {
+                data = [{ name: localization.noData, value: 1 }];
+            }
+            var option = {
+                tooltip: {
+                    show: true,
+                    formatter: '{b}: {c} ' + localization.tooltipMentions
+                },
+                series: [{
+                    type: 'wordCloud',
+                    shape: 'circle',
+                    keepAspect: false,
+                    left: 'center',
+                    top: 'center',
+                    width: '90%',
+                    height: '90%',
+                    right: null,
+                    bottom: null,
+                    sizeRange: [14, 48],
+                    rotationRange: [-45, 45],
+                    rotationStep: 15,
+                    gridSize: 8,
+                    drawOutOfBound: false,
+                    layoutAnimation: true,
+                    textStyle: {
+                        fontFamily: 'sans-serif',
+                        fontWeight: 'bold',
+                        color: function () {
+                            // Palette containing maroon red, slate blue, forest green, warm tan, charcoal
+                            var colors = ['#8D1C3D', '#4682B4', '#8FBC8F', '#D2B48C', '#2F4F4F', '#A0522D', '#4A4A4A'];
+                            return colors[Math.floor(Math.random() * colors.length)];
+                        }
+                    },
+                    emphasis: {
+                        focus: 'self',
+                        textStyle: {
+                            textShadowBlur: 4,
+                            textShadowColor: '#dddddd'
+                        }
+                    },
+                    data: data
+                }]
+            };
+            wordCloudChart.setOption(option);
+        }
+
+        function renderTreemap(data) {
+            if (!data || data.length === 0) {
+                data = [{ name: localization.noData, value: 0 }];
+            }
+            var option = {
+                tooltip: {
+                    formatter: function (info) {
+                        var value = info.value;
+                        var treePathInfo = info.treePathInfo;
+                        var path = [];
+                        for (var i = 1; i < treePathInfo.length; i++) {
+                            path.push(treePathInfo[i].name);
+                        }
+                        return [
+                            '<div class="tooltip-title">' + echarts.format.encodeHTML(path.join(' > ')) + '</div>',
+                            localization.tooltipMentions + ': ' + value
+                        ].join('');
+                    }
+                },
+                series: [{
+                    name: localization.chartTitle,
+                    type: 'treemap',
+                    visibleMin: 10,
+                    label: {
+                        show: true,
+                        formatter: '{b}\n({c})',
+                        fontSize: 12,
+                        fontWeight: 'bold'
+                    },
+                    upperLabel: {
+                        show: true,
+                        height: 22,
+                        color: '#FFFFFF',
+                        backgroundColor: '#8D1C3D',
+                        fontSize: 11
+                    },
+                    itemStyle: {
+                        borderColor: '#FFFFFF',
+                        borderWidth: 1
+                    },
+                    levels: [
+                        {
+                            itemStyle: {
+                                borderWidth: 0,
+                                gapWidth: 6
+                            }
+                        },
+                        {
+                            color: ['#8D1C3D', '#D2B48C', '#8FBC8F', '#4682B4'], // Maroon, Sand, Sage, Slate
+                            colorMappingBy: 'value',
+                            itemStyle: {
+                                gapWidth: 2
+                            }
+                        }
+                    ],
+                    data: data
+                }]
+            };
+            treemapChart.setOption(option);
+        }
+
+        function switchTab(tabId) {
+            currentTab = tabId;
+            document.getElementById('btn-wordcloud').classList.remove('active');
+            document.getElementById('btn-treemap').classList.remove('active');
+            document.getElementById('wordcloud-chart').classList.remove('active');
+            document.getElementById('treemap-chart').classList.remove('active');
+
+            if (tabId === 'wordcloud') {
+                document.getElementById('btn-wordcloud').classList.add('active');
+                document.getElementById('wordcloud-chart').classList.add('active');
+                if (wordCloudChart) wordCloudChart.resize();
+            } else {
+                document.getElementById('btn-treemap').classList.add('active');
+                document.getElementById('treemap-chart').classList.add('active');
+                if (treemapChart) treemapChart.resize();
+            }
+        }
+
+        window.onload = function() {
+            setTimeout(initCharts, 250);
+        };
+    </script>
+</body>
+</html>

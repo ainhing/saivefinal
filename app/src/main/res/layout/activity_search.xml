@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCotton"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:ignore="Overdraw">
+
+
+
+    <!-- Header / Search Bar - Synchronized with brand style -->
+    <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                android:baselineAligned="false"
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCotton"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/spacing_large"
+        android:paddingTop="54dp"
+        android:paddingBottom="12dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:translationZ="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorNoirBlack"
+            android:contentDescription="@null"/>
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            style="@style/TextAppearance.Saive.Nav"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textColor="@color/colorNoirBlack"
+            android:textColorHint="@color/colorSand"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/btnClear"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:alpha="0.3"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:visibility="gone"
+            app:tint="@color/colorNoirBlack"
+            android:contentDescription="@null"/>
+
+        <FrameLayout
+            android:id="@+id/btnCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/colorNoirBlack"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:id="@+id/tvCartBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="-4dp"
+                android:background="@drawable/bg_rounded_white_8dp"
+                android:backgroundTint="@color/colorMaroon"
+                android:gravity="center"
+                android:minWidth="14dp"
+                android:minHeight="14dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/colorNoirBlack"
+        app:layout_constraintTop_toBottomOf="@id/searchContainer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <ScrollView
+        android:id="@+id/searchSuggestions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Recent Searches -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.Saive.Nav"
+                android:text="@string/search_recent"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupRecent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:chipSpacingVertical="4dp">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_linen_shirt"
+                    android:textColor="@color/colorNoirBlack"
+                    app:chipBackgroundColor="@color/colorCotton"
+                    app:chipStrokeColor="@color/colorLinen"
+                    app:chipStrokeWidth="1dp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_wool_coat"
+                    android:textColor="@color/colorNoirBlack"
+                    app:chipBackgroundColor="@color/colorCotton"
+                    app:chipStrokeColor="@color/colorLinen"
+                    app:chipStrokeWidth="1dp" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Trending Suggestions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                style="@style/TextAppearance.Saive.Nav"
+                android:text="@string/search_trending"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="12dp"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:text="@string/col_silk_story"
+                    android:textColor="@color/colorNoirBlack"
+                    android:alpha="0.7" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="12dp"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:text="@string/monochrome_series_title"
+                    android:textColor="@color/colorNoirBlack"
+                    android:alpha="0.7" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="12dp"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:text="@string/col_minimalist"
+                    android:textColor="@color/colorNoirBlack"
+                    android:alpha="0.7" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

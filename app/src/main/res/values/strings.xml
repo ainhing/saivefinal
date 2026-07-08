@@ -1,0 +1,1185 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Saive</string>
+    <string name="search_hint">Search your wardrobe&#8230;</string>
+    <string name="cat_all">All</string>
+    <!-- tag_type_group categories (từ Firebase) -->
+    <string name="cat_top">Top</string>
+    <string name="cat_bottom">Bottom</string>
+    <string name="cat_dress">Dress</string>
+    <string name="cat_outerwear">Outerwear</string>
+    <string name="cat_shoes">Shoes</string>
+    <string name="cat_bag">Bag</string>
+    <string name="cat_accessory">Accessory</string>
+    <!-- Legacy aliases (keep for compatibility) -->
+    <string name="cat_casual">Casual</string>
+    <string name="cat_streetwear">Streetwear</string>
+    <string name="cat_hobo">Hobo</string>
+    <string name="cat_minimal">Minimal</string>
+    <string name="cat_accessories">Accessories</string>
+    <string name="cat_tshirt">T-Shirt</string>
+    <string name="cat_jeans">Jeans</string>
+    <string name="cat_jacket">Jacket</string>
+    <string name="cat_sunglasses">Sunglasses</string>
+    <string name="flash_sale_title">TIMED CURATION</string>
+    <string name="flash_sale_label">FLASH SALE</string>
+    <string name="flash_sale_desc">A limited selection of archived silhouettes, available for 48 hours only.</string>
+    <string name="btn_access_archive">ACCESS ARCHIVE</string>
+    <string name="collection_label">COLLECTION</string>
+    <string name="monochrome_series_title">THE MONOCHROME SERIES</string>
+    <string name="explore_lookbook">EXPLORE LOOKBOOK</string>
+    <string name="curated_capsule_title">CURATED CAPSULE</string>
+    <string name="material_story_title">THE ARCHITECTURE OF SILK</string>
+    <string name="material_story_desc">Our silk is sourced from sustainable farms in Vietnam, woven with a density that allows for both structure and fluidity. A material that breathes with the body.</string>
+    <string name="capsule_week_title">CAPSULE 01 / ESSENTIALS</string>
+    <string name="view_full_curation">VIEW FULL CURATION</string>
+    <string name="editorial_quote">THE WARDROBE IS A CANVAS OF INTENTIONALITY.</string>
+    <string name="footer_location">HANOI · SAIGON</string>
+    <string name="nav_back">Back</string>
+    <string name="nav_favorite">Favorite</string>
+    <string name="nav_wardrobe">Wardrobe</string>
+    <string name="nav_notify">Notify</string>
+    <string name="btn_share">SHARE</string>
+    <string name="notify_title">NOTIFICATIONS</string>
+    <string name="notify_empty_title">TOTAL QUIET</string>
+    <string name="notify_empty_desc">When there is a new drop or order update,\nwe will gently notify you.</string>
+    <string name="notify_drop_title">New Drop Available</string>
+    <string name="notify_drop_desc">The Autumn Collection has arrived. 12 new pieces.</string>
+    <string name="notify_drop_action">Explore Now</string>
+    <string name="notify_order_title">Order is on its way</string>
+    <string name="notify_order_desc">Oversized Linen Shirt Ivory· Size M is being delivered.</string>
+    <string name="notify_order_action">Track Order</string>
+    <string name="notify_capsule_title">Your wardrobe needs one more piece</string>
+    <string name="notify_capsule_desc">Capsule builder suggests a light jacket to complete the set.</string>
+    <string name="notify_capsule_action">View Wardrobe</string>
+    <string name="notify_reminder_title">You have items waiting in your wardrobe</string>
+    <string name="notify_reminder_desc">3 items saved from 2 weeks ago. Still in stock.</string>
+    <string name="notify_reminder_action">View Suggestion</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_shop">Shop</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_archive">Archive</string>
+    <string name="nav_about">ABOUT</string>
+    <string name="wardrobe_header">MY WARDROBE</string>
+    <string name="wardrobe_empty_search_title">NO PIECES FOUND</string>
+    <string name="wardrobe_empty_search_desc">We could not find any items matching your search.\nTry a different keyword or category.</string>
+
+    <string name="explore_piece">EXPLORE PIECE</string>
+    <string name="add_to_wardrobe">ADD TO WARDROBE</string>
+    <string name="added_to_wardrobe">IN WARDROBE</string>
+    <string name="btn_add_to_wardrobe">ADD TO WARDROBE</string>
+    <string name="btn_remove_wardrobe">REMOVE FROM WARDROBE</string>
+
+    <!-- Editorial Card Titles -->
+    <string name="editorial_title_1">TIMELESS CRAFT</string>
+    <string name="editorial_title_2">DAILY ELEGANCE</string>
+    <string name="editorial_title_3">THE SAIVE STORY</string>
+
+    <!-- Editorial Card Stories -->
+    <string name="editorial_story_1">Made to be worn, not replaced. Our philosophy centers on durability and timeless artisanal design.</string>
+    <string name="editorial_story_2">Quiet pieces for everyday elegance. A study of texture and shadow through tone-on-tone layering.</string>
+    <string name="editorial_story_3">Thoughtfully designed for modern living. Pieces that transition seamlessly from home to city.</string>
+
+    <string name="editorial_material_1">Vietnamese Heritage Crafts</string>
+    <string name="editorial_material_2">Raw Silk • Organic Cotton</string>
+    <string name="editorial_material_3">Architectural Forms</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_header">PROFILE</string>
+    <string name="profile_user_name">Thao Nhi Huynh</string>
+    <string name="profile_location">Ho Chi Minh, Vietnam</string>
+
+    <string name="stat_orders">Orders</string>
+    <string name="stat_collections">Collections</string>
+    <string name="stat_recent">Recent</string>
+
+    <string name="menu_my_orders">My Orders</string>
+    <string name="menu_saved_collections">Saved Collections</string>
+    <string name="menu_my_wardrobe">My Wardrobe</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_address">Shipping Address</string>
+    <string name="menu_address_sub">Manage your addresses</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_language_sub">English</string>
+    <string name="menu_esg_research">ESG Research</string>
+    <!-- ESG strings -->
+    <string name="esg_subtitle">Environmental · Social · Governance</string>
+    <string name="esg_tab_search">🔍 Search</string>
+    <string name="esg_tab_compare">⚖️ Compare</string>
+    <string name="esg_tab_simulate">📊 Simulate</string>
+    <string name="esg_search_title">Search Company ESG Scores</string>
+    <string name="esg_search_subtitle">1,000 global companies · 2010–2020</string>
+    <string name="esg_company_name_label">COMPANY NAME</string>
+    <string name="esg_search_hint">Enter company name (e.g., Company_1)</string>
+    <string name="esg_year_label">YEAR</string>
+    <string name="esg_search_btn">Search</string>
+    <string name="esg_compare_title">Compare 2 Companies</string>
+    <string name="esg_compare_subtitle">Directly check ESG and financial scores</string>
+    <string name="esg_company1_label">COMPANY 1</string>
+    <string name="esg_company2_label">COMPANY 2</string>
+    <string name="esg_compare_btn">Compare</string>
+    <string name="esg_simulate_title">Simulate ESG Impact</string>
+    <string name="esg_simulate_subtitle">Input ESG score to predict financial performance (linear regression)</string>
+    <string name="esg_overall_label">OVERALL ESG SCORE (0–100)</string>
+    <string name="esg_overall_hint">e.g., 65.5</string>
+    <string name="esg_industry_label">INDUSTRY (optional)</string>
+    <string name="esg_region_label">REGION (optional)</string>
+    <string name="esg_predict_btn">Predict</string>
+
+    <string name="esg_all_years">All years</string>
+    <string name="esg_all_industries">All industries</string>
+    <string name="esg_all_regions">All regions</string>
+    <string name="esg_loading_data">Loading data...</string>
+    <string name="esg_enter_company_name">Please enter company name</string>
+    <string name="esg_select_different_companies">Please select 2 different companies</string>
+    <string name="esg_enter_esg_score">Please enter ESG Overall score (0–100)</string>
+    <string name="esg_invalid_esg_score">ESG score must be between 0 and 100</string>
+    <string name="esg_guide_title">💡 Guide</string>
+    <string name="esg_guide_desc">Enter company name (e.g., Company_1) to view aggregated ESG score and financial performance by year.</string>
+    <string name="esg_not_found_title">Not Found</string>
+    <string name="esg_not_found_desc">No company found matching \"%1$s\".\nTry another name or use \'Company_1\', \'Company_2\'...</string>
+    <string name="esg_no_data_title">No Data</string>
+    <string name="esg_no_data_year_desc">No data found for the year %1$d. Try another year.</string>
+    <string name="esg_no_data_filter_desc">No data found for this filter.</string>
+    <string name="esg_years_data_format">%1$d years of data (%2$d–%3$d)</string>
+    <string name="esg_year_format">Year %1$d</string>
+    <string name="esg_winner_format">🏆 Higher ESG: %1$s</string>
+    <string name="esg_sim_result_title">Impact Simulation Results</string>
+    <string name="esg_sim_input_label">Input ESG score: </string>
+    <string name="esg_sim_financial_pred_title">PREDICTED FINANCIAL PERFORMANCE</string>
+    <string name="esg_sim_avg_esg_peer_title">AVERAGE ESG SCORE OF PEER SEGMENT</string>
+    <string name="esg_sim_econometric_index_title">ECONOMETRIC EXPERIMENTAL INDEX</string>
+    <string name="esg_sim_correlation_coef_label">Correlation coefficient:</string>
+    <string name="esg_sim_regression_slope_label">Regression coefficient (Slope):</string>
+    <string name="esg_sim_positive_corr">positive</string>
+    <string name="esg_sim_negative_corr">negative</string>
+    <string name="esg_sim_significant">significant</string>
+    <string name="esg_sim_weak">weak</string>
+    <string name="esg_sim_insignificant">insignificant</string>
+    <string name="esg_sim_correlation_format">r = %1$.3f (%2$s)</string>
+    <string name="esg_sim_corr_significant_pos">significant positive correlation</string>
+    <string name="esg_sim_corr_significant_neg">significant negative correlation</string>
+    <string name="esg_sim_corr_weak_pos">weak positive correlation</string>
+    <string name="esg_sim_corr_weak_neg">weak negative correlation</string>
+    <string name="esg_sim_corr_insignificant">insignificant correlation</string>
+    <string name="esg_sim_observations">observations</string>
+    <string name="esg_sim_profit_per_esg">profit / ESG point</string>
+    <string name="esg_sim_insight_high">✅ High ESG (≥70): Businesses usually have high capacity to attract sustainable investment capital, reduce legal risks, and boost brand reputation.</string>
+    <string name="esg_sim_insight_mid">⚠️ Medium ESG (50–70): Need to improve some criteria to access green capital and meet global ESG reporting requirements.</string>
+    <string name="esg_sim_insight_low">🔴 Low ESG (&lt;50): High risks in governance, environment, and social. Negatively impacts stock price and long-term cost of capital.</string>
+    <string name="esg_compare_criteria">Criteria</string>
+    <string name="menu_about">About SAIVE</string>
+    <string name="menu_faq">FAQ</string>
+    <string name="faq_subtitle">FREQUENTLY ASKED QUESTIONS</string>
+    <string name="faq_q1">What is SAIVE?</string>
+    <string name="faq_a1">SAIVE is a quiet luxury fashion brand born in Saigon. We believe beauty does not have to be loud, each collection consists of only 12 carefully crafted pieces made from sustainable materials.</string>
+    <string name="faq_q2">How do I place an order?</string>
+    <string name="faq_a2">Browse our collections, select your piece, choose your size and color, then tap \'Add to Bag\'. Once ready, proceed to checkout and fill in your shipping and payment details.</string>
+    <string name="faq_q3">What payment methods are accepted?</string>
+    <string name="faq_a3">We accept Cash on Delivery (COD), Momo Wallet, ZaloPay, Bank Transfer, and Credit/Debit Cards.</string>
+    <string name="faq_q4">How long does delivery take?</string>
+    <string name="faq_a4">Standard delivery within Vietnam takes 3–5 business days. Express options may be available depending on your location.</string>
+    <string name="faq_q5">Can I return or exchange an item?</string>
+    <string name="faq_a5">Yes. We offer a 30-day return policy, no questions asked. Items must be unworn and in original condition. Contact us to initiate a return.</string>
+    <string name="faq_q6">How do I track my order?</string>
+    <string name="faq_a6">Go to Profile → My Orders, select your order, and tap \'Track Order\' to see real-time delivery status.</string>
+    <string name="faq_q7">Are your materials sustainable?</string>
+    <string name="faq_a7">Absolutely. We use 100% natural materials including linen from pesticide-free European farms, TENCEL from recycled wood fiber, and bamboo fabric that is fully biodegradable.</string>
+    <string name="faq_q8">How do I use a voucher code?</string>
+    <string name="faq_a8">During checkout, enter your voucher code in the \'Promo Code\' field and tap Apply. The discount will be reflected in your order total.</string>
+    <string name="faq_q9">Can I save items to my wardrobe?</string>
+    <string name="faq_a9">Yes. Tap the wardrobe icon on any product to save it. Access your saved pieces anytime from the Wardrobe tab in the bottom navigation.</string>
+    <string name="faq_q10">How do I contact customer support?</string>
+    <string name="faq_a10">Visit our Contact Us page or email us at hello@saive.vn. We typically respond within 24 hours on business days.</string>
+
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="contact_tagline">We\'d love to hear from you.</string>
+    <string name="contact_desc">Reach out through any channel below or send us a message directly.</string>
+    <string name="contact_label_email">EMAIL</string>
+    <string name="contact_label_phone">PHONE</string>
+    <string name="contact_label_instagram">INSTAGRAM</string>
+    <string name="contact_label_send_message">SEND A MESSAGE</string>
+    <string name="contact_btn_send">SEND MESSAGE</string>
+    <string name="contact_footer_note">We typically respond within 24 hours on business days.\nHANOI · SAIGON</string>
+    <string name="contact_error_fields">Please fill in all fields</string>
+    <string name="contact_success_sent">Message sent. We\'ll get back to you shortly.</string>
+    <string name="contact_hint_message">Tell us how we can help&#8230;</string>
+    <string name="menu_my_coupons">My Vouchers</string>
+    <string name="auth_login_title">Login</string>
+    <string name="auth_signup_title">Sign up</string>
+    <string name="label_password">Password</string>
+    <string name="label_confirm_password">Confirm Password</string>
+    <string name="label_name">Name</string>
+    <string name="label_phone">Phone number</string>
+    <string name="checkout_select_address">Select Shipping Address</string>
+    <string name="checkout_select_address_desc">Choose where you want your order to be delivered.</string>
+    <string name="checkout_add_new_address">+ Add New Address</string>
+    <string name="menu_logout">LOGOUT</string>
+    <string name="menu_login">LOGIN</string>
+    <string name="menu_signup">SIGN UP</string>
+    <string name="menu_forgot_password">Forgot password?</string>
+    <string name="menu_remember_me">Remember me</string>
+    <string name="btn_continue_as_guest">LOGIN AS A GUEST</string>
+    <string name="msg_guest_mode_active">You are browsing as a Guest</string>
+    <string name="msg_please_login_to_continue">Please login to continue</string>
+    <string name="msg_guest_profile_prompt">Browsing as Guest. Tap to Login.</string>
+    <string name="msg_guest_checkout_prompt">Please login to process payment.</string>
+    <string name="auth_no_account">Don\'t have an account? Sign up</string>
+    <string name="auth_has_account">Already have an account? Login</string>
+    <string name="auth_terms_agree">I agree the </string>
+    <string name="auth_terms_link">Terms &amp; Conditions</string>
+    <string name="terms_title">Terms &amp; Conditions</string>
+    <string name="terms_content">Welcome to SAIVE. By using our app, you agree to the following terms:\n\n1. Use of Service: You must provide accurate information.\n2. Privacy: Your data is protected per our policy.\n3. Content: All designs are property of SAIVE.\n4. Liability: We are not liable for indirect damages.\n\nThank you for choosing SAIVE.</string>
+    <string name="btn_close">Close</string>
+    <string name="menu_delete_account">DELETE ACCOUNT</string>
+    <string name="dialog_delete_account_title">Delete Account</string>
+    <string name="dialog_delete_account_message">Are you sure you want to permanently delete your account? This action cannot be undone.</string>
+    <string name="dialog_delete_confirm">Delete</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <string name="section_recent">Recently Viewed</string>
+    <string name="view_all">VIEW ALL</string>
+
+    <string name="col_minimalist">Minimalist</string>
+    <string name="col_silk_story">The Silk Story</string>
+    <string name="col_winter_24">Winter \'24</string>
+
+    <string name="stat_orders_count">12</string>
+    <string name="stat_collections_count">4</string>
+    <string name="stat_recent_count">28</string>
+    <string name="brand_name">SAIVE</string>
+    <string name="coupon_title">Exclusive Invitation</string>
+    <string name="coupon_desc">Access archive &amp; seasonal rewards</string>
+    <string name="coupon_code">SAIVE_S24_EXTRA</string>
+    <string name="coupon_label">Coupon</string>
+    <string name="acc_unread">Unread</string>
+    <string name="expires_format">Expires: %1$s</string>
+    <string name="label_description">DESCRIPTION</string>
+    <string name="see_more">See more</string>
+    <string name="see_less">See less</string>
+    <string name="label_see_more">See more</string>
+    <string name="label_see_less">See less</string>
+    <string name="label_color">COLOR</string>
+    <string name="label_product_details">PRODUCT DETAILS</string>
+    <string name="label_material">Material</string>
+    <string name="label_origin">Origin</string>
+    <string name="label_instructions">Instructions</string>
+    <string name="label_size">Size</string>
+    <string name="label_size_guide">Size Guide</string>
+    <string name="label_size_guide_short">Size Guide</string>
+    <string name="label_bust">Bust</string>
+    <string name="label_waist">Waist</string>
+    <string name="label_hip">Hip</string>
+    <string name="label_measurement_unit">cm</string>
+    <string name="label_compare_size">Compare</string>
+    <string name="label_compare_size_desc">Compare with your clothes</string>
+    <string name="label_length_guide">Length selection guide by style</string>
+    <string name="label_length_guide_desc">Illustrating product size according to height</string>
+    <string name="label_mysize_assist">MySize ASSIST</string>
+    <string name="label_mysize_assist_desc">See the recommended size for you</string>
+    <string name="label_product">Product</string>
+    <string name="label_body">Body</string>
+    <string name="label_total">Total</string>
+    <string name="label_reviews">REVIEWS</string>
+    <string name="label_write_review">WRITE A REVIEW</string>
+    <string name="label_rating">Rating</string>
+    <string name="label_comment">Comment</string>
+    <string name="label_submit">SUBMIT</string>
+    <string name="label_attach_photos">ATTACH PHOTOS</string>
+    <string name="hint_review">Tell us what you think about this piece&#8230;</string>
+    <string name="sort_price_low_high">Price: Low to High</string>
+    <string name="sort_price_high_low">Price: High to Low</string>
+    <string name="sort_alphabetical_az">Alphabetical: A-Z</string>
+    <string name="sort_alphabetical_za">Alphabetical: Z-A</string>
+    <string name="sort_latest">Latest Arrivals</string>
+    <string name="sort_oldest">Oldest First</string>
+    <string name="favorites_items_count">%1$d ITEMS</string>
+    <string name="favorites_empty_state">NO FAVORITES YET</string>
+    <string name="cart_title">SHOPPING BAG</string>
+    <string name="cart_empty_title">YOUR BAG IS EMPTY</string>
+    <string name="cart_empty_desc">Explore our collections and add pieces\nthat resonate with you.</string>
+    <string name="btn_checkout">CHECKOUT</string>
+    <string name="coupon_hint">Enter coupon code</string>
+    <string name="btn_apply">APPLY</string>
+    <string name="coupon_applied">Coupon applied: 10% discount</string>
+    <string name="coupon_invalid">Invalid coupon code</string>
+    <string name="coupon_empty">Please enter a coupon code</string>
+    <string name="search_recent">RECENT SEARCHES</string>
+    <string name="search_trending">TRENDING NOW</string>
+    <string name="chip_linen_shirt">Linen shirt</string>
+    <string name="chip_wool_coat">Wool coat</string>
+    <string name="label_complete_look">COMPLETE THE LOOK</string>
+    <!-- About Brand Strings -->
+    <string name="about_hero_title">Quietly Confident.\nUnspoken.</string>
+    <string name="about_hero_subtitle">SAIVE · QUIET LUXURY · VIETNAM</string>
+    <string name="about_origin_year">2022</string>
+    <string name="about_origin_text">Starting from a simple question:\nwhy does beauty have to be loud?\nSAIVE was born in Saigon, from\nthe belief that simplicity\nis the highest form of luxury.</string>
+    <string name="about_material_title">We choose the fabric before the design.</string>
+    <string name="about_material_linen">LINEN</string>
+    <string name="about_material_linen_desc">Sourced from pesticide-free European farms. Breathable.</string>
+    <string name="about_material_tencel">TENCEL</string>
+    <string name="about_material_tencel_desc">Recycled wood fiber. Soft as silk. 50%% cooler than cotton.</string>
+    <string name="about_material_bamboo">BAMBOO</string>
+    <string name="about_material_bamboo_desc">Regrows in 90 days. Pesticide-free. Fully biodegradable.</string>
+    <string name="about_philosophy_quote">"Each collection consists of only 12 pieces.\nNo more. No less."</string>
+    <string name="about_philosophy_sub">We don\'t follow seasons. We follow life\'s rhythm.</string>
+    <string name="about_stats_items_value">12</string>
+    <string name="about_stats_items_label">Pieces per\ncollection</string>
+    <string name="about_stats_natural_value">100%</string>
+    <string name="about_stats_natural_label">Natural\nmaterials</string>
+    <string name="about_stats_sale_value">0</string>
+    <string name="about_stats_sale_label">Seasonal\nSales</string>
+    <string name="about_stats_founded_value">2022</string>
+    <string name="about_stats_founded_label">Founded in\nSaigon</string>
+    <string name="about_commit_title">Our Commitments</string>
+    <string name="about_commit_1">30-day returns, no questions asked</string>
+    <string name="about_commit_2">Fully reusable packaging</string>
+    <string name="about_commit_3">Fair wages for all artisans</string>
+    <string name="about_commit_4">Lifetime repair guarantee</string>
+    <string name="updating_language">Updating language&#8230;</string>
+
+    <!-- Checkout Strings -->
+    <string name="checkout_shipping_title">SHIPPING INFO</string>
+    <string name="checkout_payment_title">PAYMENT METHOD</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="label_phone_number">Phone Number</string>
+    <string name="label_email">Email Address</string>
+    <string name="label_address">Street Address</string>
+    <string name="label_country">Country</string>
+    <string name="hint_choose_country">Choose your country</string>
+    <string name="label_save_info">Save this information for next time</string>
+    <string name="btn_continue_payment">CONTINUE TO PAYMENT</string>
+    <string name="btn_place_order">PLACE ORDER</string>
+    <string name="btn_continue_payment_format">CONTINUE TO PAYMENT (%1$s)</string>
+    <string name="btn_place_order_format">PLACE ORDER (%1$s)</string>
+    <string name="format_summary_size">Size: %1$s</string>
+    <string name="format_discount_label" translatable="false">%1$s (%2$s)</string>
+    <string name="format_negative_price" translatable="false">-%1$s</string>
+    <string name="format_order_attributes">Size: %1$s | Qty: %2$d</string>
+    <string name="format_order_attributes_with_color">Size: %1$s | Color: %2$s | Qty: %3$d</string>
+    <string name="format_order_see_more" tools:ignore="PluralsCandidate">See more (+%1$d items)</string>
+    <string name="format_expected_delivery">Expected: %1$s</string>
+    <string name="checkout_order_summary">ORDER SUMMARY</string>
+    <string name="checkout_shipping_to">Shipping to</string>
+
+    <string name="payment_bank">Bank Transfer</string>
+    <string name="payment_vietqr">VietQR</string>
+    <string name="payment_cod">Cash on Delivery (COD)</string>
+    <string name="payment_bank_desc">Transfer via Vietcombank, Techcombank&#8230;</string>
+    <string name="payment_vietqr_desc">Scan and pay with any banking apps</string>
+    <string name="payment_cod_desc">Pay when you receive the package</string>
+
+    <string name="label_city">City / Province</string>
+    <string name="hint_choose_city">Choose your city/province</string>
+    <string name="label_district">District</string>
+    <string name="hint_choose_district">Choose your district</string>
+    <string name="label_ward">Ward / Commune</string>
+    <string name="hint_choose_ward">Choose your ward/commune</string>
+    <string name="error_generic">An error occurred. Please try again.</string>
+    <string name="error_required_field">This field is required</string>
+    <string name="error_phone_length">Please enter 9 digits</string>
+    <string name="error_select_city_first">Please select city/province first</string>
+    <string name="error_select_district_first">Please select district first</string>
+    <string name="error_select_city">Please select city</string>
+    <string name="error_select_district">Please select district</string>
+    <string name="error_select_ward">Please select ward</string>
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="tab_active">Active</string>
+    <string name="tab_completed">Completed</string>
+    <string name="tab_cancelled">Cancelled</string>
+    <string name="btn_track_order">Track Order</string>
+    <string name="btn_leave_review">Leave Review</string>
+    <string name="btn_reorder">Re-Order</string>
+    <string name="order_item_attributes">Size: %1$s | Qty: %2$dpcs</string>
+
+    <string name="error_name_required">Name is required</string>
+    <string name="error_email_required">Email is required</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_short">Password must be at least 6 characters</string>
+    <string name="error_passwords_not_match">Passwords do not match</string>
+    <string name="error_phone_required">Phone number is required</string>
+    <string name="error_agree_terms">Please agree to the Terms &amp; Conditions</string>
+    <string name="toast_signup_success">Signup successful! Please login.</string>
+    <string name="payment_method_cash">Cash</string>
+    <string name="payment_method_card">Credit &amp; Debit Card</string>
+    <string name="payment_method_add_card">Add Card</string>
+    <string name="payment_method_more">More Payment Options</string>
+    <string name="payment_card_select_title">SELECT CARD</string>
+    <string name="payment_success_title">ORDER PLACED SUCCESSFULLY</string>
+    <string name="payment_success_desc">Thank you for choosing SAIVE. Your order has been received and is being prepared with care.</string>
+    <string name="btn_continue_shopping">CONTINUE SHOPPING</string>
+    <string name="btn_view_order">VIEW ORDER STATUS</string>
+
+    <!-- Address Data -->
+    <string-array name="countries_array">
+        <item>Vietnam</item>
+        <item>Singapore</item>
+        <item>Thailand</item>
+        <item>Malaysia</item>
+        <item>Japan</item>
+        <item>South Korea</item>
+        <item>China</item>
+    </string-array>
+
+    <string-array name="cities_vn_array">
+        <item>Ho Chi Minh City</item>
+        <item>Hanoi</item>
+        <item>Da Nang</item>
+        <item>Can Tho</item>
+        <item>Hai Phong</item>
+        <item>Hue</item>
+        <item>Da Lat</item>
+    </string-array>
+
+    <string-array name="districts_hcm_array">
+        <item>District 1</item>
+        <item>District 3</item>
+        <item>District 5</item>
+        <item>District 7</item>
+        <item>Binh Thanh District</item>
+        <item>Tan Binh District</item>
+        <item>Phu Nhuan District</item>
+        <item>Thu Duc City</item>
+    </string-array>
+
+    <string-array name="wards_hcm_d1_array">
+        <item>Ben Nghe Ward</item>
+        <item>Ben Thanh Ward</item>
+        <item>Co Giang Ward</item>
+        <item>Cau Kho Ward</item>
+        <item>Cau Ong Lanh Ward</item>
+        <item>Da Kao Ward</item>
+        <item>Nguyen Cu Trinh Ward</item>
+        <item>Nguyen Thai Binh Ward</item>
+        <item>Pham Ngu Lao Ward</item>
+        <item>Tan Dinh Ward</item>
+    </string-array>
+
+    <string-array name="districts_hanoi_array">
+        <item>Hoan Kiem District</item>
+        <item>Ba Dinh District</item>
+        <item>Dong Da District</item>
+        <item>Hai Ba Trung District</item>
+        <item>Tay Ho District</item>
+        <item>Cau Giay District</item>
+        <item>Thanh Xuan District</item>
+    </string-array>
+    <!-- Address Management -->
+    <string name="address_title">MY ADDRESSES</string>
+    <string name="address_add_new">ADD NEW ADDRESS</string>
+    <string name="address_empty">No addresses saved yet.</string>
+    <string name="address_default_label">DEFAULT</string>
+    <string name="address_set_default">Set as default</string>
+    <string name="address_edit">Edit</string>
+    <string name="address_delete">Delete</string>
+    <string name="address_add_title">ADD ADDRESS</string>
+    <string name="address_edit_title">EDIT ADDRESS</string>
+    <string name="address_save">SAVE ADDRESS</string>
+    <string name="address_label_home">Home</string>
+    <string name="address_label_office">Office</string>
+    <string name="address_label_other">Other</string>
+
+    <!-- Collection Screen Strings -->
+    <string name="collection_view_all">VIEW ALL PIECES</string>
+    <string name="collection_story_title">DESIGN STORY</string>
+    <string name="collection_items_count">%1$d PIECES</string>
+    <string name="nav_collections">COLLECTIONS</string>
+    <string name="collection_filter">FILTER &amp; SORT</string>
+
+    <!-- Collections List Screen -->
+    <string name="collections_list_title">OUR\nCOLLECTIONS</string>
+    <string name="col_num_1">01</string>
+    <string name="col_num_2">02</string>
+    <string name="col_num_3">03</string>
+    <string name="col_edition_2024">EDITION\n2024</string>
+    <string name="col_archive_vol1">ARCHIVE\nVOL. 1</string>
+    <string name="col_new_arrival">NEW\nARRIVAL</string>
+    <string name="col_time_1">09:00</string>
+    <string name="col_date_1">12\nOCTOBER</string>
+    <string name="col_time_2">14:30</string>
+    <string name="col_date_2">15\nOCTOBER</string>
+    <string name="col_time_3">10:00</string>
+    <string name="col_date_3">20\nOCTOBER</string>
+    <string name="col_time_4">14:00</string>
+    <string name="col_date_4">15\nSEPTEMBER</string>
+    <string name="col_winter_title">WINTER\nSTORY</string>
+    <string name="col_preview_label">PREVIEW\nONLY</string>
+    <string name="col_silk_story_title">THE ARCHITECTURE\nOF SILK</string>
+    <string name="col_monochrome_title">THE MONOCHROME\nSERIES</string>
+    <string name="col_autumn_drop_title">THE AUTUMN\nCOLLECTION</string>
+    <string name="col_autumn_drop_story">Autumn Drop: Embracing the transition with warm textures and earthy tones.</string>
+
+    <string name="btn_explore_collection">EXPLORE COLLECTION</string>
+    <string name="bulletin_header">BULLETIN</string>
+    <string name="posted_time">Posted %1$s ago</string>
+    <string name="notify_detail_description_placeholder">Our new collection has finally arrived. This season, we focused on sustainable materials and timeless silhouettes. Crafted from premium Italian wool and recycled silk, each garment is designed to be a staple in your wardrobe for years to come.</string>
+    <string name="label_editorial_02">EDITORIAL 02</string>
+    <string name="label_autumn_winter">AUTUMN / WINTER</string>
+    <string name="label_new_collection">NEW COLLECTION</string>
+    <string name="label_shop_now">SHOP NOW</string>
+    <string name="label_flash_sale">Flash Sale</string>
+    <string name="label_sale">SALE</string>
+    <string name="chip_linen">Linen</string>
+    <string name="chip_silk">Silk</string>
+    <string name="chip_noir">Noir</string>
+    <string name="chip_ivory">Ivory</string>
+    <string name="label_item_total">Item total:</string>
+    <string name="label_discount">Discount:</string>
+    <string name="label_delivery">Delivery:</string>
+    <string name="label_free">Free</string>
+    <string name="btn_payment">Payment</string>
+    <string name="promo_code_hint">Promo code</string>
+    <!-- Coupon Screen -->
+    <string name="coupon_available_title">Available Vouchers</string>
+    <string name="coupon_search_hint">Search for offers&#8230;</string>
+    <string name="coupon_copy">COPY</string>
+    <string name="coupon_valid_until">Valid until: %1$s</string>
+    <string name="coupon_off">OFF</string>
+    <string name="coupon_no_coupons">NO VOUCHERS YET</string>
+
+    <!-- Coupon Detail -->
+    <string name="coupon_detail_how_to">How to use</string>
+    <string name="coupon_detail_steps">• Copy the code below.\n• Go to your cart or checkout page.\n• Paste the code into the \'Coupon code\' box.\n• Enjoy exclusive offers from Saive!</string>
+    <string name="coupon_detail_your_code">YOUR CODE</string>
+    <string name="coupon_detail_copy_use">Copy &amp; Use Now</string>
+    <string name="coupon_detail_welcome_desc">Get 20%% off on your first order</string>
+
+    <!-- Address Labels -->
+    <string name="label_address_label">Address Label</string>
+    <string name="hint_full_name">e.g. Thao Nhi Huynh</string>
+    <string name="hint_phone_number">+84 901 234 567</string>
+    <string name="hint_street_address">House number, street name&#8230;</string>
+    <string name="hint_city">e.g. Ho Chi Minh</string>
+    <string name="hint_district">e.g. District 1</string>
+    <string name="suggestion_trousers">Linen Trousers</string>
+    <string name="suggestion_loafers">Leather Loafers</string>
+    <string name="suggestion_scarf">Silk Scarf</string>
+    <string name="toast_added_favorites">Added to Favorites</string>
+    <string name="toast_removed_favorites">Removed from Favorites</string>
+    <string name="toast_already_in_wardrobe">Already in Wardrobe</string>
+    <string name="toast_photo_feature_later">Photo selection feature will be integrated later</string>
+    <string name="toast_input_comment">Please enter your comment</string>
+    <string name="toast_review_thanks">Thank you for your review!</string>
+    <string name="review_user_you">You</string>
+    <string name="share_message_format">Check out this %1$s on Saive: %2$s</string>
+    <string name="lang_en">English</string>
+    <string name="lang_vi">Tiếng Việt</string>
+    <string name="lang_zh">中文</string>
+    <string name="notifications_enabled">Notifications enabled</string>
+    <string name="notifications_disabled">Notifications disabled</string>
+    <string name="menu_admin_portal">Admin Portal</string>
+    <string name="bank_transfer_title">Bank Transfer</string>
+    <string name="bank_transfer_scan_desc">Scan this QR Code to process your payment</string>
+    <string name="bank_transfer_expire_format">This QR Code will be expired in %1$s</string>
+    <string name="bank_transfer_regenerate">Regenerate the QR Code</string>
+    <string name="bank_transfer_confirm_success">Confirm Payment Success</string>
+    <string name="admin_menu_flash_sale">Flash Sale</string>
+    <string name="admin_menu_active_count_format">%1$d active</string>
+    <string name="alert_title_default">Alert</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="select_shipping_address">Select Shipping Address</string>
+    <string name="add_new_address_caps">ADD NEW ADDRESS</string>
+    <string name="select_size">Select Size</string>
+    <string name="valid_until_format">Valid until: %1$s</string>
+    <string name="error_email_already_exists">Email already exists</string>
+    <string name="toast_update_success">Update successful</string>
+    <string name="toast_delete_success">Deleted successfully</string>
+    <string name="error_select_location">Please select a location on map</string>
+    <string name="error_load_failed_format">Load Error: %1$s</string>
+    <string name="birthday_saved_format">Birthday saved: %1$s</string>
+    <string name="admin_dashboard_title">Dashboard</string>
+    <string name="admin_greeting">Hello,</string>
+    <string name="admin_manage_orders">Order Management</string>
+    <string name="admin_search_order_hint">Search by customer name&#8230;</string>
+    <string name="admin_search_product_hint">Search by product name&#8230;</string>
+    <string name="admin_search_blog_hint">Search by title, author&#8230;</string>
+    <string name="admin_search_user_hint">Search by name, email&#8230;</string>
+    <string name="admin_manage_blogs">Manage Blogs</string>
+    <string name="admin_tab_all">All</string>
+    <string name="admin_tab_pending">Pending</string>
+    <string name="admin_tab_confirmed">Confirmed</string>
+    <string name="admin_tab_shipping">Shipping</string>
+    <string name="admin_tab_delivered">Delivered</string>
+    <string name="admin_tab_cancelled">Cancelled</string>
+    <string name="admin_tab_review_pending">Pending</string>
+    <string name="admin_tab_approved">Approved</string>
+    <string name="admin_tab_rejected">Rejected</string>
+    <string name="admin_shortcuts">SHORTCUTS</string>
+    <string name="admin_pending_orders_shortcut">Pending Orders</string>
+    <string name="admin_unapproved_reviews_shortcut">Unapproved Reviews</string>
+    <string name="admin_customer_info">CUSTOMER INFORMATION</string>
+    <string name="admin_products_label">Product Catalog</string>
+    <string name="admin_update_status_title">UPDATE STATUS</string>
+    <string name="admin_update_status_btn">Update Status</string>
+    <string name="admin_btn_delete">Delete</string>
+    <string name="admin_error_update_failed">Update failed</string>
+    <string name="admin_error_delete_failed">Delete failed</string>
+    <string name="admin_error_login_failed">Incorrect admin email or password</string>
+    <string name="admin_stats_revenue">REVENUE</string>
+    <string name="admin_stats_orders">ORDERS</string>
+    <string name="admin_stats_users">USERS</string>
+    <string name="admin_stats_blogs">BLOGS</string>
+    <string name="admin_stats_reviews">REVIEWS</string>
+    <string name="admin_stats_products">PRODUCTS</string>
+    <string name="admin_growth">GROWTH ANALYTICS</string>
+    <string name="admin_recent_activity">RECENT ACTIVITY</string>
+    <string name="admin_menu_inventory">Inventory</string>
+    <string name="admin_menu_orders">Orders</string>
+    <string name="admin_menu_flashsale">Flash Sale</string>
+    <string name="admin_menu_marketing">Vouchers</string>
+    <string name="admin_menu_users">Users</string>
+    <string name="admin_menu_reviews">Reviews</string>
+    <string name="admin_push_notify">Send system-wide push notification</string>
+    <string name="admin_broadcast_push">BROADCAST PUSH NOTIFICATION</string>
+    <string name="admin_broadcast_desc">This message will be sent to all users immediately.</string>
+    <string name="admin_marketing_title">MARKETING &amp; VOUCHERS</string>
+    <string name="admin_add_voucher">CREATE NEW VOUCHER</string>
+    <string name="admin_voucher_name">Voucher Name</string>
+    <string name="admin_voucher_code">Discount Code</string>
+    <string name="admin_voucher_discount">Discount Value (%, VND)</string>
+    <string name="admin_voucher_expiry">Expiry Date</string>
+    <string name="admin_voucher_desc">Description</string>
+    <string name="admin_save_voucher">SAVE VOUCHER</string>
+    <string name="admin_voucher_status">Status</string>
+    <string name="admin_voucher_used" tools:ignore="PluralsCandidate">%1$d Used</string>
+    <string name="admin_voucher_active">Active</string>
+    <string name="admin_voucher_expired">Expired</string>
+    <string name="admin_voucher_scheduled">Scheduled</string>
+    <string name="admin_delete_voucher">Delete Voucher</string>
+    <string name="admin_delete_voucher_msg">Are you sure you want to delete this voucher? This cannot be undone.</string>
+    <string name="admin_select_category">Select Category</string>
+    <string name="admin_add_piece">ADD NEW PIECE</string>
+    <string name="admin_save_piece">SAVE PIECE</string>
+    <string name="admin_flash_sale_title">FLASH SALE CAMPAIGN</string>
+    <string name="admin_create_flash_sale">CREATE CAMPAIGN</string>
+    <string name="admin_flash_sale_products">PARTICIPATING PIECES</string>
+    <string name="admin_flash_sale_discount">Campaign Discount (%)</string>
+    <string name="admin_flash_sale_duration">Duration (Hours)</string>
+    <string name="admin_flash_sale_start">Start Time</string>
+    <string name="admin_save_campaign">ACTIVATE FLASH SALE</string>
+    <string name="admin_select_products">Select Products</string>
+    <string name="admin_user_mgmt">USER DIRECTORY</string>
+    <string name="label_user_role_vip">VIP CUSTOMER</string>
+    <string name="label_user_role_admin">ADMIN</string>
+    <string name="label_user_role_customer">CUSTOMER</string>
+    <string name="admin_logout_confirm">Select Logout to exit Admin</string>
+    <string name="admin_inventory_title">INVENTORY MANAGEMENT</string>
+    <string name="admin_order_mgmt">ORDER MANAGEMENT</string>
+    <string name="order_status_pending">Pending</string>
+    <string name="order_status_processing">Processing</string>
+    <string name="order_status_shipped">Shipped</string>
+    <string name="order_status_completed">Completed</string>
+    <string name="label_total_amount">Total Amount</string>
+    <string name="label_customer">CUSTOMER</string>
+    <string name="btn_mark_shipped">MARK AS SHIPPED</string>
+    <string name="btn_export_invoice">EXPORT INVOICE (PDF)</string>
+    <string name="track_order_title">Track Order</string>
+    <string name="label_order_id_format">Order #%1$s</string>
+    <string name="label_expected_delivery">Exp. Delivery by %1$s</string>
+    <string name="order_placed">Order Placed</string>
+    <string name="order_in_transit">Order in transit</string>
+    <string name="order_delivered_success">Delivered Successfully</string>
+    <string name="order_not_delivered">Not Delivered yet</string>
+    <string name="order_items_count_format" tools:ignore="PluralsCandidate">%1$d Items: %2$s</string>
+
+    <string name="inventory_low_stock">Low Stock</string>
+    <string name="inventory_out_of_stock">Out of Stock</string>
+    <string name="label_shipping_address">Shipping Address</string>
+    <string name="btn_add">ADD</string>
+    <string name="btn_change">CHANGE</string>
+    <string name="label_add_new_plus">+ ADD NEW</string>
+    <string name="mock_user_name">NHI HUYNH</string>
+    <string name="mock_review_date">24 OCT 2023</string>
+    <string name="mock_review_comment">The material is incredible. It feels so soft and looks very elegant.</string>
+
+    <string name="logout_title">Logout</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="toast_logged_out">Logged out</string>
+    <string name="toast_account_deleted">Account deleted</string>
+    <string name="col_headline_format">%1$s\nTimeless Elegance.</string>
+    <string name="col_subheadline_default">Discover our latest collection of premium silk and wool pieces designed for your everyday luxury.</string>
+    <string name="col_why_saive">Why Saive?</string>
+    <string name="col_why_desc">We believe in slow fashion. Every piece is crafted with care, ensuring longevity and timeless style that transcends seasons.</string>
+    <string name="col_shop_collection">Shop the Collection</string>
+    <string name="col_btn_shop">SHOP THE COLLECTION</string>
+    <string name="btn_shop_monochrome">SHOP THE MONOCHROME</string>
+    <string name="btn_shop_autumn">SHOP THE AUTUMN</string>
+    <string name="btn_shop_silk">SHOP THE SILK</string>
+    <string name="col_feature_1">Pure Silk</string>
+    <string name="col_feature_2">Premium Quality</string>
+    <string name="col_feature_3">Local Sourcing</string>
+    <string name="col_feature_4">Eco-Friendly</string>
+    <string name="col_copyright">© 2024 SAIVE. All rights reserved.</string>
+
+    <!-- Product Mock Data -->
+    <string name="price_3450">3.450.000 ₫</string>
+    <string name="price_1150">1.150.000 ₫</string>
+    <string name="price_950">950.000 ₫</string>
+    <string name="price_1800">1.800.000 ₫</string>
+    <string name="price_550">550.000 ₫</string>
+    <string name="price_2950">2.950.000 ₫</string>
+    <string name="price_2250">2.250.000 ₫</string>
+    <string name="price_4200">4.200.000 ₫</string>
+    <string name="price_2850">2.850.000 ₫</string>
+    <string name="price_1250">1.250.000 ₫</string>
+    <string name="price_850">850.000 ₫</string>
+    <string name="price_2100">2.100.000 ₫</string>
+
+    <string name="prod_noir_coat">Noir Wool Coat</string>
+    <string name="prod_city_trousers">City Trousers</string>
+    <string name="prod_min_knit">Minimalist Knit</string>
+    <string name="prod_archive_tote">Archive Tote</string>
+    <string name="prod_wool_scarf">Wool Blend Scarf</string>
+    <string name="prod_double_blazer">Double Blazer</string>
+    <string name="prod_ankle_boots">Ankle Boots</string>
+    <string name="prod_autumn_trench">Autumn Trench</string>
+    <string name="prod_silk_gown">Silk Gown</string>
+    <string name="prod_flowing_pants">Flowing Pants</string>
+    <string name="prod_min_top">Minimal Top</string>
+    <string name="prod_silk_blazer">Silk Blazer</string>
+
+    <!-- Monochrome Collection -->
+    <string name="col_monochrome_headline">The Art of\nAbsence.</string>
+    <string name="col_monochrome_subheadline">A study of light and shadow. Minimalist silhouettes in a palette of deep noir and crisp ivory.</string>
+    <string name="col_monochrome_why_title">Pure Minimalism</string>
+    <string name="col_monochrome_why_desc">Every line is intentional. Our Monochrome series focuses on the purity of form and the quality of construction.</string>
+
+    <!-- Autumn Collection -->
+    <string name="col_autumn_headline">Earthy\nTransitions.</string>
+    <string name="col_autumn_subheadline">Warm textures and layered forms. Embracing the change of season with premium wool blends and rich tones.</string>
+    <string name="col_autumn_why_title">Seasonal Warmth</string>
+    <string name="col_autumn_why_desc">Crafted for the shifting winds. We use high-density wool and thermal silk to keep you elegant and warm.</string>
+
+    <!-- Silk Collection -->
+    <string name="col_silk_headline">Architecture\nof Silk.</string>
+    <string name="col_silk_subheadline">Fluidity meets structure. Sourced from traditional Vietnamese looms, our silk pieces redefine modern elegance.</string>
+    <string name="col_silk_why_title">Vietnamese Heritage</string>
+    <string name="col_silk_why_desc">Our silk is woven in Bao Loc, known for its incredible luster and durability. A material that breathes with the body.</string>
+
+    <!-- Essentials Collection -->
+    <string name="col_essentials_headline">THE ESSENTIALS</string>
+    <string name="col_essentials_subheadline">CURATED PIECES FOR EVERY DAY</string>
+    <string name="col_essentials_why_title">TIMELESS DESIGN</string>
+    <string name="col_essentials_why_desc">Built for longevity and versatility in any wardrobe.</string>
+    <string name="btn_shop_essentials">SHOP ESSENTIALS</string>
+
+    <!-- Urban Archive Collection -->
+    <string name="col_urban_headline">URBAN ARCHIVE</string>
+    <string name="col_urban_subheadline">LIMITED DROP: STREET ARCHITECTURE</string>
+    <string name="col_urban_why_title">STREET HERITAGE</string>
+    <string name="col_urban_why_desc">Exploring the intersection of function and form.</string>
+    <string name="btn_explore_drop">EXPLORE DROP</string>
+
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="change_profile_title">Change Profile</string>
+    <string name="label_personal_information">Personal Information</string>
+    <string name="change_photo_title">Change Photo</string>
+    <string name="profile_birthday">Birthday</string>
+    <string name="profile_gender">Gender</string>
+    <string name="profile_not_set">Not set</string>
+    <string name="profile_save">Save</string>
+    <string name="profile_save_changes">Save Changes</string>
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="label_detail_forgot_password">Enter your email to receive a verification code</string>
+    <string name="forgot_password_back_to_login">Back to Login</string>
+    <string name="verify_otp_title">Verify OTP</string>
+    <string name="otp_hint">-</string>
+    <string name="label_detail_verify_otp">Code send to your email</string>
+    <string name="verify_opt_resend_code">Resend Code</string>
+    <string name="new_password_title">New Password</string>
+    <string name="menu_payment_cards">Payment Cards</string>
+    <string name="menu_empty_payment_cards">Empty Payment Cards</string>
+    <string name="menu_dark_mode">Dark Mode</string>
+    <string name="btn_view_collection">VIEW COLLECTION</string>
+    <string name="label_account_settings">ACCOUNT SETTINGS</string>
+    <string name="label_preferences">PREFERENCES</string>
+    <string name="label_support_legal">SUPPORT &amp; LEGAL</string>
+
+    <string name="error_enter_otp">Please enter OTP</string>
+    <string name="error_otp_length">OTP must be 6 digits</string>
+    <string name="error_invalid_otp">Invalid OTP</string>
+    <string name="toast_new_otp">New OTP: %1$s</string>
+    <string name="btn_hide">HIDE</string>
+    <string name="btn_reject">REJECT</string>
+    <string name="btn_approve">APPROVE</string>
+    <string name="cart_empty_error">Your bag is empty</string>
+    <string name="toast_coupon_applied_percent">Coupon applied: %1$d%% off</string>
+    <string name="dialog_remove_item_title">Remove Item</string>
+    <string name="dialog_remove_item_msg">Are you sure you want to remove this item from the bag?</string>
+    <string name="dialog_remove">Remove</string>
+    <string name="label_select_size">Select Size</string>
+    <string name="label_select_color">Select Color</string>
+    <string name="price_zero_format">0 ₫</string>
+    <string name="label_color_format">Color: %1$s</string>
+    <string name="label_size_format">Size: %1$s</string>
+    <string name="timer_default">00</string>
+    <string name="discount_format">-%1$d%%</string>
+    <string name="toast_added_to_wardrobe">Added %1$d to wardrobe</string>
+    <string name="quantity_default">1</string>
+
+    <string name="card_preview_number">**** **** **** ****</string>
+    <string name="card_preview_holder">CARD HOLDER</string>
+    <string name="card_preview_expiry">MM/YY</string>
+    <string name="label_card_holder_caps">CARD HOLDER</string>
+    <string name="label_expires_caps">EXPIRES</string>
+    <string name="error_invalid_card_number">Invalid card number</string>
+    <string name="toast_card_added">Card added successfully</string>
+
+    <string name="coupon_detail_discount_format">Get %1$s OFF on your order</string>
+    <string name="toast_coupon_copied">Copied code %1$s</string>
+
+    <string name="label_select_category">SELECT CATEGORY</string>
+    <string name="error_select_category">Please select a category</string>
+    <string name="toast_notification_broadcasted">Notification broadcasted successfully</string>
+    <string name="cat_promotions">Promotions</string>
+    <string name="cat_orders">Orders</string>
+    <string name="cat_system">System</string>
+    <string name="cat_update">Update</string>
+    <string name="btn_add_to_bag">ADD TO BAG</string>
+    <string name="label_quantity">QUANTITY</string>
+    <string name="order_empty_title">NO ORDERS YET</string>
+    <string name="coupon_header">VOUCHERS</string>
+    <string name="admin_notification_mgmt">NOTIFICATION MGMT</string>
+    <string name="admin_review_mgmt">REVIEW MODERATION</string>
+    <string name="admin_login_title">LOGIN ADMIN</string>
+    <string name="desc_admin_logo">Admin Logo</string>
+    <string name="desc_admin_login_button">Admin Login Button</string>
+    <string name="desc_app_logo">SAIVE Logo</string>
+    <string name="desc_login">Login</string>
+    <string name="desc_signup">Sign Up</string>
+    <string name="desc_submit">Submit</string>
+    <string name="desc_fb_login">Facebook Login</string>
+    <string name="desc_google_login">Google Login</string>
+    <string name="admin_send_notification">SEND NOTIFICATION</string>
+    <string name="admin_create_notification">CREATE NOTIFICATION</string>
+    <string name="admin_send_broadcast">SEND BROADCAST</string>
+    <string name="label_select_option">SELECT OPTION</string>
+    <string name="hint_phone_remaining">9 remaining digits</string>
+    <string name="admin_no_reviews">No reviews to moderate</string>
+    <string name="hint_search_history">Search history&#8230;</string>
+    <string name="label_upload_images">UPLOAD IMAGES (MAX 3)</string>
+    <string name="hint_price_vnd">Price (VND)</string>
+    <string name="hint_sku">SKU</string>
+    <string name="hint_product_name">Product Name</string>
+    <string name="hint_material_story">Material Story &amp; Details</string>
+    <string name="label_add_photo">add photo</string>
+    <string name="label_how_is_order">How is your order?</string>
+    <string name="label_overall_rating">Your overall rating</string>
+    <string name="label_detailed_review">Add detailed review</string>
+    <string name="label_admin_premium_control">Premium Control Panel</string>
+    <string name="label_restricted_access">Restricted Access</string>
+    <string name="label_inventory_stock">Stock: %1$d</string>
+    <string name="label_midnight_curation">The Midnight Curation</string>
+    <string name="label_saive_footer">SAIVE v1.0.4 • EST 2022</string>
+    <string name="label_limited_time_drops">Limited Time Drops</string>
+    <string name="label_expected_delivery_date">Expected Delivery Date</string>
+    <string name="label_tracking_id">Tracking ID</string>
+    <string name="label_payment_method">Payment Method</string>
+    <string name="label_order_status">Order Status</string>
+    <string name="label_in_progress">In Progress</string>
+    <string name="label_view_more_products" tools:ignore="PluralsCandidate">View more (+%1$d products)</string>
+    <string name="label_added_to_cart">Added to cart</string>
+    <string name="label_products_vn">Products</string>
+    <string name="label_expires_in_days" tools:ignore="PluralsCandidate">Expires in %1$d days</string>
+    <string name="label_add_new_card">Add New Card</string>
+    <string name="label_save_card">SAVE CARD</string>
+    <string name="label_card_details">Card Details</string>
+    <string name="label_card_number">Card Number</string>
+    <string name="hint_card_number">0000 0000 0000 0000</string>
+    <string name="label_card_holder">Card Holder</string>
+    <string name="hint_card_holder">FULL NAME</string>
+    <string name="label_expiry_date">Expiry Date</string>
+    <string name="hint_expiry_date">MM/YY</string>
+    <string name="label_cvv">CVV</string>
+    <string name="hint_cvv">123</string>
+    <string name="btn_add_card">ADD CARD</string>
+
+    <!-- Location & Maps -->
+    <string name="location_permission_title">What is Your Location?</string>
+    <string name="location_permission_desc">We need to know your location in order to suggest nearby services.</string>
+    <string name="location_btn_allow">Allow Location Access</string>
+    <string name="location_btn_manual">Enter Location Manually</string>
+    <string name="location_picker_title">Enter Your Location</string>
+    <string name="location_search_hint">Search location</string>
+    <string name="location_use_current">Use my current location</string>
+    <string name="location_search_result">SEARCH RESULT</string>
+    <string name="address_select_map">Select from Map</string>
+    <string name="google_maps_key" translatable="false">YOUR_API_KEY_HERE</string>
+    <string name="default_web_client_id" translatable="false">YOUR_WEB_CLIENT_ID_HERE</string>
+    <string name="change_password_title">Change Password</string>
+    <string name="label_current_password">Current Password</string>
+    <string name="link_forgot_password">Forgot Password?</string>
+    <string name="label_new_password">New Password</string>
+    <string name="label_confirm_new_password">Confirm New Password</string>
+    <string name="btn_change_password">Change Password</string>
+    <string name="error_current_password_required">Current password is required</string>
+    <string name="error_current_password_incorrect">Incorrect current password</string>
+    <string name="error_new_password_required">New password is required</string>
+    <string name="error_new_password_min">New password must be at least 6 characters</string>
+    <string name="error_new_password_same">New password cannot be the same as current password</string>
+    <string name="error_confirm_password_required">Please confirm your new password</string>
+    <string name="toast_password_changed">Password updated successfully</string>
+    <string name="empty_cart">Your cart is empty</string>
+    <string name="empty_cart_desc">Looks like you haven\'t added anything to your cart yet.</string>    <!-- Login Errors & Toasts -->
+    <string name="login_admin_unlocked">Admin Mode Unlocked</string>
+    <string name="login_forgot_pwd_clicked">Forgot password clicked</string>
+    <string name="login_error_email_req">Email is required</string>
+    <string name="login_error_email_invalid">Please enter a valid email</string>
+    <string name="login_error_pwd_req">Password is required</string>
+    <string name="login_error_acc_blocked">Account is blocked. Please contact Admin.</string>
+    <string name="login_toast_success">Login Successful</string>
+
+    <!-- Checkout Errors & Toasts -->
+    <string name="checkout_invalid_card">Invalid card number</string>
+    <string name="checkout_card_added">Card added successfully</string>
+    <string name="checkout_error_city">Please select a city</string>
+    <string name="checkout_error_district">Please select a district</string>
+    <string name="checkout_error_ward">Please select a ward</string>
+    <string name="checkout_error_payment">Please select a payment method</string>
+
+    <!-- Main & Common -->
+    <string name="main_error_acc_blocked">Account blocked by Admin</string>
+    <string name="app_name_caps">SAIVE</string>
+
+    <!-- Product Detail -->
+    <string name="product_error_review_empty">Please enter your review</string>
+    <string name="product_toast_review_success">Review submitted successfully!</string>
+    <string name="product_error_select_size">Please select a size</string>
+    <string name="product_error_select_color">Please select a color</string>
+    <string name="product_toast_added_to_cart">Added to Wardrobe</string>
+
+    <!-- Batch 3 & Admin -->
+    <string name="toast_review_success">Review submitted successfully!</string>
+    <string name="toast_pwd_reset_success">Password reset successful!</string>
+    <string name="error_invalid_card_num">Invalid card number</string>
+    <string name="error_enter_card_name">Enter card holder name</string>
+    <string name="toast_card_saved_success">Card saved successfully</string>
+    <string name="about_est">EST. 2024</string>
+    <string name="admin_review_moderation_title">REVIEW MODERATION</string>
+    <string name="admin_review_empty">No reviews to moderate</string>
+    <string name="admin_select_option">SELECT OPTION</string>
+    <string name="admin_upload_images">UPLOAD IMAGES (MAX 3)</string>
+    <string name="btn_confirm_location">Confirm Location</string>
+    <string name="label_editorial">EDITORIAL</string>
+    <string name="timer_default_time">00 : 00 : 00</string>
+    <string name="flash_sale_participating_products">PARTICIPATING PRODUCTS</string>
+    <string name="desc_create_flash_sale">Create Flash Sale</string>
+    <string name="desc_edit_product">Edit product</string>
+    <string name="inventory_stock_format">Stock: %1$d</string>
+
+    <!-- Payment Cards & Bank Transfer -->
+    <string name="label_card_holder_name">Card Holder Name</string>
+    <string name="label_expiry_date_format">Expiry Date (MM/YY)</string>
+    <string name="label_bank_transfer">Bank Transfer</string>
+    <string name="desc_scan_qr_code">Scan this QR Code to process your payment</string>
+    <string name="desc_qr_code_expired_format">This QR Code will be expired in %1$02d:%2$02d</string>
+    <string name="btn_regenerate_qr">↺  Regenerate the QR Code</string>
+    <string name="btn_confirm_payment_success">Confirm Payment Success</string>
+    <string name="desc_qr_code_expired">QR Code has expired. Please regenerate.</string>
+
+    <!-- General Accessibility Descriptions -->
+    <string name="desc_menu">Menu</string>
+    <string name="desc_decrease_quantity">Decrease Quantity</string>
+    <string name="desc_increase_quantity">Increase Quantity</string>
+    <string name="desc_close">Close</string>
+
+    <!-- Order tracking & Collapse strings -->
+    <string name="btn_collapse">Collapse</string>
+
+    <string name="status_cancelled">Cancelled</string>
+    <string name="status_pending">Pending</string>
+    <string name="status_confirmed">Confirmed</string>
+    <string name="status_shipping">Shipping</string>
+    <string name="status_delivered">Delivered</string>
+    <string name="status_in_transit">In transit</string>
+    <string name="status_in_3_days">in 3 days</string>
+    <string name="label_today">Today</string>
+    <string name="hint_notification_title">Notification Title</string>
+    <string name="hint_notification_message">Message content...</string>
+    <string name="hint_search">Search...</string>
+    <string name="label_detail_verify_otp_format">Please enter the OTP sent to email\n%1$s</string>
+
+    <!-- Multi-product Review Screen -->
+    <string name="label_rate_this_product">Rate this product</string>
+    <string name="hint_review_comment">Share your experience with this pieceâ€¦</string>
+    <string name="error_rate_all_products">Please rate all products before submitting</string>
+    <string name="label_add_photos">Add Photos</string>
+    <string name="label_your_review">Your Review</string>
+
+    <string name="admin_delete_order_title">Delete Order</string>
+    <string name="admin_delete_order_msg">Are you sure you want to delete this order? This action cannot be undone.</string>
+    <string name="label_order_date_format">Order Date: %1$s</string>
+    <string name="contact_email" translatable="false">hello@saive.vn</string>
+    <string name="contact_phone" translatable="false">+84 901 234 567</string>
+    <string name="contact_instagram" translatable="false">\@saive.vn</string>
+    <string name="contact_hint_email" translatable="false">hello@email.com</string>
+    <string name="btn_explore">EXPLORE</string>
+
+    <!-- Admin details localization -->
+    <string name="admin_product_detail_title">Product Details</string>
+    <string name="admin_order_detail_title">Order Details</string>
+    <string name="label_category_format">Category: %1$s</string>
+    <string name="label_original_price">Original Price</string>
+    <string name="label_sale_price">Sale Price</string>
+    <string name="label_stock">Stock</string>
+    <string name="label_sold">Sold</string>
+    <string name="label_status">Status</string>
+    <string name="label_featured">Featured</string>
+    <string name="label_customer_info">Customer Information</string>
+    <string name="label_products">Products</string>
+    <string name="label_update_order">Update Order</string>
+    <string name="label_order_notes_hint">Order Notes</string>
+    <string name="btn_save_changes">Save Changes</string>
+    <string name="status_active">Active</string>
+    <string name="status_inactive">Inactive</string>
+
+    <!-- Admin Employee & Drawer Menu Localization -->
+    <string name="admin_employee_title">Employee Management</string>
+    <string name="admin_employee_search_hint">Search by name, department, position...</string>
+    <string name="admin_employee_add_title">Add Employee</string>
+    <string name="admin_employee_edit_title">Edit Employee</string>
+    <string name="admin_employee_name_hint">Full Name</string>
+    <string name="admin_employee_email_hint">Email</string>
+    <string name="admin_employee_phone_hint">Phone Number</string>
+    <string name="admin_employee_department_hint">Department</string>
+    <string name="admin_employee_position_hint">Position</string>
+    <string name="admin_employee_active_status">Active Status</string>
+    <string name="admin_employee_cancel">Cancel</string>
+    <string name="admin_employee_save">Save</string>
+    <string name="admin_employee_toast_status_success">Status updated successfully</string>
+    <string name="admin_employee_toast_error">Error: </string>
+    <string name="admin_employee_toast_load_error">Error loading data: </string>
+    <string name="admin_employee_toast_fields_required">Please fill in all fields</string>
+    <string name="admin_employee_toast_update_success">Employee updated successfully</string>
+    <string name="admin_employee_toast_add_success">Employee added successfully</string>
+    
+    <string name="admin_menu_dashboard">Dashboard</string>
+    <string name="admin_menu_products">Products</string>
+    <string name="admin_menu_blogs">Blogs</string>
+    <string name="admin_menu_employees">Employees</string>
+    <string name="admin_menu_logout">Logout</string>
+    <string name="admin_stats_total_revenue">Total Revenue</string>
+    <string name="admin_review_topic_title">Review Topic Distribution</string>
+    <string name="admin_view_topic_charts">View Word Cloud &amp; Treemap</string>
+
+    <string name="btn_shop_the_look">SHOP THE LOOK</string>
+    <string name="recommend_title">Outfit Recommendations</string>
+    <string name="recommend_subtitle">Complete outfit recommendation matching this product</string>
+    <string name="btn_add_all_to_cart">ADD ALL TO CART</string>
+    <string name="recommend_view_detail">View Details</string>
+    <string name="recommend_added_all_toast">All recommended items added to cart!</string>
+    <string name="recommend_empty_toast">No matching items found for this outfit.</string>
+    <string name="recommend_main_item">Main Product</string>
+    <string name="default_notification_channel_id" translatable="false">default_channel</string>
+    <string name="ic_notification" translatable="false">ic_notification</string>
+    <string name="error_wrong_password">Incorrect password.</string>
+    <string name="col_empty_products">This collection currently has no products.</string>
+    <string name="label_payment_vietqr_short">PAYMENT: VIETQR</string>
+
+    <string name="admin_review_mgmt_title">REVIEW MODERATION</string>
+    <string name="admin_add_variant_size_hint">Size (e.g., M, L, XL)</string>
+    <string name="admin_add_variant_color_hint">Color (e.g., Black, Brown)</string>
+    <string name="admin_add_variant_stock_hint">Stock Quantity</string>
+    <string name="admin_user_detail_title">User Details</string>
+    <string name="admin_user_detail_name">Name</string>
+    <string name="admin_user_detail_email">EMAIL</string>
+    <string name="admin_user_detail_role">ROLE</string>
+    <string name="admin_user_detail_auth">AUTH PROVIDER</string>
+    <string name="admin_user_detail_created">CREATED AT</string>
+    <string name="admin_user_detail_close">Close</string>
+    <string name="admin_dashboard_product">Product</string>
+    <string name="admin_dashboard_price">Price</string>
+    <string name="admin_dashboard_service">Service</string>
+    <string name="admin_dashboard_delivery">Delivery</string>
+
+    <!-- Analytics Topics -->
+    <string name="topic_prod_quality">Quality</string>
+    <string name="topic_prod_features">Features</string>
+    <string name="topic_prod_design">Design</string>
+    <string name="topic_prod_performance">Performance</string>
+    <string name="topic_prod_fit">Fit</string>
+
+    <string name="topic_price_cost">Price</string>
+    <string name="topic_price_value">Value</string>
+    <string name="topic_price_promo">Promos</string>
+    <string name="topic_price_compare">Compare</string>
+
+    <string name="topic_serv_shop">Shop</string>
+    <string name="topic_serv_consult">Consult</string>
+    <string name="topic_serv_support">Support</string>
+    <string name="topic_serv_attitude">Attitude</string>
+    <string name="topic_serv_response">Response</string>
+
+    <string name="topic_deliv_speed">Speed</string>
+    <string name="topic_deliv_shipper">Shipper</string>
+    <string name="topic_deliv_pkg">Packaging</string>
+    <string name="topic_deliv_status">Status</string>
+    <string name="topic_deliv_policy">Policy</string>
+    <string name="topic_deliv_fee">Delivery fee</string>
+    <string name="topic_deliv_qty">Quantity</string>
+    <string name="topic_deliv_target">Target</string>
+
+    <!-- Chart UI -->
+    <string name="chart_tab_wordcloud">Word Cloud</string>
+    <string name="chart_tab_treemap">Topic Treemap</string>
+    <string name="chart_loading">Loading analysis...</string>
+    <string name="chart_no_data">No Data</string>
+    <string name="chart_tooltip_mentions">Mentions</string>
+    <string name="chart_title_topics">Review Topics</string>
+    <string name="chart_mentions">Mentions</string>
+    <string name="chart_times">times</string>
+    <string name="chart_review_topics">Review Topics</string>
+
+    <string name="admin_product_detail_variants">Product Variants</string>
+    <string name="admin_product_edit_change_image">Change Image</string>
+    <string name="admin_product_edit_name">Product Name</string>
+    <string name="admin_product_edit_category">Category</string>
+    <string name="admin_product_edit_price">Original Price</string>
+    <string name="admin_product_edit_sale_price">Sale Price</string>
+    <string name="admin_product_edit_total_stock">Total Stock Quantity</string>
+    <string name="admin_product_edit_manage_variants">Manage Stock by Variant (Size/Color)</string>
+    <string name="admin_product_edit_add_variant">Add Variant</string>
+    <string name="admin_product_edit_is_active">Active</string>
+    <string name="admin_product_edit_featured">Featured</string>
+    <string name="admin_product_edit_save">SAVE PRODUCT</string>
+    <string name="admin_product_edit_delete">DELETE PRODUCT</string>
+    <string name="admin_reviews_swipe_hint">Swipe right to approve, swipe left to reject</string>
+    <string name="admin_nav_title">SAIVE Admin</string>
+    <string name="admin_nav_subtitle">Management Console</string>
+    <string name="admin_blog_edit">Edit Blog</string>
+    <string name="admin_blog_delete">Delete Blog</string>
+    <string name="admin_blog_delete_confirm">Are you sure you want to delete this blog?</string>
+    <string name="admin_blog_create">Create New Post</string>
+    <string name="admin_blog_updated_success">Blog updated successfully!</string>
+    <string name="admin_blog_deleted_success">Blog deleted successfully!</string>
+    <string name="admin_blog_created_success">Blog created successfully!</string>
+    <string name="admin_error_title_empty">Title cannot be empty</string>
+    <string name="admin_label_author">Author: %1$s</string>
+    <string name="admin_status_published">Published</string>
+    <string name="admin_status_draft">Draft</string>
+    <string name="admin_btn_save">Save</string>
+    <string name="admin_btn_create">Create</string>
+    <string name="admin_product_detail_no_variants">No variants available</string>
+    <string name="admin_product_edit_add_new_variant">Add New Variant</string>
+    <string name="admin_product_edit_delete_title">Delete Product</string>
+    <string name="admin_switch_customer_mode">Switching to Customer Mode...</string>
+    <string name="admin_switched_customer_app">Switched to Customer App</string>
+    <string name="admin_review_percent_format">%1$d%% (%2$d)</string>
+    <string name="admin_product_edit_delete_confirm">Are you sure you want to delete this product?</string>
+    <string name="admin_product_delete_success">Product deleted successfully</string>
+    <string name="admin_product_add_success">Product added successfully!</string>
+    <string name="admin_product_invalid_number">Please enter a valid number format</string>
+    <string name="admin_product_add_variant_add">Add</string>
+    <string name="admin_product_add_variant_cancel">Cancel</string>
+    <string name="esg_overall">ESG Overall</string>
+    <string name="esg_environment">Environment</string>
+    <string name="esg_social">Social</string>
+    <string name="esg_governance">Governance</string>
+    <string name="esg_profit_margin">Profit Margin</string>
+    <string name="esg_growth_rate">Growth Rate</string>
+    <string name="esg_market_cap">Market Cap</string>
+    <string name="esg_compare_overall">Overall ESG Score</string>
+</resources>

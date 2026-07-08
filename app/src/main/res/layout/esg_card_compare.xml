@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/bg_material_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header info: comparison year and titles -->
+    <TextView
+        android:id="@+id/cmpYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorMaroon"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Table Header: Names of Company 1 and Company 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:alpha="0.5"
+            android:text="@string/esg_compare_criteria"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cmpName1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+
+        <TextView
+            android:id="@+id/cmpName2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+    </LinearLayout>
+
+    <!-- Row: ESG Overall -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/esg_overall"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cmpEsg1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textColor="@color/colorMaroon"
+            android:textStyle="bold"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/cmpEsg2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textColor="@color/colorMaroon"
+            android:textStyle="bold"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" />
+
+    <!-- Row: Environmental -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/esg_environment"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cmpEnv1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+
+        <TextView
+            android:id="@+id/cmpEnv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" />
+
+    <!-- Row: Social -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/esg_social"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cmpSoc1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+
+        <TextView
+            android:id="@+id/cmpSoc2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" />
+
+    <!-- Row: Governance -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/esg_governance"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cmpGov1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+
+        <TextView
+            android:id="@+id/cmpGov2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" />
+
+    <!-- Row: Profit Margin -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/esg_profit_margin"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cmpProfit1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+
+        <TextView
+            android:id="@+id/cmpProfit2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" />
+
+    <!-- Row: Growth Rate -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/esg_growth_rate"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cmpGrowth1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+
+        <TextView
+            android:id="@+id/cmpGrowth2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" />
+
+    <!-- Row: Market Cap -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="@string/esg_market_cap"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cmpMarket1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+
+        <TextView
+            android:id="@+id/cmpMarket2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/colorNoirBlack" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" />
+
+    <!-- Winner banner -->
+    <TextView
+        android:id="@+id/cmpWinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#15810100"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textColor="@color/colorMaroon"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

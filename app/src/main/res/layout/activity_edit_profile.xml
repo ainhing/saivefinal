@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCotton"
+    tools:context=".ui.EditProfileActivity"
+    tools:ignore="Overdraw">
+
+    <!-- Header Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorHeaderBg"
+        android:paddingHorizontal="@dimen/spacing_large"
+        android:paddingTop="54dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/nav_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/colorOnMaroon" />
+
+        <TextView
+            style="@style/TextAppearance.Saive.SectionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.2"
+            android:text="@string/edit_profile_title"
+            android:textColor="@color/colorOnMaroon"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/editProfileScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/headerContainer"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="60dp">
+
+            <!-- AVATAR SECTION -->
+            <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="104dp"
+                    android:layout_height="104dp">
+
+                    <FrameLayout
+                        android:layout_width="104dp"
+                        android:layout_height="104dp"
+                        android:padding="4dp"
+                        android:background="@drawable/bg_avatar_ring">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivAvatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            tools:src="@drawable/model1"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Saive.Circle" />
+                    </FrameLayout>
+
+                    <!-- Nút chỉnh sửa avatar (góc dưới phải) -->
+                    <FrameLayout
+                        android:id="@+id/btnEditAvatar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="2dp"
+                        android:background="@color/colorAccentBrand"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:elevation="4dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:contentDescription="@string/change_photo_title"
+                            app:tint="@color/white" />
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvChangePhoto"
+                    style="@style/TextAppearance.Saive.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/change_photo_title"
+                    android:textColor="@color/colorAccentBrand"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- FIELDS: Birthday + Gender -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp">
+
+                <TextView
+                    style="@style/TextAppearance.Saive.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.2"
+                    android:text="@string/label_personal_information"
+                    android:textColor="@color/colorGrayText"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_material_card"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp">
+
+                    <!-- Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_menu_item"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_profile"
+                            android:contentDescription="@null"
+                            app:tint="@color/colorNoirBlack" />
+
+                        <TextView
+                            style="@style/TextAppearance.Saive.Light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/label_name"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/etName"
+                            style="@style/TextAppearance.Saive.Light"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@null"
+                            android:gravity="end|center_vertical"
+                            android:hint="@string/profile_not_set"
+                            android:textColorHint="@color/colorSand"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="14sp"
+                            android:maxLines="1"
+                            android:inputType="textPersonName" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@color/colorLinen"
+                        android:alpha="0.5" />
+
+                    <!-- Birthday -->
+                    <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                        android:id="@+id/btnPickDob"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/bg_menu_item"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_my_calendar"
+                            android:contentDescription="@null"
+                            app:tint="@color/colorNoirBlack" />
+
+                        <TextView
+                            style="@style/TextAppearance.Saive.Light"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/profile_birthday"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvDob"
+                            style="@style/TextAppearance.Saive.Light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/profile_not_set"
+                            android:textColor="@color/colorSand"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_back"
+                            android:rotation="180"
+                            android:contentDescription="@null"
+                            app:tint="@color/colorLinen" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@color/colorLinen"
+                        android:alpha="0.5" />
+
+                    <!-- Gender -->
+                    <LinearLayout
+                tools:ignore="UseCompoundDrawables"
+                        android:id="@+id/btnPickGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/bg_menu_item"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_profile"
+                            android:contentDescription="@null"
+                            app:tint="@color/colorNoirBlack" />
+
+                        <TextView
+                            style="@style/TextAppearance.Saive.Light"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/profile_gender"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvGender"
+                            style="@style/TextAppearance.Saive.Light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/profile_not_set"
+                            android:textColor="@color/colorSand"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_back"
+                            android:rotation="180"
+                            android:contentDescription="@null"
+                            app:tint="@color/colorLinen" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Save Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSaveProfile"
+                    style="@style/TextAppearance.Saive.Nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="40dp"
+                    android:letterSpacing="0.2"
+                    android:text="@string/profile_save_changes"
+                    android:textColor="@color/colorButtonText"
+                    app:backgroundTint="@color/colorButtonBg"
+                    app:cornerRadius="12dp"
+                    app:elevation="4dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

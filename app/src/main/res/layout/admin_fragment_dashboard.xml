@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCotton">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Welcome Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/admin_greeting"
+                        style="@style/TextAppearance.Saive.Caption"
+                        android:textColor="@color/colorGrayText" />
+
+                    <TextView
+                        android:id="@+id/tvAdminName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Thảo Nhi Huỳnh"
+                        style="@style/TextAppearance.Saive.Header"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivAdminAvatar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/model1"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Saive.Circle"
+                    app:strokeColor="@color/colorMaroon"
+                    app:strokeWidth="1dp" />
+            </LinearLayout>
+
+            <!-- Stats Row: 5 cards -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:clipToPadding="false"
+                android:paddingHorizontal="4dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Products -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnProductsShortcut"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="1dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+                            <ImageView
+                                android:id="@+id/icProduct"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/inventoryicon"
+                                app:tint="@color/colorMaroon" />
+                            <TextView
+                                android:id="@+id/tvTotalProducts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                tools:text="?"
+                                style="@style/TextAppearance.Saive.Header"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_stats_products"
+                                style="@style/TextAppearance.Saive.Caption"
+                                android:textColor="@color/colorGrayText" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Orders -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnOrdersShortcut"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="1dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+                            <ImageView
+                                android:id="@+id/icOrders"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ordericonadmin"
+                                app:tint="@color/colorMaroon" />
+                            <TextView
+                                android:id="@+id/tvTotalOrders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                tools:text="22"
+                                style="@style/TextAppearance.Saive.Header"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_stats_orders"
+                                style="@style/TextAppearance.Saive.Caption"
+                                android:textColor="@color/colorGrayText" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Users -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnUsersShortcut"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="1dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+                            <ImageView
+                                android:id="@+id/icUsers"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_profile"
+                                app:tint="@color/colorMaroon" />
+                            <TextView
+                                android:id="@+id/tvTotalUsers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                tools:text="8"
+                                style="@style/TextAppearance.Saive.Header"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_stats_users"
+                                style="@style/TextAppearance.Saive.Caption"
+                                android:textColor="@color/colorGrayText" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Blogs -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnBlogsShortcut"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="1dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+                            <ImageView
+                                android:id="@+id/icBlogs"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_all"
+                                app:tint="@color/colorMaroon" />
+                            <TextView
+                                android:id="@+id/tvTotalBlogs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                tools:text="9"
+                                style="@style/TextAppearance.Saive.Header"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_menu_blogs"
+                                style="@style/TextAppearance.Saive.Caption"
+                                android:textColor="@color/colorGrayText" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Reviews -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnReviewsShortcut"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="1dp"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+                            <ImageView
+                                android:id="@+id/icReviews"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_favorite"
+                                app:tint="@color/colorMaroon" />
+                            <TextView
+                                android:id="@+id/tvTotalReviews"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                tools:text="1"
+                                style="@style/TextAppearance.Saive.Header"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_stats_reviews"
+                                style="@style/TextAppearance.Saive.Caption"
+                                android:textColor="@color/colorGrayText" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Revenue Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/colorMaroon"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_coupon"
+                            app:tint="@color/white" />
+                        <TextView
+                            android:id="@+id/tvTotalRevenue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            tools:text="16.049.000"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            tools:text="₫"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/admin_stats_total_revenue"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Review Topic Analytics Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardReviewAnalytics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/admin_review_topic_title"
+                        style="@style/TextAppearance.Saive.Label"
+                        android:textColor="@color/colorNoirBlack"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Product Bar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/admin_dashboard_product"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                        <ProgressBar
+                            android:id="@+id/progressProduct"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressTint="@color/colorMaroon" />
+                        <TextView
+                            android:id="@+id/tvPercentProduct"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            tools:text="0% (0)"
+                            android:gravity="end"
+                            android:textColor="@color/colorGrayText"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Price Bar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/admin_dashboard_price"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                        <ProgressBar
+                            android:id="@+id/progressPrice"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressTint="#D2B48C" />
+                        <TextView
+                            android:id="@+id/tvPercentPrice"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            tools:text="0% (0)"
+                            android:gravity="end"
+                            android:textColor="@color/colorGrayText"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Service Bar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/admin_dashboard_service"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                        <ProgressBar
+                            android:id="@+id/progressService"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressTint="#8FBC8F" />
+                        <TextView
+                            android:id="@+id/tvPercentService"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            tools:text="0% (0)"
+                            android:gravity="end"
+                            android:textColor="@color/colorGrayText"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Delivery Bar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/admin_dashboard_delivery"
+                            android:textColor="@color/colorNoirBlack"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                        <ProgressBar
+                            android:id="@+id/progressDelivery"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressTint="#4682B4" />
+                        <TextView
+                            android:id="@+id/tvPercentDelivery"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            tools:text="0% (0)"
+                            android:gravity="end"
+                            android:textColor="@color/colorGrayText"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewTopicChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/admin_view_topic_charts"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:textColor="@color/colorMaroon"
+                        app:icon="@drawable/ic_all"
+                        app:iconTint="@color/colorMaroon" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Shortcuts -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/admin_shortcuts"
+                style="@style/TextAppearance.Saive.Label"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPendingOrders"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="@string/admin_pending_orders_shortcut"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="16dp"
+                android:gravity="start|center_vertical"
+                android:paddingStart="24dp"
+                app:strokeColor="@color/colorLinen"
+                android:textColor="@color/colorNoirBlack"
+                android:layout_marginBottom="12dp"
+                app:icon="@drawable/ordericonadmin"
+                app:iconPadding="16dp"
+                app:iconTint="@color/colorMaroon" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUnapprovedReviews"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="@string/admin_unapproved_reviews_shortcut"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="16dp"
+                android:gravity="start|center_vertical"
+                android:paddingStart="24dp"
+                app:strokeColor="@color/colorLinen"
+                android:textColor="@color/colorNoirBlack"
+                app:icon="@drawable/ic_favorite"
+                app:iconPadding="16dp"
+                app:iconTint="@color/colorMaroon" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

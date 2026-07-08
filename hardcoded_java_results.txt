@@ -1,0 +1,11 @@
+BlogDetailFragment.java:123 - Edit Blog
+BlogDetailFragment.java:163 - Delete Blog
+BlogDetailFragment.java:164 - Are you sure you want to delete this blog?
+BlogsFragment.java:81 - Tạo bài viết mới
+LoginActivity.java:43 - thuy.dao@saive.com
+LoginActivity.java:44 - admin123
+ProductDetailFragment.java:100 - Không có phân loại hàng
+ProductEditFragment.java:168 - Thêm biến thể mới
+ProductEditFragment.java:276 - Xóa sản phẩm
+ProductEditFragment.java:277 - Bạn có chắc chắn muốn xóa sản phẩm này?
+Total hardcoded strings in Java: 10

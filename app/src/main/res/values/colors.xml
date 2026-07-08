@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorAlwaysWhite">#FFFFFF</color>
+    <color name="colorAlwaysBlack">#000000</color>
+    <color name="colorCountdownText">#FFFFFF</color>
+    <color name="colorFlashProductName">#D4C9B8</color>
+    <color name="colorNoirBlack">#1A1A1A</color>
+
+    <!-- Brand / Theme Colors -->
+    <color name="colorMaroon">#810100</color>
+    <color name="colorAccentRed">#810100</color>
+    <color name="colorCherryRed">@color/colorMaroon</color>
+    <color name="colorMaroonBrand">@color/colorMaroon</color>
+    <color name="colorSand">#A89B85</color>
+    <color name="colorCotton">#EDEBDD</color>
+    <color name="colorIvory">#FAF8F3</color>
+    <color name="colorLinen">#D4C9B8</color>
+
+    <!-- Table Colors -->
+    <color name="colorSizeTableHead">#E4E0D6</color>
+    <color name="colorSizeTableRowAlt">#D9D2C4</color>
+
+    <!-- UI Element Colors -->
+    <color name="colorGrey">#888888</color>
+    <color name="colorGrayText">#888888</color>
+    <color name="colorLightGray">#E0E0E0</color>
+    <color name="colorRatingGold">#FFD700</color>
+    <color name="colorTransWhite">#40FFFFFF</color>
+
+    <!-- Background & Category Colors -->
+    <color name="colorBeigeBg">#EDE8DF</color>
+    <color name="colorGrayBg">#F0EDE3</color>
+    <color name="colorCategoryBg">#F5EAEA</color>
+    <color name="colorCategoryBorder">#E0D0D0</color>
+    <color name="colorUnreadBg">#FAF8F3</color>
+    <color name="colorReadBg">#EDEBDD</color>
+    <color name="colorNoir">#1B1717</color>
+    <color name="colorSandLight">#F2F0E9</color>
+    <color name="colorActionBlue">#0047FF</color>
+    <color name="colorGreen">#4CAF50</color>
+
+    <!-- Colors for content on Flash Sale background (Adaptive) -->
+    <color name="colorFlashSaleContent">@color/colorLinen</color>
+    <color name="colorFlashSaleContentSecondary">@color/colorSand</color>
+
+    <!-- Colors for content on Maroon background (Adaptive) -->
+    <color name="colorOnMaroon">#FFFFFF</color>
+    <color name="colorOnMaroonSecondary">#B0FFFFFF</color>
+    <color name="colorOnMaroonDivider">#20FFFFFF</color>
+    <color name="colorOnMaroonContainer">#15FFFFFF</color>
+
+    <!-- Collection List Colors (Refined Pallette) -->
+    <color name="colorCollectionMaroon">@color/colorMaroonBrand</color>
+    <color name="colorCollectionSand">@color/colorSand</color>
+    <color name="colorCollectionMaroonSand">#4A0E0E</color>
+    <color name="colorCollectionSandLight">#E8E2D8</color>
+    <color name="colorCollectionBlack">#1A1A1A</color>
+    <color name="colorCollectionYellow">#FFC470</color>
+    <color name="colorCollectionPink">#FFB5D0</color>
+    <color name="colorCollectionBlue">#7CB9FF</color>
+    <color name="colorCollectionGreen">#B1F2B3</color>
+
+    <!-- Full Screen Backgrounds (Maroon in Light -> Black in Dark) -->
+    <color name="colorAuthBg">@color/colorMaroon</color>
+
+    <!-- Adaptive Theme Colors for Quiet Luxury -->
+    <color name="colorHeaderBg">@color/colorMaroon</color>
+    <color name="colorHeaderContent">@color/colorAlwaysWhite</color>
+
+    <color name="colorButtonBg">@color/colorMaroon</color>
+    <color name="colorButtonText">@color/colorAlwaysWhite</color>
+
+    <color name="colorAccentBrand">@color/colorMaroon</color>
+
+    <!-- Auth Card Adaptive -->
+    <color name="colorAuthCardBg">@color/white</color>
+    <color name="colorAuthCardTitle">@color/colorMaroon</color>
+    <color name="colorAuthCardSubtitle">@color/colorGrayText</color>
+    <color name="colorAddressCardBg">@color/white</color>
+    <color name="colorAddressCardText">@color/colorNoirBlack</color>
+    <color name="colorAddressCardPhone">@color/colorSand</color>
+
+    <!-- Input Field Adaptive -->
+    <color name="colorInputText">@color/colorNoirBlack</color>
+    <color name="colorInputHint">@color/colorGrey</color>
+    <color name="colorInputBoxBg">@android:color/transparent</color>
+    <color name="colorInputStroke">@color/colorLinen</color>
+
+    <!-- Contact Card Adaptive Colors -->
+    <color name="colorContactCardBg">@color/colorMaroon</color>
+    <color name="colorContactCardContent">@color/colorAlwaysWhite</color>
+    <color name="colorContactCardLabel">#D4C9B8</color>
+
+    <!-- Translucent Surface Adaptive -->
+    <color name="colorTranslucentSurface">#08000000</color>
+
+    <!-- Semantic Text Colors -->
+    <color name="colorTextPrimary">@color/colorNoirBlack</color>
+    <color name="colorTextSecondary">#555555</color>
+    <color name="colorTextTertiary">#777777</color>
+    <color name="colorTextPlaceholder">#888888</color>
+    <color name="colorTextOnDark">#FFFFFF</color>
+
+    <!-- Flash Sale Always-Dark Background -->
+    <color name="colorFlashSaleBg">#1A1A1A</color>
+
+    <!-- Search Box Adaptive -->
+    <color name="colorSearchBoxBg">#F5F5F5</color>
+</resources>

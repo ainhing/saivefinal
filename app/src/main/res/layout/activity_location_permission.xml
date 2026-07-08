@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAuthCardBg"
+    android:padding="24dp"
+    tools:ignore="Overdraw">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_back"
+        android:contentDescription="@string/nav_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorNoirBlack" />
+
+    <ImageView
+        android:id="@+id/ivLocationIcon"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/bg_circle_beige"
+        android:backgroundTint="@color/colorSearchBoxBg"
+        android:padding="40dp"
+        android:src="@drawable/ic_pin_drop"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorMaroon" />
+
+    <TextView
+        android:id="@+id/tvHeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/location_permission_title"
+        android:textColor="@color/colorNoirBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLocationIcon" />
+
+    <TextView
+        android:id="@+id/tvSubheadline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/location_permission_desc"
+        android:textColor="@color/colorSand"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeadline" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAllowLocation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bg_rounded_maroon_btn"
+        android:text="@string/location_btn_allow"
+        android:textAllCaps="false"
+        android:textColor="@color/colorButtonText"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvSubheadline" />
+
+    <TextView
+        android:id="@+id/btnEnterManually"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="8dp"
+        android:text="@string/location_btn_manual"
+        android:textColor="@color/colorMaroon"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAllowLocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

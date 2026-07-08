@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav_graph"
+    app:startDestination="@id/adminDashboard">
+
+    <fragment
+        android:id="@+id/adminDashboard"
+        android:name="com.example.saive.admin.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/admin_fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/adminOrders"
+        android:name="com.example.saive.admin.ui.orders.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/admin_fragment_orders">
+        <action
+            android:id="@+id/action_orders_to_detail"
+            app:destination="@id/adminOrderDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminOrderDetail"
+        android:name="com.example.saive.admin.ui.orders.OrderDetailFragment"
+        android:label="Order Details"
+        tools:layout="@layout/admin_fragment_order_detail">
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminProducts"
+        android:name="com.example.saive.admin.ui.products.ProductsFragment"
+        android:label="Products"
+        tools:layout="@layout/admin_fragment_products">
+        <action
+            android:id="@+id/action_products_to_detail"
+            app:destination="@id/adminProductDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminProductDetail"
+        android:name="com.example.saive.admin.ui.products.ProductDetailFragment"
+        android:label="Product Details"
+        tools:layout="@layout/admin_fragment_product_detail">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminUsers"
+        android:name="com.example.saive.admin.ui.users.UsersFragment"
+        android:label="Users"
+        tools:layout="@layout/admin_fragment_users" />
+
+    <fragment
+        android:id="@+id/adminEmployees"
+        android:name="com.example.saive.admin.ui.employees.EmployeesFragment"
+        android:label="Employees"
+        tools:layout="@layout/admin_fragment_employees" />
+
+    <fragment
+        android:id="@+id/adminReviews"
+        android:name="com.example.saive.admin.ui.reviews.ReviewsFragment"
+        android:label="Reviews"
+        tools:layout="@layout/admin_fragment_reviews" />
+
+    <fragment
+        android:id="@+id/adminBlogs"
+        android:name="com.example.saive.admin.ui.blogs.BlogsFragment"
+        android:label="Blogs"
+        tools:layout="@layout/admin_fragment_blogs">
+        <action
+            android:id="@+id/action_blogs_to_detail"
+            app:destination="@id/adminBlogDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminBlogDetail"
+        android:name="com.example.saive.admin.ui.blogs.BlogDetailFragment"
+        android:label="Blog Details"
+        tools:layout="@layout/admin_fragment_blog_detail">
+        <argument
+            android:name="blogId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

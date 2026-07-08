@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/adminDashboard"
+        android:icon="@drawable/ic_all"
+        android:title="@string/admin_dashboard_title" />
+    <item
+        android:id="@+id/adminOrders"
+        android:icon="@drawable/ordericonadmin"
+        android:title="@string/admin_stats_orders" />
+    <item
+        android:id="@+id/adminProducts"
+        android:icon="@drawable/inventoryicon"
+        android:title="@string/admin_stats_products" />
+    <item
+        android:id="@+id/adminBlogs"
+        android:icon="@drawable/ic_all"
+        android:title="@string/admin_stats_blogs" />
+    <item
+        android:id="@+id/adminReviews"
+        android:icon="@drawable/ic_profile"
+        android:title="Đánh giá" />
+</menu>

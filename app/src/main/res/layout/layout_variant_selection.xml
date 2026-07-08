@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/colorCotton"
+    tools:ignore="Overdraw">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            style="@style/TextAppearance.Saive.Header"
+            android:layout_width="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/btnSizeGuide"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/select_size"
+            android:textSize="20sp" />
+
+        <LinearLayout
+                android:baselineAligned="false"
+            android:id="@+id/btnSizeGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_rounded_white_8dp"
+            android:backgroundTint="@color/colorTranslucentSurface"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_all"
+                app:tint="@color/colorNoirBlack"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/btnSizeGuide"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                style="@style/TextAppearance.Saive.Nav"
+                android:text="@string/label_size_guide_short"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+                android:baselineAligned="false"
+            android:id="@+id/optionsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" />
+    </HorizontalScrollView>
+
+</LinearLayout>

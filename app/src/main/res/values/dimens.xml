@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing & Margins -->
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="item_spacing">16dp</dimen>
+    <dimen name="spacing_micro">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+    <dimen name="spacing_xxlarge">40dp</dimen>
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="header_margin">24dp</dimen>
+
+    <!-- Section Spacing -->
+    <dimen name="section_spacing">48dp</dimen>
+    <dimen name="section_spacing_large">80dp</dimen>
+    <dimen name="section_spacing_huge">100dp</dimen>
+
+    <!-- Component Sizes -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="nav_bar_height">72dp</dimen>
+    <dimen name="menu_item_height">54dp</dimen>
+    <dimen name="avatar_size">88dp</dimen>
+    <dimen name="banner_height">560dp</dimen>
+    <dimen name="editorial_image_height">640dp</dimen>
+    <dimen name="recent_card_width">120dp</dimen>
+    <dimen name="recent_card_height">160dp</dimen>
+    <dimen name="center_action_size">64dp</dimen>
+
+    <!-- Icons -->
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_nav">24dp</dimen>
+    <dimen name="icon_size_medium">36dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="logo_text_size">18sp</dimen>
+    <dimen name="logo_text_size_huge">100sp</dimen>
+    <dimen name="text_size_h1">28sp</dimen>
+    <dimen name="text_size_h2">24sp</dimen>
+    <dimen name="text_size_h3">20sp</dimen>
+    <dimen name="text_size_body">15sp</dimen>
+    <dimen name="text_size_caption">13sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_tiny">12sp</dimen>
+    <dimen name="text_size_micro">12sp</dimen>
+
+    <!-- UI Details -->
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="corner_radius_large">20dp</dimen>
+
+    <!-- Thêm theo chuẩn hoá Batch 1 -->
+    <dimen name="spacing_60">60dp</dimen>
+    <dimen name="spacing_110">110dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="icon_size_large">44dp</dimen>
+    <dimen name="text_size_32">32sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    
+    <dimen name="elevation_tiny">2dp</dimen>
+    <dimen name="elevation_small">4dp</dimen>
+    <dimen name="elevation_medium">16dp</dimen>
+    <dimen name="elevation_large">24dp</dimen>
+    <dimen name="spacing_6">6dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_54">54dp</dimen>
+    <dimen name="spacing_120">120dp</dimen>
+    <dimen name="icon_size_20">20dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    
+    <dimen name="icon_size_40">40dp</dimen>
+    <dimen name="spacing_10">10dp</dimen>
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="corner_radius_12">12dp</dimen>
+    <dimen name="corner_radius_8">8dp</dimen>
+    <dimen name="stroke_width">1dp</dimen>
+</resources>

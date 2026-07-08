@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCotton">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCotton"
+        app:elevation="0dp">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Blog Details"
+            app:titleTextColor="@color/colorNoirBlack"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/colorNoirBlack" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Premium Rounded Cover Image Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/colorLinen"
+                android:layout_marginBottom="20dp">
+                
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/model1" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Status & Title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_background_sand"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    tools:text="Published" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TextAppearance.Saive.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/colorNoirBlack"
+                android:lineHeight="32sp"
+                android:layout_marginBottom="16dp"
+                tools:text="5 Color Matching Mistakes to Avoid" />
+
+            <!-- Metadata List (Author, Date, Tags) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:elevation="0.5dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginBottom="24dp">
+
+                <!-- Author Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_profile"
+                        app:tint="@color/colorMaroon" />
+                    <TextView
+                        android:id="@+id/tvAuthor"
+                        style="@style/TextAppearance.Saive.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/colorNoirBlack"
+                        tools:text="Author: ROOFI" />
+                </LinearLayout>
+
+                <!-- Date Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@android:drawable/ic_menu_my_calendar"
+                        app:tint="@color/colorMaroon" />
+                    <TextView
+                        android:id="@+id/tvDate"
+                        style="@style/TextAppearance.Saive.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/colorGrayText"
+                        tools:text="2025-08-29" />
+                </LinearLayout>
+
+                <!-- Tags Row -->
+                <LinearLayout
+                    android:id="@+id/layoutTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@android:drawable/ic_menu_compass"
+                        app:tint="@color/colorMaroon" />
+                    <TextView
+                        android:id="@+id/tvTags"
+                        style="@style/TextAppearance.Saive.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/colorMaroon"
+                        android:textStyle="bold"
+                        tools:text="fashion, styling tips" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Summary Section inside a stylish Quote Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/colorLinen"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorMaroon"
+                        android:layout_marginEnd="14dp"/>
+
+                    <TextView
+                        android:id="@+id/tvSummary"
+                        style="@style/TextAppearance.Saive.Light"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:textColor="@color/colorGrayText"
+                        android:lineSpacingExtra="4dp"
+                        android:textSize="14sp"
+                        tools:text="Common styling mistakes when coordinating outfit colors..." />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Main Body Content -->
+            <TextView
+                android:id="@+id/tvContent"
+                style="@style/TextAppearance.Saive.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:lineSpacingExtra="6dp"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                tools:text="Full article body content goes here..." />
+
+            <View android:layout_width="match_parent" android:layout_height="40dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

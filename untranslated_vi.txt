@@ -1,0 +1,94 @@
+cat_casual: Casual
+cat_streetwear: Streetwear
+cat_hobo: Hobo
+cat_minimal: Minimal
+contact_label_email: EMAIL
+contact_label_instagram: INSTAGRAM
+see_more: See more
+see_less: See less
+label_measurement_unit: cm
+label_mysize_assist: MySize ASSIST
+about_material_linen: LINEN
+about_material_tencel: TENCEL
+about_material_bamboo: BAMBOO
+about_stats_natural_value: 100%
+payment_vietqr: VietQR
+order_item_attributes: Size: %1$s | Qty: %2$dpcs
+col_time_1: 09:00
+col_time_2: 14:30
+col_time_3: 10:00
+col_time_4: 14:00
+label_editorial_02: EDITORIAL 02
+label_flash_sale: Flash Sale
+chip_linen: Linen
+chip_noir: Noir
+chip_ivory: Ivory
+hint_phone_number: +84 901 234 567
+lang_en: English
+lang_vi: Tiếng Việt
+lang_zh: 中文
+admin_menu_flash_sale: Flash Sale
+admin_dashboard_title: Dashboard
+admin_greeting: Hello,
+admin_manage_orders: Order Management
+admin_tab_all: All
+admin_tab_pending: Pending
+admin_tab_confirmed: Confirmed
+admin_tab_shipping: Shipping
+admin_tab_delivered: Delivered
+admin_tab_cancelled: Cancelled
+admin_tab_review_pending: Pending
+admin_tab_approved: Approved
+admin_tab_rejected: Rejected
+admin_shortcuts: SHORTCUTS
+admin_pending_orders_shortcut: Pending Orders
+admin_unapproved_reviews_shortcut: Unapproved Reviews
+admin_customer_info: CUSTOMER INFORMATION
+admin_products_label: Product Catalog
+admin_update_status_title: UPDATE STATUS
+admin_update_status_btn: Update Status
+admin_btn_delete: Delete
+admin_error_update_failed: Update failed
+admin_error_delete_failed: Delete failed
+admin_error_login_failed: Incorrect admin email or password
+admin_stats_revenue: REVENUE
+admin_stats_orders: ORDERS
+admin_stats_users: USERS
+admin_stats_blogs: BLOGS
+admin_stats_reviews: REVIEWS
+admin_stats_products: PRODUCTS
+admin_growth: GROWTH ANALYTICS
+admin_recent_activity: RECENT ACTIVITY
+admin_menu_flashsale: Flash Sale
+price_3450: 3.450.000 ₫
+price_1150: 1.150.000 ₫
+price_950: 950.000 ₫
+price_1800: 1.800.000 ₫
+price_550: 550.000 ₫
+price_2950: 2.950.000 ₫
+price_2250: 2.250.000 ₫
+price_4200: 4.200.000 ₫
+price_2850: 2.850.000 ₫
+price_1250: 1.250.000 ₫
+price_850: 850.000 ₫
+price_2100: 2.100.000 ₫
+otp_hint: -
+price_zero_format: 0 ₫
+discount_format: -%1$d%%
+card_preview_number: **** **** **** ****
+card_preview_expiry: MM/YY
+hint_card_number: 0000 0000 0000 0000
+hint_expiry_date: MM/YY
+label_cvv: CVV
+timer_default_time: 00 : 00 : 00
+status_cancelled: Cancelled
+status_pending: Pending
+status_confirmed: Confirmed
+status_shipping: Shipping
+status_delivered: Delivered
+label_rate_this_product: Rate this product
+hint_review_comment: Share your experience with this piece…
+error_rate_all_products: Please rate all products before submitting
+label_add_photos: Add Photos
+label_your_review: Your Review
+admin_employee_email_hint: Email

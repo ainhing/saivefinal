@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/bg_material_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header info: simulated value and details scope -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/esg_sim_result_title"
+        android:textColor="@color/colorMaroon"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/simScope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorNoirBlack"
+        android:textSize="11sp"
+        android:alpha="0.5"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Simulated Input Badge -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#10FAF8F3"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:text="@string/esg_sim_input_label"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/simInputEsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Predicted Values block -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:alpha="0.4"
+        android:letterSpacing="0.1"
+        android:text="@string/esg_sim_financial_pred_title"
+        android:textColor="@color/colorNoirBlack"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:text="@string/esg_profit_margin"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/simPredProfit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:text="@string/esg_growth_rate"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/simPredGrowth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:text="@string/esg_market_cap"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/simPredMarket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" android:layout_marginBottom="12dp" />
+
+    <!-- Sub-scores for reference -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:alpha="0.4"
+        android:letterSpacing="0.1"
+        android:text="@string/esg_sim_avg_esg_peer_title"
+        android:textColor="@color/colorNoirBlack"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:text="@string/esg_environment"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/simAvgEnv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:text="@string/esg_social"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/simAvgSoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:text="@string/esg_governance"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/simAvgGov"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" android:layout_marginBottom="12dp" />
+
+    <!-- Correlation & economic insights -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:alpha="0.4"
+        android:letterSpacing="0.1"
+        android:text="@string/esg_sim_econometric_index_title"
+        android:textColor="@color/colorNoirBlack"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:text="@string/esg_sim_correlation_coef_label"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/simCorr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:text="@string/esg_sim_regression_slope_label"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/simSlope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/colorLinen" android:alpha="0.5" android:layout_marginBottom="12dp" />
+
+    <!-- Qualitative Insights -->
+    <TextView
+        android:id="@+id/simInsight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorNoirBlack"
+        android:textSize="12sp"
+        android:alpha="0.8"
+        android:lineSpacingMultiplier="1.2" />
+
+</LinearLayout>

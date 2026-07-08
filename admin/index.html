@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAIVE Admin Dashboard</title>
+  <meta name="description" content="Bảng điều khiển quản trị SAIVE - Quản lý sản phẩm, đơn hàng, người dùng, blog và đánh giá." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- ECharts for Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="login-screen" class="login-wrapper">
+    <div class="login-card">
+      <div class="logo">SAIVE</div>
+      <h2 data-i18n="login-system-title" style="font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-secondary); margin-bottom: 32px;">Hệ thống Quản trị</h2>
+      <div class="form-group">
+        <label data-i18n="login-email-label">Email Quản trị</label>
+        <input type="email" id="login-email" placeholder="" value="">
+      </div>
+      <div class="form-group">
+        <label data-i18n="login-password-label">Mật khẩu</label>
+        <input type="password" id="login-password" placeholder="" value="">
+      </div>
+      <button class="btn-login" data-i18n="login-btn" onclick="handleLoginSubmit()">Đăng nhập</button>
+      <div id="login-error" data-i18n="login-error-msg" style="color: var(--danger); margin-top: 15px; font-size: 0.85rem; display: none;">
+        Thông tin đăng nhập không chính xác!
+      </div>
+    </div>
+  </div>
+
+  <div id="admin-app" style="display: none;">
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <span class="logo-icon"></span>
+      <span class="logo-text">SAIVE</span>
+    </div>
+    <span class="logo-sub" data-i18n="sidebar-admin-panel">Admin Panel</span>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a href="#" class="nav-item active" data-page="dashboard" id="nav-dashboard">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-dashboard">Dashboard</span>
+    </a>
+    <a href="#" class="nav-item" data-page="products" id="nav-products">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-products">Sản phẩm</span>
+    </a>
+    <a href="#" class="nav-item" data-page="orders" id="nav-orders">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-orders">Đơn hàng</span>
+    </a>
+    <a href="#" class="nav-item" data-page="users" id="nav-users">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-users">Người dùng</span>
+    </a>
+    <a href="#" class="nav-item" data-page="employees" id="nav-employees">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-employees">Nhân viên</span>
+    </a>
+    <a href="#" class="nav-item" data-page="blogs" id="nav-blogs">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-blogs">Blog</span>
+    </a>
+    <a href="#" class="nav-item" data-page="vouchers" id="nav-vouchers">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-vouchers">Voucher</span>
+    </a>
+    <a href="#" class="nav-item" data-page="reviews" id="nav-reviews">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-reviews">Đánh giá</span>
+    </a>
+    <a href="#" class="nav-item" data-page="settings" id="nav-settings">
+      <span class="nav-icon"></span>
+      <span data-i18n="nav-settings">Cài đặt</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="server-status" id="server-status">
+      <span class="status-dot" id="status-dot"></span>
+      <span id="status-text" data-i18n="status-connecting">Đang kết nối...</span>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<div class="main-wrapper">
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-toggle" id="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <h1 class="page-title" id="page-title">Dashboard</h1>
+    </div>
+    <div class="topbar-right">
+      <div class="refresh-action">
+        <button class="btn btn-sm btn-outline" style="color: white; border-color: rgba(255,255,255,0.3);" onclick="refreshData()" data-i18n="btn-refresh">Làm mới</button>
+      </div>
+      <div class="user-action">
+        <button class="btn btn-sm btn-danger" onclick="handleLogout()" data-i18n="btn-logout"> Đăng xuất</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGES -->
+  <main class="content" id="main-content">
+
+    <!-- DASHBOARD PAGE -->
+    <section class="page active" id="page-dashboard">
+      <div class="stats-grid">
+        <div class="stat-card" id="stat-products">
+          <div class="stat-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="count-products">—</div>
+            <div class="stat-label" data-i18n="stat-products">Sản phẩm</div>
+          </div>
+          <div class="stat-trend up">↑</div>
+        </div>
+        <div class="stat-card" id="stat-orders">
+          <div class="stat-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="count-orders">—</div>
+            <div class="stat-label" data-i18n="stat-orders">Đơn hàng</div>
+          </div>
+          <div class="stat-trend up">↑</div>
+        </div>
+        <div class="stat-card" id="stat-users">
+          <div class="stat-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="count-users">—</div>
+            <div class="stat-label" data-i18n="stat-users">Người dùng</div>
+          </div>
+          <div class="stat-trend up">↑</div>
+        </div>
+        <div class="stat-card" id="stat-blogs">
+          <div class="stat-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="count-blogs">—</div>
+            <div class="stat-label" data-i18n="stat-blogs">Blog</div>
+          </div>
+          <div class="stat-trend neutral">→</div>
+        </div>
+        <div class="stat-card" id="stat-reviews">
+          <div class="stat-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="count-reviews">—</div>
+            <div class="stat-label" data-i18n="stat-reviews">Đánh giá</div>
+          </div>
+          <div class="stat-trend up">↑</div>
+        </div>
+        <div class="stat-card" id="stat-vouchers">
+          <div class="stat-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="count-vouchers">—</div>
+            <div class="stat-label" data-i18n="nav-vouchers">Voucher</div>
+          </div>
+          <div class="stat-trend neutral">→</div>
+        </div>
+        <div class="stat-card" id="stat-revenue">
+          <div class="stat-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="count-revenue">—</div>
+            <div class="stat-label" data-i18n="stat-revenue">Tổng doanh thu</div>
+          </div>
+          <div class="stat-trend up">↑</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <h2 class="card-title" data-i18n="card-revenue-growth"> Tăng trưởng doanh thu (7 ngày gần nhất)</h2>
+        </div>
+        <div class="card-body">
+          <div id="revenue-growth-chart" class="revenue-chart" style="display: flex; align-items: flex-end; gap: 10px; height: 180px; padding-top: 20px;">
+             <!-- Bars will be injected here -->
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title" data-i18n="card-recent-orders"> Đơn hàng gần đây</h2>
+          </div>
+          <div class="card-body">
+            <table class="table" id="dashboard-orders-table">
+              <thead>
+              <tr>
+                <th data-i18n="th-order-id">Mã đơn</th>
+                <th data-i18n="th-customer">Khách hàng</th>
+                <th data-i18n="th-items">Sản phẩm</th>
+                <th data-i18n="th-total">Tổng tiền</th>
+                <th data-i18n="th-status">Trạng thái</th>
+              </tr>
+              </thead>
+              <tbody id="dashboard-orders-body">
+              <tr><td colspan="5" class="loading-cell">Đang tải...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title" data-i18n="card-order-stats"> Thống kê đơn hàng</h2>
+          </div>
+          <div class="card-body">
+            <h4 data-i18n="label-by-status" style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px; text-transform: uppercase;">Theo trạng thái</h4>
+            <div id="order-status-chart" class="status-chart" style="margin-bottom: 24px;"></div>
+
+            <h4 data-i18n="label-popular-categories" style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px; text-transform: uppercase;">Danh mục phổ biến</h4>
+            <div id="category-chart" class="status-chart"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 class="card-title" data-i18n="card-review-topics"> Phân bổ chủ đề đánh giá</h2>
+            <button class="btn btn-sm btn-outline" onclick="showReviewAnalytics()" style="font-size: 0.7rem;">Chi tiết</button>
+          </div>
+          <div class="card-body">
+            <div id="review-topic-chart" class="status-chart">
+               <!-- Topic bars will be injected here -->
+            </div>
+            <div style="margin-top: 15px; text-align: center; border-top: 1px solid var(--border-color); padding-top: 10px;">
+               <small style="color: var(--text-secondary)" data-i18n="label-analysis-note">Dựa trên phân tích từ khóa nội dung (AI Analysis)</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS PAGE -->
+    <section class="page" id="page-products">
+      <div class="page-actions">
+        <div class="search-box">
+          <input type="text" id="product-search" data-i18n="placeholder-search-products" placeholder=" Tìm sản phẩm..." oninput="filterProducts()" />
+        </div>
+        <button class="btn btn-primary" onclick="openProductModal()" data-i18n="btn-add-product">+ Thêm sản phẩm</button>
+      </div>
+
+      <div class="card">
+        <div class="card-body no-padding">
+          <table class="table" id="products-table">
+            <thead>
+            <tr>
+              <th data-i18n="th-image">Ảnh</th>
+              <th data-i18n="th-id">ID</th>
+              <th data-i18n="th-product-name">Tên sản phẩm</th>
+              <th data-i18n="th-price">Giá</th>
+              <th data-i18n="th-stock">Tồn kho</th>
+              <th data-i18n="th-category">Danh mục</th>
+              <th data-i18n="th-rating">Đánh giá</th>
+              <th data-i18n="th-status">Trạng thái</th>
+              <th data-i18n="th-action">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody id="products-table-body">
+            <tr><td colspan="9" class="loading-cell">Đang tải...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDERS PAGE -->
+    <section class="page" id="page-orders">
+      <div class="page-actions">
+        <div class="search-box">
+          <input type="text" id="order-search" data-i18n="placeholder-search-orders" placeholder=" Tìm đơn hàng..." oninput="filterOrders()" />
+        </div>
+        <div class="filter-group">
+          <input type="date" id="order-date-from" onchange="filterOrders()" title="Từ ngày">
+          <input type="date" id="order-date-to" onchange="filterOrders()" title="Đến ngày">
+          <select id="order-status-filter" onchange="filterOrders()">
+            <option value="" data-i18n="opt-all-status">Tất cả trạng thái</option>
+            <option value="pending" data-i18n="opt-pending">Chờ xác nhận</option>
+            <option value="confirmed" data-i18n="opt-confirmed">Đã xác nhận</option>
+            <option value="shipping" data-i18n="opt-shipping">Đang giao</option>
+            <option value="delivered" data-i18n="opt-delivered">Đã giao</option>
+            <option value="cancelled" data-i18n="opt-cancelled">Đã hủy</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" onclick="window.openOrderCreateModal()" data-i18n="btn-add-order">+ Thêm đơn hàng</button>
+      </div>
+
+      <div class="card">
+        <div class="card-body no-padding">
+          <table class="table" id="orders-table">
+            <thead>
+            <tr>
+              <th data-i18n="th-order-id">Mã đơn</th>
+              <th data-i18n="th-customer">Khách hàng</th>
+              <th data-i18n="th-email">Email</th>
+              <th data-i18n="th-total">Tổng tiền</th>
+              <th data-i18n="th-payment">PT thanh toán</th>
+              <th data-i18n="th-status">Trạng thái</th>
+              <th data-i18n="th-date">Ngày tạo</th>
+              <th data-i18n="th-action">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody id="orders-table-body">
+            <tr><td colspan="8" class="loading-cell">Đang tải...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- USERS PAGE -->
+    <section class="page" id="page-users">
+      <div class="page-actions">
+        <div class="search-box">
+          <input type="text" id="user-search" data-i18n="placeholder-search-users" placeholder=" Tìm người dùng..." oninput="filterUsers()" />
+        </div>
+        <div class="filter-group">
+          <label>Từ ngày:</label>
+          <input type="date" id="user-date-from" onchange="filterUsers()" />
+          <label>Đến ngày:</label>
+          <input type="date" id="user-date-to" onchange="filterUsers()" />
+        </div>
+        <button class="btn btn-primary" onclick="openModal('user-modal')" data-i18n="btn-add-user">+ Thêm người dùng</button>
+      </div>
+
+      <div class="card">
+        <div class="card-body no-padding">
+          <table class="table" id="users-table">
+            <thead>
+            <tr>
+              <th data-i18n="th-avatar">Avatar</th>
+              <th data-i18n="th-name">Tên</th>
+              <th data-i18n="th-email">Email</th>
+              <th data-i18n="th-dob">Ngày sinh</th>
+              <th data-i18n="th-gender">Giới tính</th>
+              <th data-i18n="th-role">Vai trò</th>
+              <th data-i18n="th-status">Trạng thái</th>
+              <th data-i18n="th-date">Ngày tạo</th>
+              <th data-i18n="th-action">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody id="users-table-body">
+            <tr><td colspan="9" class="loading-cell">Đang tải...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMPLOYEES PAGE -->
+    <section class="page" id="page-employees">
+      <div class="page-actions">
+        <div class="search-box">
+          <input type="text" id="employee-search" data-i18n="placeholder-search-employees" placeholder="🔍 Tìm nhân viên..." />
+        </div>
+        <button class="btn btn-primary" onclick="openEmployeeModal()" data-i18n="btn-add-employee">+ Thêm nhân viên</button>
+      </div>
+
+      <div class="card">
+        <div class="card-body no-padding">
+          <table class="table">
+            <thead>
+            <tr>
+              <th data-i18n="th-fullname">Họ tên</th>
+              <th data-i18n="th-position">Vai trò</th>
+              <th data-i18n="th-shift">Ca làm</th>
+              <th data-i18n="th-email">Email</th>
+              <th data-i18n="th-status">Trạng thái</th>
+              <th data-i18n="th-action">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody id="employees-table-body">
+            <tr><td colspan="6" class="loading-cell">Đang tải...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOGS PAGE -->
+    <section class="page" id="page-blogs">
+      <div class="page-actions">
+        <div class="search-box">
+          <input type="text" id="blog-search" data-i18n="placeholder-search-blogs" placeholder=" Tìm blog..." oninput="filterBlogs()" />
+        </div>
+        <div class="filter-group">
+          <label>Từ ngày:</label>
+          <input type="date" id="blog-date-from" onchange="filterBlogs()" />
+          <label>Đến ngày:</label>
+          <input type="date" id="blog-date-to" onchange="filterBlogs()" />
+        </div>
+        <button class="btn btn-primary" onclick="openBlogModal()" data-i18n="btn-add-blog">+ Thêm blog</button>
+      </div>
+
+      <div class="card">
+        <div class="card-body no-padding">
+          <table class="table" id="blogs-table">
+            <thead>
+            <tr>
+              <th data-i18n="th-cover">Ảnh bìa</th>
+              <th data-i18n="th-title">Tiêu đề</th>
+              <th data-i18n="th-author">Tác giả</th>
+              <th data-i18n="th-tags">Tags</th>
+              <th data-i18n="th-status">Trạng thái</th>
+              <th data-i18n="th-date">Ngày tạo</th>
+              <th data-i18n="th-action">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody id="blogs-table-body">
+            <tr><td colspan="7" class="loading-cell">Đang tải...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOUCHERS PAGE -->
+    <section class="page" id="page-vouchers">
+      <div class="page-actions">
+        <div class="search-box">
+          <input type="text" id="voucher-search" data-i18n="placeholder-search-vouchers" placeholder=" Tìm voucher..." oninput="filterVouchers()" />
+        </div>
+        <div class="filter-group">
+          <label>Từ ngày:</label>
+          <input type="date" id="voucher-date-from" onchange="filterVouchers()" />
+          <label>Đến ngày:</label>
+          <input type="date" id="voucher-date-to" onchange="filterVouchers()" />
+        </div>
+        <button class="btn btn-primary" onclick="openVoucherModal()" data-i18n="btn-add-coupon">+ Thêm Voucher</button>
+      </div>
+
+      <div class="card">
+        <div class="card-body no-padding">
+          <table class="table" id="vouchers-table">
+            <thead>
+            <tr>
+              <th data-i18n="th-coupon-code">Mã Code</th>
+              <th data-i18n="th-title">Tiêu đề</th>
+              <th data-i18n="th-discount">Giảm giá</th>
+              <th data-i18n="th-expiry">Hết hạn</th>
+              <th data-i18n="th-usage">Lượt dùng</th>
+              <th data-i18n="th-status">Trạng thái</th>
+              <th data-i18n="th-date">Ngày tạo</th>
+              <th data-i18n="th-action">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody id="vouchers-table-body">
+            <tr><td colspan="8" class="loading-cell">Đang tải...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS PAGE -->
+    <section class="page" id="page-reviews">
+      <div class="page-actions">
+        <div class="search-box">
+          <input type="text" id="review-search" data-i18n="placeholder-search-reviews" placeholder=" Tìm đánh giá..." oninput="filterReviews()" />
+        </div>
+        <div class="filter-group">
+          <label>Từ ngày:</label>
+          <input type="date" id="review-date-from" onchange="filterReviews()" />
+          <label>Đến ngày:</label>
+          <input type="date" id="review-date-to" onchange="filterReviews()" />
+          <select id="review-approved-filter" onchange="filterReviews()">
+            <option value="" data-i18n="opt-all">Tất cả</option>
+            <option value="true" data-i18n="opt-approved">Đã duyệt</option>
+            <option value="false" data-i18n="opt-pending-review">Chờ duyệt</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body no-padding">
+          <table class="table" id="reviews-table">
+            <thead>
+            <tr>
+              <th data-i18n="th-product">Sản phẩm</th>
+              <th data-i18n="th-user">Người dùng</th>
+              <th data-i18n="th-review">Đánh giá</th>
+              <th data-i18n="th-content">Nội dung</th>
+              <th data-i18n="th-status">Trạng thái</th>
+              <th data-i18n="th-date">Ngày</th>
+              <th data-i18n="th-action">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody id="reviews-body">
+            <tr><td colspan="7" class="loading-cell">Đang tải...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETTINGS PAGE -->
+    <section class="page" id="page-settings">
+      <div class="card" style="max-width: 800px; margin: 0 auto;">
+        <div class="card-header">
+          <h2 class="card-title" data-i18n="settings-title">Cài đặt hệ thống & Giao diện</h2>
+        </div>
+        <div class="card-body">
+          <form id="form-settings" class="form-grid">
+            <div class="form-group full-width">
+              <label data-i18n="label-shop-name">Tên cửa hàng</label>
+              <input type="text" id="set-shop-name" value="SAIVE Luxury Store">
+            </div>
+            <div class="form-group">
+              <label data-i18n="label-language">Ngôn ngữ Dashboard</label>
+              <select id="set-language" onchange="changeLanguage(this.value)">
+                <option value="vi">Tiếng Việt</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-i18n="label-theme">Chế độ hiển thị</label>
+              <select id="set-theme" onchange="changeTheme(this.value)">
+                <option value="dark">Midnight (Tối)</option>
+                <option value="light">Luxury (Sáng)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-i18n="label-shipping-fee">Phí vận chuyển (đ)</label>
+              <input type="number" id="set-shipping" value="30000">
+            </div>
+            <div class="form-group">
+              <label data-i18n="label-min-freeship">Đơn hàng tối thiểu Freeship (đ)</label>
+              <input type="number" id="set-min-free" value="1000000">
+            </div>
+            <div class="form-group full-width">
+              <label data-i18n="label-address">Địa chỉ văn phòng</label>
+              <input type="text" id="set-address" value="227 Nguyễn Văn Cừ, Quận 5, TP.HCM">
+            </div>
+            <div class="form-group">
+              <label data-i18n="label-phone">Số điện thoại hỗ trợ</label>
+              <input type="text" id="set-phone" value="0901 234 567">
+            </div>
+            <div class="form-group">
+              <label data-i18n="label-contact-email">Email liên hệ</label>
+              <input type="email" id="set-email" value="contact@saive.vn">
+            </div>
+            <div class="form-group full-width" style="text-align: right; margin-top: 20px;">
+              <button type="button" class="btn btn-primary" onclick="saveSettings()" data-i18n="btn-save-settings">Lưu cấu hình</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ===== MODALS ===== -->
+
+<!-- Product Modal -->
+<div class="modal-overlay" id="product-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="product-modal-title" data-i18n="modal-product-title">Thêm sản phẩm</h3>
+      <button class="modal-close" onclick="closeModal('product-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="product-id-field" />
+      <div class="form-grid">
+        <div class="form-group">
+          <label data-i18n="label-product-id">Product ID *</label>
+          <input type="text" id="product-ProductId" placeholder="P001" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-category-id">Danh mục ID</label>
+          <select id="product-CategoryId">
+            <option value="" data-i18n="opt-select-category">-- Chọn danh mục --</option>
+            <option value="casual">Casual</option>
+            <option value="streetwear">Streetwear</option>
+            <option value="hobo">Hobo</option>
+            <option value="minimal">Minimal</option>
+            <option value="accessories">Phụ kiện</option>
+            <option value="shoes">Giày</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="label-product-name">Tên sản phẩm *</label>
+          <input type="text" id="product-ProductName" placeholder="Tên sản phẩm" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-original-price">Giá gốc (VNĐ)</label>
+          <input type="number" id="product-OriginalPrice" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-price-vnd">Giá bán (VNĐ)</label>
+          <input type="number" id="product-Price" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-stock">Tổng tồn kho</label>
+          <input type="number" id="product-StockQuantity" placeholder="0" readonly style="background: var(--bg-hover);" />
+        </div>
+        <div class="form-group full-width">
+          <label style="font-weight: 700; margin-bottom: 10px; display: block;">Phân loại hàng (Size & Màu sắc) *</label>
+          <div style="display: flex; gap: 8px; margin-bottom: 12px; align-items: flex-end;">
+            <div style="flex: 1;">
+              <label style="font-size: 0.7rem; opacity: 0.7;">Size</label>
+              <input type="text" id="new-variant-size" placeholder="M/32/..." />
+            </div>
+            <div style="flex: 1;">
+              <label style="font-size: 0.7rem; opacity: 0.7;">Màu</label>
+              <input type="text" id="new-variant-color" placeholder="Đen/Trắng/..." />
+            </div>
+            <div style="flex: 1;">
+              <label style="font-size: 0.7rem; opacity: 0.7;">Tồn kho</label>
+              <input type="number" id="new-variant-stock" value="0" min="0" />
+            </div>
+            <button type="button" class="btn btn-primary" style="padding: 10px 15px;" onclick="addProductVariant()">+</button>
+          </div>
+
+          <div style="max-height: 200px; overflow-y: auto; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-hover);">
+            <table class="table" style="font-size: 0.8rem; margin: 0;">
+              <thead style="position: sticky; top: 0; background: var(--bg-card); z-index: 1;">
+                <tr>
+                  <th>Size</th>
+                  <th>Màu</th>
+                  <th style="text-align:center;">Tồn kho</th>
+                  <th style="text-align:center;">Xóa</th>
+                </tr>
+              </thead>
+              <tbody id="product-variants-list">
+                <tr><td colspan="4" style="text-align:center; padding: 15px; color: var(--text-muted);">Chưa có phân loại nào</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-active">Kích hoạt</label>
+          <select id="product-IsActive">
+            <option value="true" data-i18n="opt-yes">Có</option>
+            <option value="false" data-i18n="opt-no">Không</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-featured">Nổi bật</label>
+          <select id="product-IsFeatured">
+            <option value="false" data-i18n="opt-no">Không</option>
+            <option value="true" data-i18n="opt-yes">Có</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="label-img-url">URL Ảnh (mỗi dòng một URL)</label>
+          <textarea id="product-Images" rows="3" placeholder="https://..."></textarea>
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="label-description">Mô tả</label>
+          <textarea id="product-Description" rows="3" placeholder="Mô tả sản phẩm..."></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('product-modal')" data-i18n="btn-cancel">Hủy</button>
+      <button class="btn btn-primary" onclick="saveProduct()" data-i18n="btn-save"> Lưu</button>
+    </div>
+  </div>
+</div>
+
+<!-- Order Detail Modal -->
+<div class="modal-overlay" id="order-modal">
+  <div class="modal modal-lg">
+    <div class="modal-header">
+      <h3 data-i18n="modal-order-detail-title">Chi tiết đơn hàng</h3>
+      <button class="modal-close" onclick="closeModal('order-modal')">✕</button>
+    </div>
+    <div class="modal-body" id="order-detail-body">
+    </div>
+    <div class="modal-footer">
+      <label data-i18n="label-update-status">Cập nhật trạng thái:</label>
+      <select id="order-status-update">
+        <option value="pending" data-i18n="opt-pending">Chờ xác nhận</option>
+        <option value="confirmed" data-i18n="opt-confirmed">Đã xác nhận</option>
+        <option value="shipping" data-i18n="opt-shipping">Đang giao</option>
+        <option value="delivered" data-i18n="opt-delivered">Đã giao</option>
+        <option value="cancelled" data-i18n="opt-cancelled">Đã hủy</option>
+      </select>
+      <button class="btn btn-primary" onclick="updateOrderStatus()" data-i18n="btn-update">Cập nhật</button>
+      <button class="btn btn-outline" onclick="closeModal('order-modal')" data-i18n="btn-close">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<!-- Create Order Modal -->
+<div class="modal-overlay" id="order-create-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 data-i18n="modal-add-order-title">Thêm đơn hàng mới</h3>
+      <button class="modal-close" onclick="closeModal('order-create-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <label data-i18n="label-customer-name">Khách hàng *</label>
+          <input type="text" id="new-order-FullName" placeholder="Họ và tên" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-phone-short">SĐT *</label>
+          <input type="text" id="new-order-Phone" placeholder="Số điện thoại" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-email">Email *</label>
+          <input type="email" id="new-order-Email" placeholder="Email" />
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="label-shipping-address">Địa chỉ giao hàng *</label>
+          <input type="text" id="new-order-ShippingAddress" placeholder="Địa chỉ" />
+        </div>
+        <div class="form-group full-width">
+          <label style="font-weight: 700; margin-bottom: 10px; display: block;">Sản phẩm trong đơn hàng *</label>
+          <div style="display: flex; gap: 8px; margin-bottom: 12px; align-items: flex-end;">
+            <div style="flex: 2;">
+              <label style="font-size: 0.7rem; opacity: 0.7;">Chọn sản phẩm</label>
+              <select id="new-order-product-select">
+                <option value="">-- Chọn sản phẩm --</option>
+              </select>
+            </div>
+            <div style="flex: 0.6;">
+              <label style="font-size: 0.7rem; opacity: 0.7;">Size</label>
+              <input type="text" id="new-order-item-size" placeholder="M/32" />
+            </div>
+            <div style="flex: 0.6;">
+              <label style="font-size: 0.7rem; opacity: 0.7;">Màu</label>
+              <input type="text" id="new-order-item-color" placeholder="Đen" />
+            </div>
+            <div style="flex: 0.6;">
+              <label style="font-size: 0.7rem; opacity: 0.7;">SL</label>
+              <input type="number" id="new-order-item-qty" value="1" min="1" />
+            </div>
+            <button type="button" class="btn btn-primary" style="padding: 10px 15px;" onclick="addOrderItem()">+</button>
+          </div>
+
+          <div style="max-height: 200px; overflow-y: auto; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-hover);">
+            <table class="table" style="font-size: 0.8rem; margin: 0;">
+              <thead style="position: sticky; top: 0; background: var(--bg-card); z-index: 1;">
+                <tr>
+                  <th>Sản phẩm</th>
+                  <th style="text-align:center;">Size/Màu</th>
+                  <th style="text-align:center;">SL</th>
+                  <th style="text-align:right;">Giá</th>
+                  <th style="text-align:center;">Xóa</th>
+                </tr>
+              </thead>
+              <tbody id="new-order-items-list">
+                <tr><td colspan="5" style="text-align:center; padding: 15px; color: var(--text-muted);">Chưa có sản phẩm nào được chọn</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-total-vnd">Tổng tiền (VNĐ) *</label>
+          <input type="number" id="new-order-TotalAmount" placeholder="0" readonly style="background: var(--bg-hover); font-weight: 700; color: var(--maroon);" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-payment-method">PT Thanh toán</label>
+          <select id="new-order-PaymentMethod">
+            <option value="COD">COD</option>
+            <option value="Momo">Momo</option>
+            <option value="Bank Transfer">Chuyển khoản</option>
+          </select>
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="label-note">Ghi chú</label>
+          <textarea id="new-order-Note" rows="2" placeholder="Ghi chú đơn hàng..."></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('order-create-modal')" data-i18n="btn-cancel">Hủy</button>
+      <button class="btn btn-primary" onclick="saveOrder()" data-i18n="btn-save"> Lưu đơn hàng</button>
+    </div>
+  </div>
+</div>
+
+<!-- User Modal -->
+<div class="modal-overlay" id="user-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="user-modal-title" data-i18n="modal-user-title">Người dùng</h3>
+      <button class="modal-close" onclick="closeModal('user-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="user-id-field" />
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <label data-i18n="th-email">Email *</label>
+          <input type="email" id="user-Email" placeholder="email@example.com" />
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="th-name">Họ tên</label>
+          <input type="text" id="user-DisplayName" placeholder="Nguyễn Văn A" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="login-password-label">Mật khẩu</label>
+          <input type="password" id="user-Password" placeholder="••••••••" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-phone">Số điện thoại</label>
+          <input type="text" id="user-Phone" placeholder="0900000000" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-dob-format">Ngày sinh (dd/MM/yyyy)</label>
+          <input type="text" id="user-DateOfBirth" placeholder="01/01/1990" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-gender">Giới tính</label>
+          <select id="user-Gender">
+            <option value="" data-i18n="opt-all">-- Chưa chọn --</option>
+            <option value="Male" data-i18n="opt-male">Nam</option>
+            <option value="Female" data-i18n="opt-female">Nữ</option>
+            <option value="Other" data-i18n="opt-other">Khác</option>
+            <option value="Prefer not to say" data-i18n="opt-no-reveal">Không muốn tiết lộ</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-role">Vai trò</label>
+          <select id="user-Role">
+            <option value="user" data-i18n="th-user">Người dùng</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-status">Trạng thái</label>
+          <select id="user-IsActive">
+            <option value="true" data-i18n="opt-active">Hoạt động</option>
+            <option value="false" data-i18n="opt-locked">Bị khóa</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('user-modal')" data-i18n="btn-cancel">Hủy</button>
+      <button class="btn btn-primary" onclick="saveUser()" data-i18n="btn-save"> Lưu</button>
+    </div>
+  </div>
+</div>
+
+<!-- Employee Modal -->
+<div class="modal-overlay" id="employee-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="emp-modal-title" data-i18n="modal-employee-title">Quản lý nhân viên</h3>
+      <button class="modal-close" onclick="closeModal('employee-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="emp-id-field" />
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <label data-i18n="th-fullname">Họ tên *</label>
+          <input type="text" id="emp-name" placeholder="Nguyễn Văn A" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-email">Email *</label>
+          <input type="email" id="emp-email" placeholder="email@saive.vn" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-phone">Số điện thoại</label>
+          <input type="text" id="emp-phone" placeholder="090..." />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-position">Chức vụ</label>
+          <input type="text" id="emp-position" placeholder="Manager, Sales..." />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-department">Phòng ban</label>
+          <input type="text" id="emp-department" placeholder="Kinh doanh, Kho..." />
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('employee-modal')" data-i18n="btn-cancel">Hủy</button>
+      <button class="btn btn-primary" onclick="saveEmployee()" data-i18n="btn-save"> Lưu</button>
+    </div>
+  </div>
+</div>
+
+<!-- Blog Modal -->
+<div class="modal-overlay" id="blog-modal">
+  <div class="modal modal-lg">
+    <div class="modal-header">
+      <h3 id="blog-modal-title" data-i18n="modal-blog-title">Thêm/Sửa Blog</h3>
+      <button class="modal-close" onclick="closeModal('blog-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="blog-id-field" />
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <label data-i18n="th-title">Tiêu đề Blog *</label>
+          <input type="text" id="blog-Title" placeholder="Nhập tiêu đề bài viết..." />
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-author">Tác giả</label>
+          <input type="text" id="blog-Author" placeholder="Tên người viết" />
+        </div>
+        <div class="form-group">
+          <label>Trạng thái</label>
+          <select id="blog-IsPublished">
+            <option value="true">Xuất bản (Public)</option>
+            <option value="false">Lưu nháp (Draft)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-tags">Tags</label>
+          <input type="text" id="blog-Tags" placeholder="Fashion, Style..." />
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-cover">URL Ảnh bìa</label>
+          <input type="text" id="blog-CoverImage" placeholder="https://..." />
+        </div>
+        <div class="form-group full-width">
+          <label>Tóm tắt bài viết</label>
+          <textarea id="blog-Summary" rows="2" placeholder="Mô tả ngắn gọn về bài viết..."></textarea>
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="th-content">Nội dung bài viết</label>
+          <textarea id="blog-Content" rows="10" placeholder="Viết nội dung tại đây..."></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('blog-modal')" data-i18n="btn-cancel">Hủy</button>
+      <button class="btn btn-primary" onclick="saveBlog()" data-i18n="btn-save">Lưu bài viết</button>
+    </div>
+  </div>
+</div>
+
+<!-- Voucher Modal -->
+<div class="modal-overlay" id="voucher-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="voucher-modal-title" data-i18n="modal-coupon-title">Quản lý Voucher</h3>
+      <button class="modal-close" onclick="closeModal('voucher-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="voucher-id-field" />
+      <div class="form-grid">
+        <div class="form-group full-width">
+          <label data-i18n="label-coupon-code">Mã Voucher (Code) *</label>
+          <input type="text" id="voucher-code" placeholder="SUMMER2024" />
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="label-coupon-title">Tiêu đề Voucher *</label>
+          <input type="text" id="voucher-title" placeholder="Giảm giá mùa hè" />
+        </div>
+        <div class="form-group">
+          <label>Loại Voucher</label>
+          <select id="voucher-type">
+            <option value="Percentage">Phần trăm (%)</option>
+            <option value="Fixed">Số tiền cố định (đ)</option>
+            <option value="FreeShipping">Miễn phí vận chuyển</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-coupon-discount">Giá trị giảm</label>
+          <input type="text" id="voucher-discount" placeholder="50.000đ hoặc 20%" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="label-coupon-expiry">Ngày hết hạn (dd/MM/yyyy)</label>
+          <input type="text" id="voucher-expiryDate" placeholder="31/12/2024" />
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-status">Trạng thái</label>
+          <select id="voucher-status">
+            <option value="Active" data-i18n="opt-active">Hoạt động</option>
+            <option value="Expired" data-i18n="opt-expired">Hết hạn</option>
+            <option value="Scheduled" data-i18n="opt-scheduled">Đã lên lịch</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="th-usage">Lượt đã dùng</label>
+          <input type="number" id="voucher-usageCount" value="0" />
+        </div>
+        <div class="form-group">
+          <label>Số lượng phát hành (Limit)</label>
+          <input type="number" id="voucher-usageLimit" value="100" />
+        </div>
+        <div class="form-group full-width">
+          <label data-i18n="label-description">Mô tả</label>
+          <textarea id="voucher-description" rows="3" placeholder="Mô tả chi tiết chương trình..."></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('voucher-modal')" data-i18n="btn-cancel">Hủy</button>
+      <button class="btn btn-primary" onclick="saveVoucher()" data-i18n="btn-save"> Lưu Voucher</button>
+    </div>
+  </div>
+</div>
+
+<!-- Review Analytics Modal -->
+<div class="modal-overlay" id="review-analytics-modal">
+  <div class="modal modal-lg" style="height: 80vh;">
+    <div class="modal-header">
+      <h3 data-i18n="card-review-topics">Phân tích chủ đề đánh giá (AI)</h3>
+      <button class="modal-close" onclick="closeModal('review-analytics-modal')">✕</button>
+    </div>
+    <div class="modal-body" style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; background: var(--bg-hover); padding: 5px; border-radius: 10px; gap: 10px;">
+        <button class="btn btn-sm analytics-tab-btn active" onclick="switchAnalyticsTab('wordcloud')" id="btn-tab-wc">Word Cloud</button>
+        <button class="btn btn-sm analytics-tab-btn" onclick="switchAnalyticsTab('treemap')" id="btn-tab-tm">Topic Treemap</button>
+      </div>
+      <div id="analytics-chart-container" style="flex: 1; min-height: 400px; width: 100%;">
+        <div id="analytics-wordcloud" style="width: 100%; height: 100%;"></div>
+        <div id="analytics-treemap" style="width: 100%; height: 100%; display: none;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Confirm Delete Modal -->
+<div class="modal-overlay" id="confirm-modal">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <h3 id="confirm-modal-title" data-i18n="modal-confirm-delete-title">⚠️ Xác nhận xóa</h3>
+      <button class="modal-close" onclick="closeModal('confirm-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p id="confirm-message" data-i18n="label-confirm-delete-msg">Bạn có chắc muốn xóa?</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('confirm-modal')" data-i18n="btn-cancel">Hủy</button>
+      <button class="btn btn-danger" id="confirm-delete-btn" data-i18n="btn-delete">Xóa</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+  </div> <!-- End #admin-app -->
+  <script src="app.js"></script>
+</body>
+</html>

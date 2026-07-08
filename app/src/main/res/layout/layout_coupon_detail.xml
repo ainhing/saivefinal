@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:ignore="Overdraw">
+
+    <!-- Thanh kéo Bottom Sheet -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="28dp"
+        android:background="@color/colorLinen"
+        android:alpha="0.5" />
+
+    <TextView
+        android:id="@+id/tvDetailTitle"
+        style="@style/TextAppearance.Saive.SectionHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAIVE WELCOME"
+        android:textSize="22sp"
+        android:textColor="@color/colorNoirBlack"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDetailDiscount"
+        style="@style/TextAppearance.Saive.Thin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/coupon_detail_welcome_desc"
+        android:textColor="@color/colorMaroon"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="24dp"
+        android:background="@color/colorLinen"
+        android:alpha="0.3" />
+
+    <!-- Hướng dẫn sử dụng -->
+    <TextView
+        style="@style/TextAppearance.Saive.Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coupon_detail_how_to"
+        android:textSize="13sp"
+        android:letterSpacing="0.05"
+        android:textColor="@color/colorTextSecondary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.Saive.Thin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/coupon_detail_steps"
+            android:textColor="@color/colorNoirBlack"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Khu vực mã Voucher (Ticket Style) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_white_8dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:elevation="2dp">
+
+            <TextView
+                style="@style/TextAppearance.Saive.Nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coupon_detail_your_code"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                android:letterSpacing="0.1" />
+
+            <TextView
+                android:id="@+id/tvDetailCode"
+                style="@style/TextAppearance.Saive.Header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="WELCOME20"
+                android:letterSpacing="0.2"
+                android:textColor="@color/colorNoirBlack"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Các lỗ bấm vé trang trí -->
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="-12dp"
+            android:background="@drawable/bg_circle_beige" />
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="-12dp"
+            android:background="@drawable/bg_circle_beige" />
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCopyDetail"
+        style="@style/Widget.Material3.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorMaroon"
+        android:text="@string/coupon_detail_copy_use"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="14dp"
+        app:rippleColor="#40FFFFFF" />
+
+</LinearLayout>

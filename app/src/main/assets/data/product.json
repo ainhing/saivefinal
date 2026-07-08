@@ -1,0 +1,1302 @@
+[{
+  "_id": {
+    "$oid": "69b27f73b240abd455984763"
+  },
+  "ProductId": "P002",
+  "CategoryId": "C001",
+  "ProductName": "Áo Ren EcoLace Satin",
+  "OriginalPrice": 650000,
+  "Price": 510000,
+  "Images": [
+    "https://drive.google.com/file/d/1flfu81azqgJnHcfyvUvZ3C76Bd45mMqX/view?usp=sharing",
+    "https://drive.google.com/file/d/1xiGqZNJd5siC6YTQ2fzm6KshPzr2nQa4/view?usp=sharing",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu2/Hobo_Aokieu2.3.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu2/Hobo_Aokieu2.4.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu2/Hobo_Aokieu2.5.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu2/Hobo_Aokieu2.6.jpg"
+  ],
+  "Description": "Áo Kiểu Ren EcoLace Satin được làm từ chất liệu ren tái chế EcoLace – mềm mại, thoáng khí và thân thiện với làn da. Họa tiết ren thủ công tạo hiệu ứng nổi nhẹ nhàng, giúp tôn vẻ nữ tính và tinh tế của người mặc. Thiết kế theo tinh thần Hobo Romantic, phóng khoáng nhưng vẫn giữ nét thanh lịch tối giản. Phù hợp cho các dịp dạo phố, cà phê, chụp ảnh concept vintage – eco, mang đến cảm giác tự nhiên và thoải mái suốt cả ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 78,
+  "Rating": 3.5,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00",
+  "IsActive": true,
+  "IsFeatured": true,
+  "UpdatedAt": "2026-03-25T00:49:02.549Z"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984764"
+  },
+  "ProductId": "P003",
+  "CategoryId": "C001",
+  "ProductName": "Áo Voan Hoa ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu3/Hobo_Aokieu3.1.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu3/Hobo_Aokieu3.2.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu3/Hobo_Aokieu3.3.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu3/Hobo_Aokieu3.4.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu3/Hobo_Aokieu3.5.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu3/Hobo_Aokieu3.6.jpg"
+  ],
+  "Description": "Áo Kiểu Voan Hoa ReBloom được làm từ chất liệu voan tái chế ReBloom – mềm mại, thoáng khí và thân thiện với làn da. Họa tiết thêu hoa thủ công tạo hiệu ứng nổi nhẹ nhàng, giúp tôn vẻ nữ tính và tinh tế của người mặc. Thiết kế theo tinh thần Hobo Romantic, phóng khoáng nhưng vẫn giữ nét thanh lịch tối giản. Phù hợp cho các dịp dạo phố, cà phê, chụp ảnh concept vintage – eco, mang đến cảm giác tự nhiên và thoải mái suốt cả ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 74,
+  "Rating": 3.9,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984765"
+  },
+  "ProductId": "P004",
+  "CategoryId": "C001",
+  "ProductName": "Áo Tay Phồng Voan Airy",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu4/Hobo_Aokieu4.1.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu4/Hobo_Aokieu4.2.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu4/Hobo_Aokieu4.3.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu4/Hobo_Aokieu4.4.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu4/Hobo_Aokieu4.5.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu4/Hobo_Aokieu4.6.jpg"
+  ],
+  "Description": "Áo Kiểu Tay Phồng Voan Airy được làm từ chất liệu voan tái chế Airy – mềm mại, thoáng khí và thân thiện với làn da. Họa tiết thêu tay phồng tạo hiệu ứng nổi nhẹ nhàng, giúp tôn vẻ nữ tính và tinh tế của người mặc. Thiết kế theo tinh thần Hobo Romantic, phóng khoáng nhưng vẫn giữ nét thanh lịch tối giản. Phù hợp cho các dịp dạo phố, cà phê, chụp ảnh concept vintage – eco, mang đến cảm giác tự nhiên và thoải mái suốt cả ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 86,
+  "Rating": 3.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984766"
+  },
+  "ProductId": "P005",
+  "CategoryId": "C001",
+  "ProductName": "Áo Voan Tầng CreamWave",
+  "OriginalPrice": 720000,
+  "Price": 620000,
+  "Images": [
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu5/Hobo_Aokieu5.1.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu5/Hobo_Aokieu5.2.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu5/Hobo_Aokieu5.3.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu5/Hobo_Aokieu5.4.jpg",
+    "assets/images/hobo/hobo_aokieu/Hobo_Aokieu5/Hobo_Aokieu5.5.jpg"
+  ],
+  "Description": "Áo Kiểu Voan Tầng CreamWave được làm từ chất liệu voan tái chế CreamWave – mềm mại, thoáng khí và thân thiện với làn da. Họa tiết thêu tầng tạo hiệu ứng nổi nhẹ nhàng, giúp tôn vẻ nữ tính và tinh tế của người mặc. Thiết kế theo tinh thần Hobo Romantic, phóng khoáng nhưng vẫn giữ nét thanh lịch tối giản. Phù hợp cho các dịp dạo phố, cà phê, chụp ảnh concept vintage – eco, mang đến cảm giác tự nhiên và thoải mái suốt cả ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 75,
+  "Rating": 4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984767"
+  },
+  "ProductId": "P006",
+  "CategoryId": "C002",
+  "ProductName": "Quần Linen Dáng Suông EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/hobo/hobo_quan/Hobo_Quan1/Hobo_Quan1.1.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan1/Hobo_Quan1.2.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan1/Hobo_Quan1.3.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan1/Hobo_Quan1.4.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan1/Hobo_Quan1.5.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan1/Hobo_Quan1.6.jpg"
+  ],
+  "Description": "Quần Linen Dáng Suông EcoSoft được làm từ chất liệu linen tái chế EcoSoft – mềm mại, thoáng khí và thân thiện với làn da. Họa tiết thêu tầng tạo hiệu ứng nổi nhẹ nhàng, giúp tôn vẻ nữ tính và tinh tế của người mặc. Thiết kế theo tinh thần Hobo Romantic, phóng khoáng nhưng vẫn giữ nét thanh lịch tối giản. Phù hợp cho các dịp dạo phố, cà phê, chụp ảnh concept vintage – eco, mang đến cảm giác tự nhiên và thoải mái suốt cả ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 23,
+  "Rating": 4.6,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984768"
+  },
+  "ProductId": "P007",
+  "CategoryId": "C002",
+  "ProductName": "Quần Lụa Hữu Cơ EcoLace Satin",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/hobo/hobo_quan/Hobo_Quan2/Hobo_Quan2.1.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan2/Hobo_Quan2.2.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan2/Hobo_Quan2.3.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan2/Hobo_Quan2.4.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan2/Hobo_Quan2.5.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan2/Hobo_Quan2.6.jpg"
+  ],
+  "Description": "Quần Lụa Hữu Cơ EcoLace Satin được làm từ chất liệu lụa hữu cơ EcoLace – mềm mại, thoáng khí và thân thiện với làn da. Họa tiết thêu tầng tạo hiệu ứng nổi nhẹ nhàng, giúp tôn vẻ nữ tính và tinh tế của người mặc. Thiết kế theo tinh thần Hobo Romantic, phóng khoáng nhưng vẫn giữ nét thanh lịch tối giản. Phù hợp cho các dịp dạo phố, cà phê, chụp ảnh concept vintage – eco, mang đến cảm giác tự nhiên và thoải mái suốt cả ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 71,
+  "Rating": 4.1,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984769"
+  },
+  "ProductId": "P008",
+  "CategoryId": "C002",
+  "ProductName": "Quần Hoa Voan ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/hobo/hobo_quan/Hobo_Quan3/Hobo_Quan3.1.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan3/Hobo_Quan3.2.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan3/Hobo_Quan3.3.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan3/Hobo_Quan3.4.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan3/Hobo_Quan3.5.jpg"
+  ],
+  "Description": "Quần Hoa Voan ReBloom được làm từ chất liệu vải tái chế ReBloom – mềm mại, thoáng khí và thân thiện với làn da. Họa tiết thêu tầng tạo hiệu ứng nổi nhẹ nhàng, giúp tôn vẻ nữ tính và tinh tế của người mặc. Thiết kế theo tinh thần Hobo Romantic, phóng khoáng nhưng vẫn giữ nét thanh lịch tối giản. Phù hợp cho các dịp dạo phố, cà phê, chụp ảnh concept vintage – eco, mang đến cảm giác tự nhiên và thoải mái suốt cả ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 36,
+  "Rating": 4.2,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598476a"
+  },
+  "ProductId": "P009",
+  "CategoryId": "C002",
+  "ProductName": "Quần Dài Lụa Tơ Tằm EcoSoft",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/hobo/hobo_quan/Hobo_Quan4/Hobo_Quan4.1.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan4/Hobo_Quan4.2.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan4/Hobo_Quan4.3.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan4/Hobo_Quan4.4.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan4/Hobo_Quan4.5.jpg",
+    "assets/images/hobo/hobo_quan/Hobo_Quan4/Hobo_Quan4.6.jpg"
+  ],
+  "Description": "Quần Dài Lụa Tơ Tằm EcoSoft được làm từ chất liệu lụa tơ tằm tái chế EcoSoft – mềm mại, thoáng khí và thân thiện với làn da. Họa tiết thêu tầng tạo hiệu ứng nổi nhẹ nhàng, giúp tôn vẻ nữ tính và tinh tế của người mặc. Thiết kế theo tinh thần Hobo Romantic, phóng khoáng nhưng vẫn giữ nét thanh lịch tối giản. Phù hợp cho các dịp dạo phố, cà phê, chụp ảnh concept vintage – eco, mang đến cảm giác tự nhiên và thoải mái suốt cả ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 40,
+  "Rating": 4.4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598476c"
+  },
+  "ProductId": "P010",
+  "CategoryId": "C003",
+  "ProductName": "Áo Thun Oversize EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu1/streetwear_aokieu1.1.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu1/streetwear_aokieu1.2.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu1/streetwear_aokieu1.3.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu1/streetwear_aokieu1.4.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu1/streetwear_aokieu1.5.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu1/streetwear_aokieu1.6.jpg"
+  ],
+  "Description": "Áo Thun Oversize EcoSoft là sự lựa chọn hoàn hảo cho phong cách Streetwear hiện đại. Chất liệu EcoSoft tái chế mang lại cảm giác mềm mại, thoáng khí và bền bỉ. Thiết kế Oversize tạo sự thoải mái tối đa và phong cách relaxed. Phù hợp để mặc hằng ngày, kết hợp với quần jean hay cargo. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 57,
+  "Rating": 4.1,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598476d"
+  },
+  "ProductId": "P011",
+  "CategoryId": "C003",
+  "ProductName": "Áo Hoodie Unisex EcoLace Satin",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu2/streetwear_aokieu2.1.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu2/streetwear_aokieu2.2.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu2/streetwear_aokieu2.3.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu2/streetwear_aokieu2.4.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu2/streetwear_aokieu2.5.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu2/streetwear_aokieu2.6.jpg"
+  ],
+  "Description": "Áo Hoodie Unisex EcoLace Satin kết hợp sự thoải mái và phong cách streetwear hiện đại. Chất liệu EcoLace Satin mềm mại, thoáng khí và độc đáo. Thiết kế Hoodie unisex phù hợp cho mọi giới tính và lứa tuổi. Có thể mặc khi tập luyện, dạo phố hoặc chụp ảnh concept. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 27,
+  "Rating": 4.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598476e"
+  },
+  "ProductId": "P012",
+  "CategoryId": "C003",
+  "ProductName": "Áo Denim Tái Chế ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu3/streetwear_aokieu3.1.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu3/streetwear_aokieu3.2.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu3/streetwear_aokieu3.3.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu3/streetwear_aokieu3.4.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu3/streetwear_aokieu3.5.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu3/streetwear_aokieu3.6.jpg"
+  ],
+  "Description": "Áo Denim Tái Chế ReBloom là biểu tượng của phong cách Streetwear cổ điển. Chất liệu denim tái chế ReBloom bền bỉ, màu sắc độc đáo và thân thiện với môi trường. Có thể mặc một mình hoặc kết hợp với các áo khác để tạo phong cách layering. Phù hợp cho bất kỳ mùa nào trong năm. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 87,
+  "Rating": 3.5,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598476f"
+  },
+  "ProductId": "P013",
+  "CategoryId": "C003",
+  "ProductName": "Áo Len Street Knit Airy",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu4/streetwear_aokieu4.1.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu4/streetwear_aokieu4.2.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu4/streetwear_aokieu4.3.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu4/streetwear_aokieu4.4.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu4/streetwear_aokieu4.5.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu4/streetwear_aokieu4.6.jpg"
+  ],
+  "Description": "Áo Len Street Knit Airy kết hợp tinh tế giữa phong cách Streetwear và sự thoải mái. Chất liệu len Airy nhẹ nhàng, thoáng khí nhưng vẫn giữ ấm. Thiết kế knit hiện đại với chi tiết độc đáo. Phù hợp mặc khi thời tiết mát mẻ hay trong nhà điều hòa. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 68,
+  "Rating": 4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984770"
+  },
+  "ProductId": "P014",
+  "CategoryId": "C003",
+  "ProductName": "Áo Khoác Track Jacket CreamWave",
+  "OriginalPrice": 720000,
+  "Price": 620000,
+  "Images": [
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu5/streetwear_aokieu5.1.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu5/streetwear_aokieu5.2.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu5/streetwear_aokieu5.3.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu5/streetwear_aokieu5.4.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu5/streetwear_aokieu5.5.jpg",
+    "assets/images/streetwear/streetwear_aokieu/streetwear_aokieu5/streetwear_aokieu5.6.jpg"
+  ],
+  "Description": "Áo Khoác Track Jacket CreamWave là chiếc khoác không thể thiếu trong tủ đồ Streetwear. Chất liệu CreamWave mềm mại, thoáng khí và có độ bền cao. Thiết kế Track Jacket vintage với các đường viền độc đáo. Có thể khoác ngoài mọi trang phục để tạo phong cách năng động. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 63,
+  "Rating": 3.8,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984771"
+  },
+  "ProductId": "P015",
+  "CategoryId": "C004",
+  "ProductName": "Quần Army Dáng Suông EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/streetwear/streetwear_quan/streetwear_quan1/streetwear_quan1.1.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan1/streetwear_quan1.2.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan1/streetwear_quan1.3.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan1/streetwear_quan1.4.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan1/streetwear_quan1.5.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan1/streetwear_quan1.6.jpg"
+  ],
+  "Description": "Quần Army Dáng Suông EcoSoft là lựa chọn classic cho phong cách Streetwear. Chất liệu EcoSoft tái chế mềm mại, thoáng khí và bền bỉ. Thiết kế Army dáng suông với nhiều túi tiện lợi. Phù hợp để mix-match với bất kỳ áo nào. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 78,
+  "Rating": 3.6,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984772"
+  },
+  "ProductId": "P016",
+  "CategoryId": "C004",
+  "ProductName": "Quần Lụa Cargo EcoLace Satin",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/streetwear/streetwear_quan/streetwear_quan2/streetwear_quan2.1.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan2/streetwear_quan2.2.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan2/streetwear_quan2.3.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan2/streetwear_quan2.4.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan2/streetwear_quan2.5.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan2/streetwear_quan2.6.jpg"
+  ],
+  "Description": "Quần Lụa Cargo EcoLace Satin mang đến phong cách Streetwear hiện đại và thoải mái. Chất liệu lụa EcoLace Satin mềm mại, có bóng long lanh. Thiết kế Cargo với túi to để đựng đồ. Phù hợp cho bất kỳ dịp nào từ dạo phố đến những buổi thường ngày. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 60,
+  "Rating": 3.8,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984773"
+  },
+  "ProductId": "P017",
+  "CategoryId": "C004",
+  "ProductName": "Quần Voan Sọc ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/streetwear/streetwear_quan/streetwear_quan3/streetwear_quan3.1.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan3/streetwear_quan3.2.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan3/streetwear_quan3.3.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan3/streetwear_quan3.4.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan3/streetwear_quan3.5.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan3/streetwear_quan3.6.jpg"
+  ],
+  "Description": "Quần Voan Sọc ReBloom mang đến sự tươi mới cho phong cách Streetwear của bạn. Chất liệu voan ReBloom tái chế mềm mại, thoáng khí. Họa tiết sọc ngang tạo điểm nhấn thời trang. Phù hợp mặc hè hoặc trong những ngày nắng nóng. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 82,
+  "Rating": 3.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984774"
+  },
+  "ProductId": "P018",
+  "CategoryId": "C004",
+  "ProductName": "Quần Jean Ngắn AiryVelvet",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/streetwear/streetwear_quan/streetwear_quan5/streetwear_quan5.1.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan5/streetwear_quan5.2.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan5/streetwear_quan5.3.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan5/streetwear_quan5.4.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan5/streetwear_quan5.5.jpg",
+    "assets/images/streetwear/streetwear_quan/streetwear_quan5/streetwear_quan5.6.jpg"
+  ],
+  "Description": "Quần Jean Ngắn AiryVelvet là món đồ essential cho phong cách Streetwear mùa hè. Chất liệu jean AiryVelvet mềm mại, thoáng khí nhưng vẫn bền. Độ dài vừa phải, phù hợp để mix-match với rất nhiều kiểu áo. Hoàn hảo cho những ngày nắng nóng. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 53,
+  "Rating": 4.4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984775"
+  },
+  "ProductId": "P020",
+  "CategoryId": "C005",
+  "ProductName": "Áo Thun In Họa Tiết EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/casual/casual_aokieu/casual_aokieu1/casual_aokieu1.1.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu1/casual_aokieu1.2.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu1/casual_aokieu1.3.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu1/casual_aokieu1.4.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu1/casual_aokieu1.5.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu1/casual_aokieu1.6.jpg"
+  ],
+  "Description": "Áo Thun In Họa Tiết EcoSoft là lựa chọn thoải mái cho phong cách Casual hằng ngày. Chất liệu EcoSoft tái chế mềm mại, thoáng khí và bền bỉ. Họa tiết in độc đáo tạo điểm nhấn cho trang phục. Phù hợp đi học, đi làm hay đi chơi. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 68,
+  "Rating": 4.1,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984776"
+  },
+  "ProductId": "P021",
+  "CategoryId": "C005",
+  "ProductName": "Áo Thun Be Organic EcoLace Satin",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/casual/casual_aokieu/casual_aokieu2/casual_aokieu2.1.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu2/casual_aokieu2.2.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu2/casual_aokieu2.3.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu2/casual_aokieu2.4.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu2/casual_aokieu2.5.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu2/casual_aokieu2.6.jpg"
+  ],
+  "Description": "Áo Thun Be Organic EcoLace Satin mang đến cảm giác tự nhiên cho phong cách Casual. Chất liệu cotton hữu cơ EcoLace Satin mềm mại, thoáng khí. Màu sắc be neutral phù hợp mix-match với nhiều trang phục. Hoàn hảo cho những buổi dạo phố hay cà phê. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 52,
+  "Rating": 4.4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00",
+  "IsActive": true,
+  "IsFeatured": true,
+  "UpdatedAt": "2026-03-25T00:49:09.185Z"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984777"
+  },
+  "ProductId": "P022",
+  "CategoryId": "C005",
+  "ProductName": "Áo Thun Trơn ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/casual/casual_aokieu/casual_aokieu3/casual_aokieu3.1.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu3/casual_aokieu3.2.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu3/casual_aokieu3.3.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu3/casual_aokieu3.4.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu3/casual_aokieu3.5.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu3/casual_aokieu3.6.jpg"
+  ],
+  "Description": "Áo Thun Trơn ReBloom là kinh điển không bao giờ lỗi mốt cho phong cách Casual. Chất liệu ReBloom tái chế mềm mại, thoáng khí. Thiết kế trơn đơn giản nhưng tinh tế. Dễ dàng mix-match với bất kỳ trang phục nào. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 77,
+  "Rating": 3.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984778"
+  },
+  "ProductId": "P023",
+  "CategoryId": "C005",
+  "ProductName": "Áo Thun Cổ Tròn Airy",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/casual/casual_aokieu/casual_aokieu4/casual_aokieu4.1.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu4/casual_aokieu4.2.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu4/casual_aokieu4.3.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu4/casual_aokieu4.4.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu4/casual_aokieu4.5.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu4/casual_aokieu4.6.jpg"
+  ],
+  "Description": "Áo Thun Cổ Tròn Airy mang đến sự thoải mái tối đa cho phong cách Casual. Chất liệu Airy nhẹ nhàng, thoáng khí ideal cho những ngày nắng nóng. Thiết kế cổ tròn cơ bản nhưng basic là chìa khóa của phong cách Casual. Phù hợp với mọi độ tuổi. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 38,
+  "Rating": 4.4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984779"
+  },
+  "ProductId": "P024",
+  "CategoryId": "C005",
+  "ProductName": "Áo Sơ Mi Denim CreamWave",
+  "OriginalPrice": 720000,
+  "Price": 620000,
+  "Images": [
+    "assets/images/casual/casual_aokieu/casual_aokieu5/casual_aokieu5.1.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu5/casual_aokieu5.2.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu5/casual_aokieu5.3.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu5/casual_aokieu5.4.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu5/casual_aokieu5.5.jpg",
+    "assets/images/casual/casual_aokieu/casual_aokieu5/casual_aokieu5.6.jpg"
+  ],
+  "Description": "Áo Sơ Mi Denim CreamWave là chiếc áo versatile cho phong cách Casual. Chất liệu denim CreamWave mềm mại, bền bỉ. Thiết kế sơ mi cổ điển với các nút gài độc đáo. Có thể mặc một mình hoặc khoác ngoài. Phù hợp cho bất kỳ mùa nào trong năm. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 67,
+  "Rating": 3.9,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598477a"
+  },
+  "ProductId": "P025",
+  "CategoryId": "C006",
+  "ProductName": "Quần Jean Suông EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/casual/casual_quan/casual_quan1/casual_quan1.1.jpg",
+    "assets/images/casual/casual_quan/casual_quan1/casual_quan1.2.jpg",
+    "assets/images/casual/casual_quan/casual_quan1/casual_quan1.3.jpg",
+    "assets/images/casual/casual_quan/casual_quan1/casual_quan1.4.jpg",
+    "assets/images/casual/casual_quan/casual_quan1/casual_quan1.5.jpg",
+    "assets/images/casual/casual_quan/casual_quan1/casual_quan1.6.jpg"
+  ],
+  "Description": "Quần Jean Suông EcoSoft là basuc độc lập của phong cách Casual. Chất liệu denim EcoSoft tái chế bền bỉ, với độ co giãn thoải mái. Thiết kế suông dáng dài phù hợp với mọi dáng người. Dễ dàng kết hợp với nhiều loại áo. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 71,
+  "Rating": 3.8,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598477b"
+  },
+  "ProductId": "P026",
+  "CategoryId": "C006",
+  "ProductName": "Quần Linen Be EcoLace Satin",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/casual/casual_quan/casual_quan2/casual_quan2.1.jpg",
+    "assets/images/casual/casual_quan/casual_quan2/casual_quan2.2.jpg",
+    "assets/images/casual/casual_quan/casual_quan2/casual_quan2.3.jpg",
+    "assets/images/casual/casual_quan/casual_quan2/casual_quan2.4.jpg",
+    "assets/images/casual/casual_quan/casual_quan2/casual_quan2.5.jpg",
+    "assets/images/casual/casual_quan/casual_quan2/casual_quan2.6.jpg"
+  ],
+  "Description": "Quần Linen Be EcoLace Satin mang đến sự thanh lịch cho phong cách Casual. Chất liệu linen hữu cơ EcoLace Satin mềm mại, thoáng khí. Màu be neutral phù hợp mix-match. Ideal cho những ngày hè nắng nóng. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 19,
+  "Rating": 4.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598477c"
+  },
+  "ProductId": "P027",
+  "CategoryId": "C006",
+  "ProductName": "Quần Jean Xanh ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/casual/casual_quan/casual_quan3/casual_quan3.1.jpg",
+    "assets/images/casual/casual_quan/casual_quan3/casual_quan3.2.jpg",
+    "assets/images/casual/casual_quan/casual_quan3/casual_quan3.3.jpg",
+    "assets/images/casual/casual_quan/casual_quan3/casual_quan3.4.jpg",
+    "assets/images/casual/casual_quan/casual_quan3/casual_quan3.5.jpg",
+    "assets/images/casual/casual_quan/casual_quan3/casual_quan3.6.jpg"
+  ],
+  "Description": "Quần Jean Xanh ReBloom là kinh điển cho phong cách Casual. Chất liệu denim ReBloom tái chế bền bỉ với màu xanh đặc trưng. Thiết kế cơ bản nhưng không kém phần sáng tạo. Phù hợp với mọi mùa và mọi dịp. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 72,
+  "Rating": 4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598477d"
+  },
+  "ProductId": "P028",
+  "CategoryId": "C006",
+  "ProductName": "Quần Denim Tối AiryFit",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/casual/casual_quan/casual_quan4/casual_quan4.1.jpg",
+    "assets/images/casual/casual_quan/casual_quan4/casual_quan4.2.jpg",
+    "assets/images/casual/casual_quan/casual_quan4/casual_quan4.3.jpg",
+    "assets/images/casual/casual_quan/casual_quan4/casual_quan4.4.jpg",
+    "assets/images/casual/casual_quan/casual_quan4/casual_quan4.5.jpg",
+    "assets/images/casual/casual_quan/casual_quan4/casual_quan4.6.jpg"
+  ],
+  "Description": "Quần Denim Tối AiryFit mang đến sự lịch lãm cho phong cách Casual. Chất liệu denim AiryFit thoáng khí nhưng vẫn bền. Màu xanh tối kết hợp với nhiều áo. Thiết kế fit vừa vặn tạo vóc dáng tốt. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 67,
+  "Rating": 3.9,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598477e"
+  },
+  "ProductId": "P029",
+  "CategoryId": "C005",
+  "ProductName": "Quần Jean Ống Rộng CreamWave",
+  "OriginalPrice": 720000,
+  "Price": 620000,
+  "Images": [
+    "assets/images/casual/casual_quan/casual_quan5/casual_quan5.1.jpg",
+    "assets/images/casual/casual_quan/casual_quan5/casual_quan5.2.jpg",
+    "assets/images/casual/casual_quan/casual_quan5/casual_quan5.3.jpg",
+    "assets/images/casual/casual_quan/casual_quan5/casual_quan5.4.jpg",
+    "assets/images/casual/casual_quan/casual_quan5/casual_quan5.5.jpg",
+    "assets/images/casual/casual_quan/casual_quan5/casual_quan5.6.jpg"
+  ],
+  "Description": "Quần Jean Ống Rộng CreamWave mang đến phong cách trẻ trung cho Casual. Chất liệu denim CreamWave bền bỉ với độ co giãn thoải mái. Thiết kế ống rộng tạo cảm giác tự do. Phù hợp mix-match với áo thun hay áo sơ mi. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 18,
+  "Rating": 4.5,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00",
+  "IsActive": true,
+  "IsFeatured": true,
+  "UpdatedAt": "2026-03-13T08:47:18.637Z"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598477f"
+  },
+  "ProductId": "P030",
+  "CategoryId": "C007",
+  "ProductName": "Áo Voan Lụa EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu1/minimal_aokieu1.1.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu1/minimal_aokieu1.2.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu1/minimal_aokieu1.3.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu1/minimal_aokieu1.4.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu1/minimal_aokieu1.5.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu1/minimal_aokieu1.6.jpg"
+  ],
+  "Description": "Áo Voan Lụa EcoSoft mang đến sự tối giản nhưng sang trọng cho phong cách Minimal. Chất liệu voan lụa EcoSoft mềm mại, thoáng khí. Thiết kế đơn giản tuyệt đối với chi tiết tế nhị. Hoàn hảo cho những bữa tiệc hay những dịp đặc biệt. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 35,
+  "Rating": 4.3,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984780"
+  },
+  "ProductId": "P031",
+  "CategoryId": "C007",
+  "ProductName": "Áo Tay Ngắn Cổ Trụ EcoLace",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu2/minimal_aokieu2.1.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu2/minimal_aokieu2.2.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu2/minimal_aokieu2.3.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu2/minimal_aokieu2.4.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu2/minimal_aokieu2.5.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu2/minimal_aokieu2.6.jpg"
+  ],
+  "Description": "Áo Tay Ngắn Cổ Trụ EcoLace mang đến sự tinh giản cho phong cách Minimal. Chất liệu EcoLace mềm mại, thoáng khí. Thiết kế cổ trụ cổ điển với tay ngắn thoải mái. Phù hợp mặc hè hoặc kết hợp với các lớp áo khác. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 32,
+  "Rating": 4.6,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00",
+  "IsActive": true,
+  "IsFeatured": true,
+  "UpdatedAt": "2026-03-25T00:49:14.225Z"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984781"
+  },
+  "ProductId": "P032",
+  "CategoryId": "C007",
+  "ProductName": "Áo Kẻ Nhẹ ReBloom Stripe",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu3/minimal_aokieu3.1.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu3/minimal_aokieu3.2.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu3/minimal_aokieu3.3.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu3/minimal_aokieu3.4.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu3/minimal_aokieu3.5.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu3/minimal_aokieu3.6.jpg"
+  ],
+  "Description": "Áo Kẻ Nhẹ ReBloom Stripe mang đến sự cân bằng cho phong cách Minimal. Chất liệu ReBloom tái chế mềm mại, thoáng khí. Họa tiết kẻ sọc tạo điểm nhấn tinh tế. Dễ dàng mix-match với các vật dụng khác. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 70,
+  "Rating": 3.8,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984782"
+  },
+  "ProductId": "P033",
+  "CategoryId": "C007",
+  "ProductName": "Áo Dệt Kim Tay Ngắn Airy Knit",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu4/minimal_aokieu4.1.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu4/minimal_aokieu4.2.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu4/minimal_aokieu4.3.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu4/minimal_aokieu4.4.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu4/minimal_aokieu4.5.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu4/minimal_aokieu4.6.jpg"
+  ],
+  "Description": "Áo Dệt Kim Tay Ngắn Airy Knit kết hợp tính minimize với sự thoải mái. Chất liệu dệt kim Airy nhẹ nhàng nhưng ấm áp. Thiết kế tay ngắn đơn giản nhưng tinh tế. Phù hợp với mọi mùa và mọi dịp. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 18,
+  "Rating": 4.6,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984783"
+  },
+  "ProductId": "P034",
+  "CategoryId": "C007",
+  "ProductName": "Áo Gile Tay Lửng CreamWave",
+  "OriginalPrice": 720000,
+  "Price": 620000,
+  "Images": [
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu5/minimal_aokieu5.1.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu5/minimal_aokieu5.2.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu5/minimal_aokieu5.3.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu5/minimal_aokieu5.4.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu5/minimal_aokieu5.5.jpg",
+    "assets/images/minimal/minimal_aokieu/minimal_aokieu5/minimal_aokieu5.6.jpg"
+  ],
+  "Description": "Áo Gile Tay Lửng CreamWave mang đến sự thanh lịch cho phong cách Minimal. Chất liệu gile CreamWave mềm mại, có phần bóng long lanh. Thiết kế tay lửng tạo vẻ nữ tính. Có thể mặc một mình hoặc kết hợp với áo long sleeve. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 69,
+  "Rating": 3.9,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984784"
+  },
+  "ProductId": "P035",
+  "CategoryId": "C008",
+  "ProductName": "Quần Short Lưng Cao EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/minimal/minimal_quan/minimal_quan1/minimal_quan1.1.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan1/minimal_quan1.2.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan1/minimal_quan1.3.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan1/minimal_quan1.4.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan1/minimal_quan1.5.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan1/minimal_quan1.6.jpg"
+  ],
+  "Description": "Quần Short Lưng Cao EcoSoft mang đến sự thanh lịch cho phong cách Minimal. Chất liệu short EcoSoft tái chế bền bỉ. Thiết kế lưng cao tạo vóc dáng tốt. Phù hợp mặc hè hoặc kết hợp với áo dài. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 100,
+  "Rating": 3.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984785"
+  },
+  "ProductId": "P036",
+  "CategoryId": "C008",
+  "ProductName": "Quần Linen Trắng EcoLace Satin",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/minimal/minimal_quan/minimal_quan2/minimal_quan2.1.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan2/minimal_quan2.2.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan2/minimal_quan2.3.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan2/minimal_quan2.4.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan2/minimal_quan2.5.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan2/minimal_quan2.6.jpg"
+  ],
+  "Description": "Quần Linen Trắng EcoLace Satin mang đến sự sạch sẽ cho phong cách Minimal. Chất liệu linen EcoLace Satin mềm mại, thoáng khí. Màu trắng tinh khôi dễ dàng mix-match. Ideal cho những ngày hè nắng nóng. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 62,
+  "Rating": 4.1,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984786"
+  },
+  "ProductId": "P037",
+  "CategoryId": "C008",
+  "ProductName": "Quần Lụa Dệt ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/minimal/minimal_quan/minimal_quan3/minimal_quan3.1.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan3/minimal_quan3.2.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan3/minimal_quan3.3.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan3/minimal_quan3.4.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan3/minimal_quan3.5.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan3/minimal_quan3.6.jpg"
+  ],
+  "Description": "Quần Lụa Dệt ReBloom mang đến sự sang trọng cho phong cách Minimal. Chất liệu lụa ReBloom tái chế bền bỉ với bóng long lanh. Thiết kế dệt tinh tế tạo điểm nhấn. Phù hợp cho những bữa tiệc hay những dịp đặc biệt. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 74,
+  "Rating": 3.8,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984787"
+  },
+  "ProductId": "P038",
+  "CategoryId": "C008",
+  "ProductName": "Quần Layer Tối AiryKnit",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/minimal/minimal_quan/minimal_quan4/minimal_quan4.1.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan4/minimal_quan4.2.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan4/minimal_quan4.3.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan4/minimal_quan4.4.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan4/minimal_quan4.5.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan4/minimal_quan4.6.jpg"
+  ],
+  "Description": "Quần Layer Tối AiryKnit kết hợp sự minimize với sự thoải mái. Chất liệu dệt kim AiryKnit nhẹ nhàng nhưng ấm áp. Thiết kế layer tạo chiều sâu cho trang phục. Phù hợp với mọi mùa. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 31,
+  "Rating": 4.6,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984788"
+  },
+  "ProductId": "P039",
+  "CategoryId": "C008",
+  "ProductName": "Quần Đắp Chéo CreamWave Wrap",
+  "OriginalPrice": 720000,
+  "Price": 620000,
+  "Images": [
+    "assets/images/minimal/minimal_quan/minimal_quan5/minimal_quan5.1.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan5/minimal_quan5.2.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan5/minimal_quan5.3.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan5/minimal_quan5.4.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan5/minimal_quan5.5.jpg",
+    "assets/images/minimal/minimal_quan/minimal_quan5/minimal_quan5.6.jpg"
+  ],
+  "Description": "Quần Đắp Chéo CreamWave Wrap mang đến sự nghệ thuật cho phong cách Minimal. Chất liệu lụa CreamWave mềm mại, có bóng long lanh. Thiết kế đắp chéo tạo vẻ nữ tính và quí phái. Phù hợp cho những dịp đặc biệt. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 59,
+  "Rating": 4.1,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984789"
+  },
+  "ProductId": "P040",
+  "CategoryId": "C009",
+  "ProductName": "Dép Lưới Tre Đan EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/giay/giay1/giay1.1.jpeg",
+    "assets/images/giay/giay1/giay1.2.jpeg",
+    "assets/images/giay/giay1/giay1.3.jpeg",
+    "assets/images/giay/giay1/giay1.4.jpeg",
+    "assets/images/giay/giay1/giay1.5.jpeg",
+    "assets/images/giay/giay1/giay1.6.jpeg"
+  ],
+  "Description": "Dép Lưới Tre Đan EcoSoft mang đến sự tự nhiên cho phong cách. Chất liệu tre đan EcoSoft thoáng khí, nhẹ nhàng. Thiết kế lưới giúp chân thở thoải mái. Phù hợp mặc nhà hoặc đi dạo. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 46,
+  "Rating": 4.2,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598478a"
+  },
+  "ProductId": "P041",
+  "CategoryId": "C001",
+  "ProductName": "Dép Quai Chéo Suede",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/giay/giay2/giay2.1.webp",
+    "assets/images/giay/giay2/giay2.2.webp",
+    "assets/images/giay/giay2/giay2.3.webp",
+    "assets/images/giay/giay2/giay2.4.webp",
+    "assets/images/giay/giay2/giay2.5.webp",
+    "assets/images/giay/giay2/giay2.6.webp"
+  ],
+  "Description": "Dép Quai Chéo Suede mang đến sự thoải mái và phong cách. Chất liệu suede mềm mại, bền bỉ. Thiết kế quai chéo tạo cảm giác ôm chân tốt. Phù hợp làm đôi dép công sở hoặc dạo phố. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 78,
+  "Rating": 3.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00",
+  "IsActive": true,
+  "IsFeatured": true,
+  "UpdatedAt": "2026-03-25T00:49:39.453Z"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598478b"
+  },
+  "ProductId": "P042",
+  "CategoryId": "C009",
+  "ProductName": "Dép Kẹp Canvas ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/giay/giay3/giay3.1.webp",
+    "assets/images/giay/giay3/giay3.2.webp",
+    "assets/images/giay/giay3/giay3.3.webp",
+    "assets/images/giay/giay3/giay3.4.webp",
+    "assets/images/giay/giay3/giay3.5.webp",
+    "assets/images/giay/giay3/giay3.6.webp"
+  ],
+  "Description": "Dép Kẹp Canvas ReBloom mang đến sự cổ điển cho phong cách. Chất liệu canvas ReBloom tái chế bền bỉ. Thiết kế kẹp cơ bản nhưng sạch sẽ. Phù hợp mặc nhà hoặc đi dạo. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 93,
+  "Rating": 3.5,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598478c"
+  },
+  "ProductId": "P043",
+  "CategoryId": "C009",
+  "ProductName": "Giày Loafer Da Bóng EcoShine",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/giay/giay4/giay4.1.webp",
+    "assets/images/giay/giay4/giay4.2.webp",
+    "assets/images/giay/giay4/giay4.3.webp",
+    "assets/images/giay/giay4/giay4.4.webp",
+    "assets/images/giay/giay4/giay4.5.webp",
+    "assets/images/giay/giay4/giay4.6.webp"
+  ],
+  "Description": "Giày Loafer Da Bóng EcoShine mang đến sự thanh lịch cho phong cách. Chất liệu da bóng EcoShine sáng bóng, bền bỉ. Thiết kế Loafer cổ điển phù hợp công sở. Dễ dàng mix-match với các trang phục. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 22,
+  "Rating": 4.5,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598478d"
+  },
+  "ProductId": "P044",
+  "CategoryId": "C009",
+  "ProductName": "Sandal Quai Dán CreamWave",
+  "OriginalPrice": 720000,
+  "Price": 620000,
+  "Images": [
+    "assets/images/giay/giay5/giay5.1.webp",
+    "assets/images/giay/giay5/giay5.2.webp",
+    "assets/images/giay/giay5/giay5.3.webp",
+    "assets/images/giay/giay5/giay5.4.webp",
+    "assets/images/giay/giay5/giay5.5.webp",
+    "assets/images/giay/giay5/giay5.6.webp"
+  ],
+  "Description": "Sandal Quai Dán CreamWave mang đến sự hiện đại cho phong cách. Chất liệu CreamWave mềm mại, thoáng khí. Thiết kế quai dán dễ điều chỉnh để vừa vặn. Phù hợp đi học, đi làm hay đi chơi. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 66,
+  "Rating": 3.8,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598478e"
+  },
+  "ProductId": "P045",
+  "CategoryId": "C010",
+  "ProductName": "Khăn Lụa Pha Cotton EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/phukien/phukien_khan/phukien_khan1/phukien_khan1.1.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan1/phukien_khan1.2.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan1/phukien_khan1.3.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan1/phukien_khan1.4.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan1/phukien_khan1.5.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan1/phukien_khan1.6.jpg"
+  ],
+  "Description": "Khăn Lụa Pha Cotton EcoSoft mang đến sự thanh lịch cho bất kỳ trang phục nào. Chất liệu lụa pha cotton EcoSoft mềm mại, thoáng khí. Có thể buộc vào cổ, cài tóc hoặc quấn vào hông. Phù hợp cho bất kỳ mùa nào. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 41,
+  "Rating": 4.4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598478f"
+  },
+  "ProductId": "P046",
+  "CategoryId": "C010",
+  "ProductName": "Khăn Linen Hữu Cơ EcoLace",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/phukien/phukien_khan/phukien_khan2/phukien_khan2.1.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan2/phukien_khan2.2.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan2/phukien_khan2.3.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan2/phukien_khan2.4.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan2/phukien_khan2.5.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan2/phukien_khan2.6.jpg"
+  ],
+  "Description": "Khăn Linen Hữu Cơ EcoLace mang đến sự tự nhiên cho phong cách. Chất liệu linen hữu cơ EcoLace thoáng khí, mềm mại. Thiết kế đơn giản nhưng tinh tế. Phù hợp mà bất kỳ dịp nào. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 25,
+  "Rating": 4.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984790"
+  },
+  "ProductId": "P047",
+  "CategoryId": "C010",
+  "ProductName": "Khăn In Lá ReBloom Nature",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/phukien/phukien_khan/phukien_khan3/phukien_khan3.1.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan3/phukien_khan3.2.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan3/phukien_khan3.3.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan3/phukien_khan3.4.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan3/phukien_khan3.5.jpg",
+    "assets/images/phukien/phukien_khan/phukien_khan3/phukien_khan3.6.jpg"
+  ],
+  "Description": "Khăn In Lá ReBloom Nature mang đến sự tự nhiên cho phong cách. Chất liệu vải ReBloom tái chế thoáng khí. Họa tiết lá tạo điểm nhấn tự nhiên. Có thể sử dụng theo nhiều cách. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 69,
+  "Rating": 4.1,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984791"
+  },
+  "ProductId": "P048",
+  "CategoryId": "C011",
+  "ProductName": "Mũ Fedora Len Tre EcoSoft",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/phukien/phukien_non/phukien_non1/phukien_non1.1.webp",
+    "assets/images/phukien/phukien_non/phukien_non1/phukien_non1.2.webp",
+    "assets/images/phukien/phukien_non/phukien_non1/phukien_non1.3.webp",
+    "assets/images/phukien/phukien_non/phukien_non1/phukien_non1.4.webp",
+    "assets/images/phukien/phukien_non/phukien_non1/phukien_non1.5.webp"
+  ],
+  "Description": "Mũ Fedora Len Tre EcoSoft mang đến sự thanh lịch cho phong cách. Chất liệu len tre EcoSoft mềm mại, thoáng khí. Thiết kế Fedora cổ điển tạo vẻ lịch lãm. Phù hợp cho bất kỳ mùa nào. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 53,
+  "Rating": 4.4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984792"
+  },
+  "ProductId": "P049",
+  "CategoryId": "C011",
+  "ProductName": "Lưỡi Trai Thêu Đỏ Mận",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/phukien/phukien_non/phukien_non2/phukien_non2.1.webp",
+    "assets/images/phukien/phukien_non/phukien_non2/phukien_non2.2.webp",
+    "assets/images/phukien/phukien_non/phukien_non2/phukien_non2.3.webp",
+    "assets/images/phukien/phukien_non/phukien_non2/phukien_non2.4.webp",
+    "assets/images/phukien/phukien_non/phukien_non2/phukien_non2.5.webp",
+    "assets/images/phukien/phukien_non/phukien_non2/phukien_non2.6.webp"
+  ],
+  "Description": "Lưỡi Trai Thêu Đỏ Mận mang đến sự trẻ trung cho phong cách. Chất liệu lưỡi trai thoáng khí. Thêu Đỏ Mận tạo điểm nhấn nổi bật. Phù hợp mặc hè hoặc khi ra nắng. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 52,
+  "Rating": 4.4,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984793"
+  },
+  "ProductId": "P050",
+  "CategoryId": "C001",
+  "ProductName": "Mũ Lưỡi Trai Patch ReBloom",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/phukien/phukien_non/phukien_non3/phukien_non3.1.webp",
+    "assets/images/phukien/phukien_non/phukien_non3/phukien_non3.2.webp",
+    "assets/images/phukien/phukien_non/phukien_non3/phukien_non3.3.webp",
+    "assets/images/phukien/phukien_non/phukien_non3/phukien_non3.4.webp",
+    "assets/images/phukien/phukien_non/phukien_non3/phukien_non3.5.webp",
+    "assets/images/phukien/phukien_non/phukien_non3/phukien_non3.6.webp"
+  ],
+  "Description": "Mũ Lưỡi Trai Patch ReBloom mang đến sự độc đáo cho phong cách. Chất liệu canvas ReBloom tái chế bền bỉ. Chi tiết patch tạo điểm nhấn thú vị. Phù hợp mặc hè hoặc dạo phố. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 70,
+  "Rating": 3.8,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00",
+  "IsActive": true,
+  "IsFeatured": true,
+  "UpdatedAt": "2026-03-25T00:49:19.570Z"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984794"
+  },
+  "ProductId": "P051",
+  "CategoryId": "C011",
+  "ProductName": "Mũ Bucket Organic AiryKnit",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/phukien/phukien_non/phukien_non4/phukien_non4.1.jpg",
+    "assets/images/phukien/phukien_non/phukien_non4/phukien_non4.2.jpg",
+    "assets/images/phukien/phukien_non/phukien_non4/phukien_non4.3.jpg",
+    "assets/images/phukien/phukien_non/phukien_non4/phukien_non4.4.jpg",
+    "assets/images/phukien/phukien_non/phukien_non4/phukien_non4.5.jpg",
+    "assets/images/phukien/phukien_non/phukien_non4/phukien_non4.6.jpg"
+  ],
+  "Description": "Mũ Bucket Organic AiryKnit mang đến sự thoải mái cho phong cách. Chất liệu dệt kim AiryKnit nhẹ nhàng, thoáng khí. Thiết kế Bucket rộng rãi, thoải mái. Phù hợp mặc hè hoặc ra ngoài. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 35,
+  "Rating": 4.6,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984795"
+  },
+  "ProductId": "P052",
+  "CategoryId": "C001",
+  "ProductName": "Mũ Len CreamWave Beanie",
+  "OriginalPrice": 720000,
+  "Price": 620000,
+  "Images": [
+    "assets/images/phukien/phukien_non/phukien_non5/phukien_non5.1.jpg",
+    "assets/images/phukien/phukien_non/phukien_non5/phukien_non5.2.jpg",
+    "assets/images/phukien/phukien_non/phukien_non5/phukien_non5.3.jpg",
+    "assets/images/phukien/phukien_non/phukien_non5/phukien_non5.4.jpg",
+    "assets/images/phukien/phukien_non/phukien_non5/phukien_non5.5.jpg",
+    "assets/images/phukien/phukien_non/phukien_non5/phukien_non5.6.jpg"
+  ],
+  "Description": "Mũ Len CreamWave Beanie mang đến sự ấm áp cho phong cách mùa lạnh. Chất liệu len CreamWave mềm mại, giữ ấm tốt. Thiết kế Beanie đơn giản nhưng thanh lịch. Phù hợp khi thời tiết mát mẻ. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 43,
+  "Rating": 4.3,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00",
+  "UpdatedAt": "2026-03-13T08:23:22.550Z"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984796"
+  },
+  "ProductId": "P053",
+  "CategoryId": "C012",
+  "ProductName": "Ví Cầm Tay EcoSoft Classic",
+  "OriginalPrice": 720000,
+  "Price": 560000,
+  "Images": [
+    "assets/images/phukien/phukien_vi/phukien_vi1/phukien_vi1.1.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi1/phukien_vi1.2.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi1/phukien_vi1.3.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi1/phukien_vi1.4.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi1/phukien_vi1.5.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi1/phukien_vi1.6.jpg"
+  ],
+  "Description": "Ví Cầm Tay EcoSoft Classic mang đến sự sang trọng cho phong cách. Chất liệu vegan leather EcoSoft bền bỉ. Thiết kế cầm tay thoải mái, dễ sử dụng. Phù hợp để đi dạo hoặc những buổi tối. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 98,
+  "Rating": 3.7,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984797"
+  },
+  "ProductId": "P054",
+  "CategoryId": "C012",
+  "ProductName": "Ví Dài EcoLace Satin Organizer",
+  "OriginalPrice": 650000,
+  "Price": 520000,
+  "Images": [
+    "assets/images/phukien/phukien_vi/phukien_vi2/phukien_vi2.1.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi2/phukien_vi2.2.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi2/phukien_vi2.3.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi2/phukien_vi2.4.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi2/phukien_vi2.5.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi2/phukien_vi2.6.jpg"
+  ],
+  "Description": "Ví Dài EcoLace Satin Organizer mang đến sự tiện lợi cho phong cách. Chất liệu vegan leather EcoLace Satin yên tĩnh, bền bỉ. Nhiều ngăn để tổ chức đồ vật gọn gàng. Phù hợp cho những ai thích sự ngăn nắp. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 39,
+  "Rating": 4.3,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984798"
+  },
+  "ProductId": "P055",
+  "CategoryId": "C001",
+  "ProductName": "Ví Mini ReBloom Clutch",
+  "OriginalPrice": 650000,
+  "Price": 480000,
+  "Images": [
+    "assets/images/phukien/phukien_vi/phukien_vi3/phukien_vi3.1.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi3/phukien_vi3.2.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi3/phukien_vi3.3.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi3/phukien_vi3.4.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi3/phukien_vi3.5.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi3/phukien_vi3.6.jpg"
+  ],
+  "Description": "Ví Mini ReBloom Clutch mang đến sự nhỏ gọn cho phong cách. Chất liệu cotton ReBloom tái chế bền bỉ. Thiết kế mini dễ mang theo. Phù hợp cho những dịp đặc biệt hoặc đi dạo nhẹ. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 73,
+  "Rating": 4.1,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00",
+  "UpdatedAt": "2026-03-13T08:35:21.653Z"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd455984799"
+  },
+  "ProductId": "P056",
+  "CategoryId": "C012",
+  "ProductName": "Ví Lưới Trong CreamWave Mesh",
+  "OriginalPrice": 600000,
+  "Price": 590000,
+  "Images": [
+    "assets/images/phukien/phukien_vi/phukien_vi4/phukien_vi4.1.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi4/phukien_vi4.2.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi4/phukien_vi4.3.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi4/phukien_vi4.4.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi4/phukien_vi4.5.jpg",
+    "assets/images/phukien/phukien_vi/phukien_vi4/phukien_vi4.6.jpg"
+  ],
+  "Description": "Ví Lưới Trong CreamWave Mesh mang đến sự độc đáo cho phong cách. Chất liệu lưới trong từ CreamWave tinh tế. Thiết kế lưới giúp nhìn rõ nội dung bên trong. Phù hợp cho những ai thích sự tổ chức và độc đáo. Sản phẩm được sản xuất tại Việt Nam, hướng đến phong cách thời trang xanh bền vững.",
+  "StockQuantity": 38,
+  "Rating": 4.3,
+  "IsDeleted": false,
+  "CreatedAt": "2026-02-24T15:28:56.498114+00:00"
+},
+{
+  "_id": {
+    "$oid": "69b27f73b240abd45598479a"
+  },
+  "ProductId": "PROD_1772706665539_qalbsg0n8",
+  "CategoryId": "C001",
+  "ProductName": "Áo test",
+  "OriginalPrice": 600000,
+  "Price": 519000,
+  "Images": [
+    "assets/roofiimages/Images/1772716926322-Hobo_Aokieu1.7.jpg",
+    "assets/roofiimages/Images/1772716947714-Hobo_Aokieu1.1.jpg",
+    "assets/roofiimages/Images/1772716953864-Hobo_Aokieu1.2.jpg"
+  ],
+  "Description": "",
+  "StockQuantity": 53,
+  "Rating": 0,
+  "IsDeleted": false,
+  "CreatedAt": "2026-03-05T10:32:01.555Z",
+  "UpdatedAt": "2026-03-13T08:47:09.826Z",
+  "IsActive": true,
+  "IsFeatured": true
+},
+{
+  "_id": {
+    "$oid": "69c337072abf438b43878e07"
+  },
+  "ProductId": "PROD_1774401240733_q6uzswzr5",
+  "CategoryId": "C001",
+  "ProductName": "ao test",
+  "OriginalPrice": 1223900,
+  "Price": 650000,
+  "Images": [
+    "assets/roofiimages/Images/1774401271151-0bdbeac178c026a2c1fd8b0251bd8180.jpg"
+  ],
+  "Description": "",
+  "StockQuantity": 4,
+  "IsActive": true,
+  "IsFeatured": false,
+  "IsDeleted": false,
+  "CreatedAt": "2026-03-25T01:14:47.091Z",
+  "UpdatedAt": "2026-03-25T01:14:47.091Z"
+}]

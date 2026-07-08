@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Shoe/sneaker icon -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M2,17 L2,14 Q4,10 7,9 L10,9 L12,7 L17,7 Q19,7 20,9 L22,13 Q22,14 21,14.5 L21,17 Q18,18 12,18 Q6,18 2,17Z"/>
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M8,9L8,11L12,11L12,9Z"
+        android:strokeWidth="0"/>
+</vector>
