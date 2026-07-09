@@ -43,17 +43,12 @@ public final class FirebaseConnector {
         getDatabase().getReference(node).child(itemId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                try {
-                    T item = snapshot.getValue(clazz);
-                    if (item != null) {
-                        applyKeyAsId(item, itemId);
-                        callback.onSuccess(item);
-                    } else {
-                        callback.onFailure("Item not found");
-                    }
-                } catch (Exception e) {
-                    android.util.Log.e("FirebaseConnector", "Error mapping single item", e);
-                    callback.onFailure("Error parsing data: " + e.getMessage());
+                T item = snapshot.getValue(clazz);
+                if (item != null) {
+                    applyKeyAsId(item, itemId);
+                    callback.onSuccess(item);
+                } else {
+                    callback.onFailure("Item not found");
                 }
             }
 
@@ -70,14 +65,10 @@ public final class FirebaseConnector {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 List<T> items = new ArrayList<>();
                 for (DataSnapshot child : snapshot.getChildren()) {
-                    try {
-                        T item = child.getValue(clazz);
-                        if (item != null) {
-                            applyKeyAsId(item, child.getKey());
-                            items.add(item);
-                        }
-                    } catch (Exception e) {
-                        android.util.Log.e("FirebaseConnector", "Error mapping item list", e);
+                    T item = child.getValue(clazz);
+                    if (item != null) {
+                        applyKeyAsId(item, child.getKey());
+                        items.add(item);
                     }
                 }
                 callback.onSuccess(items);
@@ -102,14 +93,10 @@ public final class FirebaseConnector {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 List<T> items = new ArrayList<>();
                 for (DataSnapshot child : snapshot.getChildren()) {
-                    try {
-                        T item = child.getValue(clazz);
-                        if (item != null) {
-                            applyKeyAsId(item, child.getKey());
-                            items.add(item);
-                        }
-                    } catch (Exception e) {
-                        android.util.Log.e("FirebaseConnector", "Error mapping item from query", e);
+                    T item = child.getValue(clazz);
+                    if (item != null) {
+                        applyKeyAsId(item, child.getKey());
+                        items.add(item);
                     }
                 }
                 callback.onSuccess(items);
@@ -130,14 +117,10 @@ public final class FirebaseConnector {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 List<T> items = new ArrayList<>();
                 for (DataSnapshot child : snapshot.getChildren()) {
-                    try {
-                        T item = child.getValue(clazz);
-                        if (item != null) {
-                            applyKeyAsId(item, child.getKey());
-                            items.add(item);
-                        }
-                    } catch (Exception e) {
-                        android.util.Log.e("FirebaseConnector", "Error mapping items from getAllItems", e);
+                    T item = child.getValue(clazz);
+                    if (item != null) {
+                        applyKeyAsId(item, child.getKey());
+                        items.add(item);
                     }
                 }
                 callback.onSuccess(items);
