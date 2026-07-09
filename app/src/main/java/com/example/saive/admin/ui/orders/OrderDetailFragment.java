@@ -64,7 +64,11 @@ public class OrderDetailFragment extends Fragment {
     }
 
     private void setupStatusSpinner() {
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, OrderStatus.ALL_UI);
+        String[] statusDisplayNames = new String[OrderStatus.ALL.length];
+        for (int i = 0; i < OrderStatus.ALL.length; i++) {
+            statusDisplayNames[i] = OrderStatus.getUIString(requireContext(), OrderStatus.ALL[i]);
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, statusDisplayNames);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spnStatus.setAdapter(adapter);
     }
