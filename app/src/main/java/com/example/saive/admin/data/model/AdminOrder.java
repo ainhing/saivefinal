@@ -1,13 +1,11 @@
 package com.example.saive.admin.data.model;
 
-import com.google.firebase.database.IgnoreExtraProperties;
 import com.google.firebase.database.PropertyName;
 import com.google.firebase.database.Exclude;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 
-@IgnoreExtraProperties
 public class AdminOrder {
     private String orderId; // Usually the key in Firebase
 
@@ -51,17 +49,20 @@ public class AdminOrder {
     private String note;
 
     @PropertyName("CreatedAt")
-    private String createdAt;
+    private Object createdAt;
 
     @PropertyName("UpdatedAt")
-    private String updatedAt;
+    private Object updatedAt;
 
     public AdminOrder() {
         // Required for Firebase
     }
 
+    @PropertyName("OrderId")
     public String getOrderId() { return orderId; }
+    @PropertyName("OrderId")
     public void setOrderId(String orderId) { this.orderId = orderId; }
+
 
     @PropertyName("UserId")
     public String getUserId() { return userId; }
@@ -71,22 +72,22 @@ public class AdminOrder {
     @PropertyName("Email")
     public String getEmail() { return email; }
     @PropertyName("Email")
-    public void setEmail(String email) { this.email = email; }
+    public void setEmail(Object email) { this.email = email == null ? null : String.valueOf(email); }
 
     @PropertyName("FullName")
     public String getFullName() { return fullName; }
     @PropertyName("FullName")
-    public void setFullName(String fullName) { this.fullName = fullName; }
+    public void setFullName(Object fullName) { this.fullName = fullName == null ? null : String.valueOf(fullName); }
 
     @PropertyName("Phone")
     public String getPhone() { return phone; }
     @PropertyName("Phone")
-    public void setPhone(String phone) { this.phone = phone; }
+    public void setPhone(Object phone) { this.phone = phone == null ? null : String.valueOf(phone); }
 
     @PropertyName("ShippingAddress")
     public String getShippingAddress() { return shippingAddress; }
     @PropertyName("ShippingAddress")
-    public void setShippingAddress(String shippingAddress) { this.shippingAddress = shippingAddress; }
+    public void setShippingAddress(Object shippingAddress) { this.shippingAddress = shippingAddress == null ? null : String.valueOf(shippingAddress); }
 
     @PropertyName("Items")
     public List<AdminOrderItem> getItems() { return items; }
@@ -127,10 +128,10 @@ public class AdminOrder {
     private AdminOrderItem parseItemFromMap(Map map) {
         try {
             AdminOrderItem item = new AdminOrderItem();
-            item.setProductId((String) map.get("ProductId"));
-            item.setProductName((String) map.get("ProductName"));
-            item.setSize((String) map.get("Size"));
-            item.setImage((String) map.get("Image"));
+            item.setProductId(String.valueOf(map.get("ProductId")));
+            item.setProductName(String.valueOf(map.get("ProductName")));
+            item.setSize(String.valueOf(map.get("Size")));
+            item.setImage(String.valueOf(map.get("Image")));
             
             Object qtyObj = map.get("Quantity");
             if (qtyObj != null) {
@@ -191,12 +192,12 @@ public class AdminOrder {
     @PropertyName("PaymentMethod")
     public String getPaymentMethod() { return paymentMethod; }
     @PropertyName("PaymentMethod")
-    public void setPaymentMethod(String paymentMethod) { this.paymentMethod = paymentMethod; }
+    public void setPaymentMethod(Object paymentMethod) { this.paymentMethod = paymentMethod == null ? null : String.valueOf(paymentMethod); }
 
     @PropertyName("Status")
     public String getStatus() { return normalizeStatus(status); }
     @PropertyName("Status")
-    public void setStatus(String status) { this.status = normalizeStatus(status); }
+    public void setStatus(Object status) { this.status = normalizeStatus(status == null ? null : String.valueOf(status)); }
 
     @Exclude
     public static String normalizeStatus(String serverStatus) {
@@ -232,15 +233,25 @@ public class AdminOrder {
     @PropertyName("Note")
     public String getNote() { return note; }
     @PropertyName("Note")
-    public void setNote(String note) { this.note = note; }
+    public void setNote(Object note) { this.note = note == null ? null : String.valueOf(note); }
 
     @PropertyName("CreatedAt")
-    public String getCreatedAt() { return createdAt; }
+    public Object getCreatedAt() { return createdAt; }
     @PropertyName("CreatedAt")
-    public void setCreatedAt(String createdAt) { this.createdAt = createdAt; }
+    public void setCreatedAt(Object createdAt) { this.createdAt = createdAt; }
 
     @PropertyName("UpdatedAt")
-    public String getUpdatedAt() { return updatedAt; }
+    public Object getUpdatedAt() { return updatedAt; }
     @PropertyName("UpdatedAt")
-    public void setUpdatedAt(String updatedAt) { this.updatedAt = updatedAt; }
+    public void setUpdatedAt(Object updatedAt) { this.updatedAt = updatedAt; }
+
+    @Exclude
+    public String getCreatedAtString() {
+        if (createdAt instanceof String) return (String) createdAt;
+        if (createdAt instanceof Long) {
+             java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.getDefault());
+             return sdf.format(new java.util.Date((Long) createdAt));
+        }
+        return "N/A";
+    }
 }
