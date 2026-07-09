@@ -1,10 +1,8 @@
 package com.example.saive.admin.data.model;
 
-import com.google.firebase.database.IgnoreExtraProperties;
 import com.google.firebase.database.PropertyName;
 import com.google.firebase.database.Exclude;
 
-@IgnoreExtraProperties
 public class AdminOrderItem {
     @PropertyName("ProductId")
     private String productId;
