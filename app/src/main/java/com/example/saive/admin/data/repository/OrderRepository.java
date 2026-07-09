@@ -24,6 +24,19 @@ public class OrderRepository {
         FirebaseConnector.listenToAllItems(NODE_ORDERS, AdminOrder.class, new FirebaseListCallback<AdminOrder>() {
             @Override
             public void onSuccess(List<AdminOrder> items) {
+                // Sắp xếp đơn hàng mới nhất lên đầu dựa trên CreatedAt
+                items.sort((o1, o2) -> {
+                    Object t1 = o1.getCreatedAt();
+                    Object t2 = o2.getCreatedAt();
+                    if (t1 instanceof Long && t2 instanceof Long) {
+                        return ((Long) t2).compareTo((Long) t1);
+                    }
+                    if (t1 instanceof String && t2 instanceof String) {
+                        return ((String) t2).compareTo((String) t1);
+                    }
+                    return 0;
+                });
+
                 List<AdminOrder> filtered = items;
                 if (status != null && !status.isEmpty() && !status.equalsIgnoreCase("all")) {
                     filtered = filtered.stream()
